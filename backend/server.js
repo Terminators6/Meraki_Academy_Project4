@@ -4,7 +4,7 @@ const db = require("./db/db");
 const app = express();
 
 //routers
-const { usersRouter } = require("./routers/routes/users");
+const usersRouter = require("./routers/routes/users");
 
 //built-in middlewares
 app.use(express.json());

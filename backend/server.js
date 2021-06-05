@@ -5,7 +5,8 @@ const db = require("./db/db");
 const app = express();
 
 //routers
-// const registerRouter = require("./routers/routes/register");
+
+const profileRouter =require('./routers/routes/profile')
 const registerRouter = require("./routers/routes/auth/signUp");
 const supRouter = require("./routers/routes/secund");
 const loginRouter = require("./routers/routes/auth/login");
@@ -19,8 +20,12 @@ app.use(cors());
 //app routers
 
 app.use(registerRouter);
+
+app.use('/profile',profileRouter)
+
 app.use(supRouter);
 app.use(loginRouter);
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

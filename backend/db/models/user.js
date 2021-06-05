@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
 //hash the password
 userSchema.pre("save", async function () {
     this.email = this.email.toLowerCase();
-    // this.password = await bcrypt.hash(this.password, salt);   
+    this.password = await bcrypt.hash(this.password, salt);   
 })
 
 

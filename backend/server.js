@@ -7,7 +7,8 @@ const app = express();
 require("dotenv").config();
 
 //routers
-const registerRouter = require('./routers/routes/register')
+const registerRouter = require('./routers/routes/auth/signUp')
+const profileRouter =require('./routers/routes/profile')
 
 
 //built-in middlewares
@@ -19,6 +20,7 @@ app.use(cors());
 //app routers
 
 app.use(registerRouter);
+app.use('/profile',profileRouter)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

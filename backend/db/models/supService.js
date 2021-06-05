@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const supService = new mongoose.Schema({
-  name: { type: Schema.Types.ObjectId, ref: 'User' },
+  name: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   title: { type: String, required: true },
   description: { type: String, required: true },
   type: { type: String },
   rating: { type: Number },
   numberOfVoters: { type: Number },
   image: { type: String },
-  comments: { type: mongoose.Schema.Types.ObjectId, ref: 'Comment' },
+  comments: { type: mongoose.Schema.Types.ObjectId, ref: "Comment" },
 });
 
-module.exports = mongoose.model('SupService', supService);
+module.exports = mongoose.model("SupService", supService);
 //Done

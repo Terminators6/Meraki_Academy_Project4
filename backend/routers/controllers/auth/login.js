@@ -5,13 +5,13 @@ const { model } = require("mongoose");
 
 const login = async (req, res) => {
   const { email, password } = req.body;
-  const result = await usersModel.findOne({ email: email });
   try {
+    const result = await usersModel.findOne({ email: email });
     if (!result) {
-      res.status(404).json("this email doesn't exist");
+      return res.status(404).json("this email doesn't exist");
     }
-    const compare = bcrypt.compare(password, result.password);
-    if (!compare) res.status(404).json("The password you’ve entered is incorrect");
+    const compare = await bcrypt.compare(password, result.password);
+    if (!compare) return res.status(403).json("The password you’ve entered is incorrect");
     const payload = {
       userId: result._id,
       firsName: result.firsName,

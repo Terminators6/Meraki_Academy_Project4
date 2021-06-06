@@ -10,6 +10,7 @@ const profileRouter =require('./routers/routes/profile')
 const registerRouter = require("./routers/routes/auth/signUp");
 const supRouter = require("./routers/routes/secund");
 const loginRouter = require("./routers/routes/auth/login");
+const commentRouter = require('./routers/routes/comment')
 
 //built-in middlewares
 app.use(express.json());
@@ -20,7 +21,7 @@ app.use(cors());
 //app routers
 
 app.use(registerRouter);
-
+app.use(commentRouter)
 app.use('/profile',profileRouter)
 
 app.use(supRouter);

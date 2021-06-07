@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import axios from 'axios';
 // import { Register } from '../components/auth/signUp';
 
@@ -13,39 +14,48 @@ const RegisterProvider = (props) => {
     const [password, setPassword] = useState('');
     const [role, setRole] = useState('60be297bc1ce0378e4564f2a');
     const [message, setMessage] = useState('');
-
+    const history = useHistory()
 
     const state = {
-        setFirstName, 
-        setLastName, 
-        setAge, 
-        setCountry, 
+        setFirstName,
+        setLastName,
+        setAge,
+        setCountry,
         setEmail,
-        setPassword, 
+        setPassword,
         setRole,
         addNewUser,
         message,
     };
 
-    async function addNewUser(){
+    async function addNewUser() {
         try {
-            console.log('.....axios....',{
-                firstName,lastName,age,country,email, password,role
-            });
-            await axios.post('http://localhost:5000/register',{
-                firstName,lastName,age,country,email, password,role
-            }).then((result)=>{
-                console.log('....axios result...',result);
-                setMessage('The user has been created successfully ');
-
-            })
+            const newUser = { firstName, lastName, age, country, email, password, role };
+            //client validation
+            if (firstName === '' || lastName === '' || country === '' || age === undefined || email === '' || password === '') {
+                setMessage("Please fill all the info");
+            } else {
+                await axios.post('http://localhost:5000/register', newUser)
+                    .then(response => {
+                        if (response.status == 201) {
+                            setMessage('The user has been created successfully ');
+                            setTimeout(function (){
+                                history.push('/Login')
+                            }, 2000);
+                        } else {
+                            setMessage('Error happened while register, please try again')
+                        }
+                    })              
+                }
         } catch (error) {
-            setMessage('Error happened while register, please try again')
+            setMessage('Error 5000 happened while register, please try again');
+            throw error;
         }
     }
 
-    return(
-        <RegisterContext.Provider  value ={state}>
+
+    return (
+        <RegisterContext.Provider value={state}>
             {props.children}
         </RegisterContext.Provider>
     )

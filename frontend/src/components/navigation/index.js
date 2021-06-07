@@ -8,6 +8,8 @@ export const Navigation = () => {
 		<div className="Nav">
 			Navigation component
 			<Link to="/Register"> Register </Link>
+			<Link to="/Login"> Login </Link>
+			<Link to="/Favorite"> Favorite </Link>
 		</div>
 	)
 };

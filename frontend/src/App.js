@@ -7,6 +7,7 @@ import { Main } from './components/main/index';
 import { Register } from './components/auth/signUp';
 import './App.css';
 
+
 const App = () => {
 	return <div className="App">App component
 		<Navigation/>

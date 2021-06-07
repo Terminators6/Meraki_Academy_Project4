@@ -1,4 +1,3 @@
-
 // const jwt = require('jsonwebtoken');
 // const bcrypt = require('bcrypt');
 // const secret = process.env.SECRET;
@@ -20,7 +19,6 @@
 //     }
 //     else{
 //         res.json("No headers .authorization are found");
-        
+
 //     }
 // }
-

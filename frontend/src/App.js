@@ -6,6 +6,15 @@ import { Footer } from './components/footer/index';
 import { Main } from './components/main/index';
 import { Register } from './components/auth/signUp';
 import Login from "./components/auth/login/index";
+
+import favorite from "./components/favorite/favorite";
+
+
+    
+    
+  
+  
+
 import './App.css';
 
 
@@ -16,10 +25,12 @@ const App = () => {
 		    <Navigation/>
 		    <Route exact path="/register" component={Register} />
         <Route path="/login" component={Login} />
+        <Route path="/favorite" component={favorite} />
 		    <Header/>
 		    <Main/>
 		    <Footer/>
 	</div>)
+
 };
 
 export default App;

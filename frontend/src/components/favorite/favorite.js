@@ -3,7 +3,13 @@ import { FavoriteContext } from "./../../contexts/favorite";
 
 const Favorite = () => {
   const favoriteContext = useContext(FavoriteContext);
-  return <div className="App">Dashboard component</div>;
+
+  return (
+    <div className="favorite">
+      {/* {favoriteContext.favorite()} */}
+      Fav component
+    </div>
+  );
 };
 
 export default Favorite;

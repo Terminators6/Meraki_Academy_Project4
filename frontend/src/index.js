@@ -5,12 +5,18 @@ import App from "./App";
 
 //providers context
 import LoginProvider, { LoginContext } from "./contexts/login";
+import RegisterProvider from './contexts/signUp';
+
 
 ReactDOM.render(
-  <Router>
-    <LoginProvider>
-      <App />
-    </LoginProvider>
-  </Router>,
-  document.getElementById("root")
+
+	<Router>
+		<RegisterProvider>
+       <LoginProvider>
+			    <App />
+      </LoginProvider>
+		</RegisterProvider>
+	</Router>,
+	
+	document.getElementById('root'),
 );

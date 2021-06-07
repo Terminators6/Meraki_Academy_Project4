@@ -5,12 +5,15 @@ import App from "./App";
 
 //providers context
 import LoginProvider, { LoginContext } from "./contexts/login";
+import FavoriteProvider, { FavoriteContext } from "./contexts/favorite";
 
 ReactDOM.render(
   <Router>
-    <LoginProvider>
-      <App />
-    </LoginProvider>
+    <favoriteProvider>
+      <LoginProvider>
+        <App />
+      </LoginProvider>
+    </favoriteProvider>
   </Router>,
   document.getElementById("root")
 );

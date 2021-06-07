@@ -1,67 +1,65 @@
-const servicemoudule=require("./../../db/models/supService")
+const servicemoudule = require("./../../db/models/supService");
 
 const getAllservice = (req, res) => {
-	servicemoudule
-		.find({})
-		.then((result) => {
-			res.status(200).json(result);
-		})
-		.catch((err) => {
-			res.send(err);
-		});
+  servicemoudule
+    .find({})
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      res.send(err);
+    });
 };
-
-
 
 const createNewService = (req, res) => {
-	const { name, title, description,type,rating,numberOfVoters,image,comments } = req.body;
+  const { name, title, description, type, rating, numberOfVoters, image, comments } = req.body;
 
-	const service = new servicemoudule({
-        name, 
-        title,
-         description,
-         type,
-         rating,
-         numberOfVoters,
-         image,
-         comments 
-	});
+  const service = new servicemoudule({
+    name,
+    title,
+    description,
+    type,
+    rating,
+    numberOfVoters,
+    image,
+    comments,
+  });
 
-	service
-		.save()
-		.then((result) => {
-			res.status(201).json(result);
-		})
-		.catch((err) => {
-			res.send(err);
-		});
+  service
+    .save()
+    .then((result) => {
+      res.status(201).json(result);
+    })
+    .catch((err) => {
+      res.send(err);
+    });
 };
 const updateAnServiceById = (req, res) => {
-	const id = req.params.id;
+  const id = req.params.id;
 
-	servicemoudule
-		.findByIdAndUpdate(id, req.body, { new: true })
-		.then((result) => {
-			res.status(200).json(result);
-		})
-		.catch((err) => {
-			res.send(err);
-		});
+  servicemoudule
+    .findByIdAndUpdate(id, req.body, { new: true })
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      res.send(err);
+    });
 };
 const deleteServiceById = (req, res) => {
-	const id = req.params.id;
+  const id = req.params.id;
 
-	servicemoudule
-		.findByIdAndDelete(id)
-		.then((result) => {
-			res.status(200).json({
-				success: true,
-				message: `Success Delete service with id => ${id}`,
-			});
-		})
-		.catch((err) => {
-			res.send(err);
-		});
+  servicemoudule
+    .findByIdAndDelete(id)
+    .then((result) => {
+      res.status(200).json({
+        success: true,
+        message: `Success Delete service with id => ${id}`,
+      });
+    })
+    .catch((err) => {
+      res.send(err);
+    });
 };
 // const deleteserviceByAuthor = (req, res) => {
 // 	const author = req.body.author;
@@ -79,9 +77,9 @@ const deleteServiceById = (req, res) => {
 // 		});
 // };
 module.exports = {
-	getAllservice,
-	createNewService,
-	updateAnServiceById,
-	deleteServiceById,
-	// deleteServicByAuthor,
+  getAllservice,
+  createNewService,
+  updateAnServiceById,
+  deleteServiceById,
+  // deleteServicByAuthor,
 };

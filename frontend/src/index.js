@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App";
 
-//context Providers
+//providers context
+import LoginProvider, { LoginContext } from "./contexts/login";
 import RegisterProvider from './contexts/signUp';
 
 
@@ -11,7 +12,9 @@ ReactDOM.render(
 
 	<Router>
 		<RegisterProvider>
-			<App />
+       <LoginProvider>
+			    <App />
+      </LoginProvider>
 		</RegisterProvider>
 	</Router>,
 	

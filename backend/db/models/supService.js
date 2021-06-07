@@ -12,4 +12,3 @@ const supService = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("SupService", supService);
-//Done

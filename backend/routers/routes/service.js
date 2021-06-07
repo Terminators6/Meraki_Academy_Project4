@@ -12,8 +12,8 @@ const serviceRouter = express.Router();
 
 serviceRouter.get("/", getAllservice);
 serviceRouter.post("/newService", createNewService);
-serviceRouter.put("/business/:id/update", updateAnArticleById);
-serviceRouter.delete("/business/:id/delete", deleteArticleById);
+serviceRouter.put("/business/:id/update", updateAnServiceById);
+serviceRouter.delete("/business/:id/delete", deleteServiceById);
 
 // serviceRouter.delete('/', deleteArticlesByAuthor);
 

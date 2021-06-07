@@ -17,19 +17,24 @@ const FavoriteProvider = (props) => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const state = {
-    massage,
-    setEmail,
-    setPassword,
     token,
+    favorite,
   };
 
-  function saveToken(token) {
-    const user = jwt.decode(token);
-    if (user) {
-      setToken(token);
-      setUserId(user.userId);
-      localStorage.setItem("token", token);
-    }
+  function favorite() {
+    //   const user = jwt.decode(localStorage.getItem("token"));
+    //   const id = user.userId;
+    //   console.log(id);
+    //   const fav = await axios.get(
+    //     `http://localhost:5000//favorite/60be4823baff51518ce73918`
+    //   );
+    //   let arrayOfFav = fav.favorite;
+    //   let Fav = arrayOfFav.map(async (ele, i) => {
+    //     return await supServiceModule.findOne(
+    //       { _id: ele },
+    //       "title type rating image"
+    //     );
+    //   });
   }
 
   return (

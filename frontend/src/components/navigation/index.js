@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './navigation.css'
 
-const Navigation = () => {
-	return <div className="App">Navigation component</div>;
+
+export const Navigation = () => {
+	return (
+		<div className="Nav">
+			Navigation component
+			<Link to="/Register"> Register </Link>
+		</div>
+	)
 };
 
-export default Navigation;
+

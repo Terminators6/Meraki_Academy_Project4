@@ -1,7 +1,10 @@
 import React from 'react';
 
-const Main = () => {
-	return <div className="App">App component</div>;
+export const Main = () => {
+	return (
+	<div className="App">Main Page
+
+	</div>
+	)
 };
 
-export default Main;

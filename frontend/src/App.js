@@ -15,6 +15,9 @@ import { Register } from "./components/auth/signUp";
 import { Programing } from "./components/servicePage/programing";
 import Login from "./components/auth/login/index";
 import favorite from "./components/favorite/favorite";
+import { Profile } from "./components/profile/index"
+
+
 
 import "./App.css";
 
@@ -28,7 +31,11 @@ const App = () => {
         <Route path="/login" component={Login} />
         <Route path="/favorite" component={favorite} />
 
+        <Route path="/profile" component={Profile} />
+
+
         <Route path="/programing/:userId" component={Programing} />
+
 
           	
 	<Route path="/allServices" component={AllSupService} />

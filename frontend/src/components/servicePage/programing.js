@@ -6,16 +6,20 @@ export const Programing = ({ id }) => {
   const serviceContext = useContext(ServiceContext);
   const userId = useParams().userId;
   serviceContext.getService(userId);
+
+  function rateFun() {
+    console.log("aa");
+  }
   return (
     <>
       <div className="Programing">
-        <h1>{serviceContext.title}</h1>
         <img src={serviceContext.image}></img>
-        <h1>{serviceContext.description}</h1>
-        <h1>{serviceContext.type}</h1>
-        <h1>{serviceContext.rating}</h1>
-        <h1>{serviceContext.numberOfVoters}</h1>
         <h1>{serviceContext.title}</h1>
+        <p>Type:{serviceContext.type}</p>
+        <p>{serviceContext.description}</p>
+        <input type="radio" onClick={rateFun}></input> rate here
+        <div>`{serviceContext.rating}/10`</div>
+        <div>{serviceContext.numberOfVoters}</div>
       </div>
     </>
   );

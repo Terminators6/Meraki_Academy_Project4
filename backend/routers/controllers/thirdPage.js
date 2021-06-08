@@ -4,7 +4,7 @@ const supServiceModel = require("./../../db/models/supService");
 const service = (req, res) => {
   const id = req.params;
   supServiceModel
-    .findOne({ _id: id })
+    .findOne({ _id: id.id })
     .then((result) => {
       res.status(200);
       res.json(result);

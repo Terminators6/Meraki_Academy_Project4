@@ -5,6 +5,7 @@ const db = require("./db/db");
 const app = express();
 
 //routers
+
 const profileRouter = require("./routers/routes/profile");
 const registerRouter = require("./routers/routes/auth/signUp");
 const supRouter = require("./routers/routes/secund");

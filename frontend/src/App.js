@@ -16,9 +16,12 @@ import { Programing } from "./components/servicePage/programing";
 import Login from "./components/auth/login/index";
 import favorite from "./components/favorite/favorite";
 
+
+
 import { Video } from "./components/video/video";
 
 import { Profile } from "./components/profile/index"
+
 
 
 
@@ -38,6 +41,8 @@ const App = () => {
       </Switch>
     </div>
   );
+
+
 
 
         <Route path="/profile" component={Profile} />

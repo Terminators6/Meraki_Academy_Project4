@@ -1,5 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import React, { useContext } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import './navigation.css'
 
 
@@ -13,6 +14,7 @@ export const Navigation = () => {
 			<Link to="/Profile"> Profile </Link>
 		</div>
 	)
+
 };
 
 

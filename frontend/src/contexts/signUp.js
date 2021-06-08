@@ -37,7 +37,7 @@ const RegisterProvider = (props) => {
             } else {
                 await axios.post('http://localhost:5000/register', newUser)
                     .then(response => {
-                        if (response.status == 201) {
+                        if (response.status === 201) {
                             setMessage('The user has been created successfully ');
                             setTimeout(function (){
                                 history.push('/Login')

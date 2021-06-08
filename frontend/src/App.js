@@ -7,6 +7,8 @@ import { Main } from "./components/main/index";
 import { Register } from "./components/auth/signUp";
 import Login from "./components/auth/login/index";
 import favorite from "./components/favorite/favorite";
+import { Profile } from "./components/profile/index"
+
 
 
 import "./App.css";
@@ -20,6 +22,7 @@ const App = () => {
         <Route exact path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/favorite" component={favorite} />
+        <Route path="/profile" component={Profile} />
         <Header />
         <Main />
         <Footer />

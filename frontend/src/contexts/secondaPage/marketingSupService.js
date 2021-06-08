@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const marketingSupServiceContext = React.createContext();
+export const MarketingSupServiceContext = React.createContext();
 
 
 
-const marketingSupServiceProvider = (props) => {
+const MarketingSupServiceProvider = (props) => {
 	const [service, setService] = useState('');
 	const [img, setImg] = useState('');
 	const [title, setTitle] = useState('');
@@ -19,7 +19,7 @@ const marketingSupServiceProvider = (props) => {
 		setImg,
 		setTitle,
 		setDescription,
-        getmarketingSupService,
+        getMarketingSupService,
        
 		
 	};
@@ -27,7 +27,7 @@ const marketingSupServiceProvider = (props) => {
 	
     
 
-	async function getmarketingSupService() {
+	async function getMarketingSupService() {
 		try {
 			const res = await axios.get('http://localhost:5000/sup/marketing');
 			setService(res.data);
@@ -38,11 +38,11 @@ const marketingSupServiceProvider = (props) => {
 
 	
 	return (
-		<marketingSupServiceContext.Provider value={state}>
+		<MarketingSupServiceContext.Provider value={state}>
 			{props.children}
-		</marketingSupServiceContext.Provider>
+		</MarketingSupServiceContext.Provider>
 	);
 };
 
-export default marketingSupServiceProvider;
+export default MarketingSupServiceProvider;
 

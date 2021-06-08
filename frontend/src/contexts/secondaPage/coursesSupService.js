@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const coursesSupServiceContext = React.createContext();
+export const CoursesSupServiceContext = React.createContext();
 
 
 
-const coursesSupServiceProvider = (props) => {
+const CoursesSupServiceProvider = (props) => {
 	const [service, setService] = useState('');
 	const [img, setImg] = useState('');
 	const [title, setTitle] = useState('');
@@ -19,7 +19,7 @@ const coursesSupServiceProvider = (props) => {
 		setImg,
 		setTitle,
 		setDescription,
-        getcoursesSupService,
+        getCoursesSupService,
        
 		
 	};
@@ -27,7 +27,7 @@ const coursesSupServiceProvider = (props) => {
 	
     
 
-	async function getcoursesSupService() {
+	async function getCoursesSupService() {
 		try {
 			const res = await axios.get('http://localhost:5000/sup/courses');
 			setService(res.data);
@@ -38,11 +38,11 @@ const coursesSupServiceProvider = (props) => {
 
 	
 	return (
-		<coursesSupServiceContext.Provider value={state}>
+		<CoursesSupServiceContext.Provider value={state}>
 			{props.children}
-		</coursesSupServiceContext.Provider>
+		</CoursesSupServiceContext.Provider>
 	);
 };
 
-export default coursesSupServiceProvider;
+export default CoursesSupServiceProvider;
 

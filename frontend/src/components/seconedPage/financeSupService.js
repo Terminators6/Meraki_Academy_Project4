@@ -1,15 +1,15 @@
 import React, { useContext, useEffect } from 'react';
-import {financeSupServiceContext} from './../../contexts/secondaPage/financeSupService';
+import {FinanceSupServiceContext} from '../../contexts/secondaPage/FinanceSupService';
 
-const financeSupService = () => {
-	const financeSupServiceContext = useContext(financeSupServiceContext);
+const FinanceSupService = () => {
+	const FinanceSupServiceContext = useContext(FinanceSupServiceContext);
     
 	
 
 	const handleClick = () => {
-		financeSupServiceContext.getfinanceSupService();
+		FinanceSupServiceContext.getFinanceSupService();
 		
-        financeSupServiceContext.setShow(!financeSupServiceContext.show);
+        FinanceSupServiceContext.setShow(!FinanceSupServiceContext.show);
 	};
 
 
@@ -19,10 +19,10 @@ const financeSupService = () => {
 	return (
 		<>
 			<br />
-			<button onClick={handleClick}>Get All financeSupService</button>
+			<button onClick={handleClick}>Get All FinanceSupService</button>
 			
 		</>
 	);
 };
 
-export default financeSupService;
+export default FinanceSupService;

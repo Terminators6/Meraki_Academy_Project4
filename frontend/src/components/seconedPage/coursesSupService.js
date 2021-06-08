@@ -1,15 +1,15 @@
 import React, { useContext, useEffect } from 'react';
-import {coursesSupServiceContext} from './../../contexts/secondaPage/coursesSupService';
+import {CoursesSupServiceContext} from '../../contexts/secondaPage/CoursesSupService';
 
-const coursesSupService = () => {
-	const coursesSupServiceContext = useContext(coursesSupServiceContext);
+const CoursesSupService = () => {
+	const CoursesSupServiceContext = useContext(CoursesSupServiceContext);
     
 	
 
 	const handleClick = () => {
-		coursesSupServiceContext.getcoursesSupService();
+		CoursesSupServiceContext.getCoursesSupService();
 		
-        coursesSupServiceContext.setShow(!coursesSupServiceContext.show);
+        CoursesSupServiceContext.setShow(!CoursesSupServiceContext.show);
 	};
 
 
@@ -19,10 +19,10 @@ const coursesSupService = () => {
 	return (
 		<>
 			<br />
-			<button onClick={handleClick}>Get All coursesSupService</button>
+			<button onClick={handleClick}>Get All CoursesSupService</button>
 			
 		</>
 	);
 };
 
-export default coursesSupService;
+export default CoursesSupService;

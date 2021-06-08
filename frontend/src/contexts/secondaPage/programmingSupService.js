@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const programmingSupServiceContext = React.createContext();
+export const ProgrammingSupServiceContext = React.createContext();
 
 
 
-const programmingSupServiceProvider = (props) => {
+const ProgrammingSupServiceProvider = (props) => {
 	const [service, setService] = useState('');
 	const [img, setImg] = useState('');
 	const [title, setTitle] = useState('');
@@ -19,7 +19,7 @@ const programmingSupServiceProvider = (props) => {
 		setImg,
 		setTitle,
 		setDescription,
-        getprogrammingSupService,
+        getProgrammingSupService,
        
 		
 	};
@@ -27,7 +27,7 @@ const programmingSupServiceProvider = (props) => {
 	
     
 
-	async function getprogrammingSupService() {
+	async function getProgrammingSupService() {
 		try {
 			const res = await axios.get('http://localhost:5000/sup/programming');
 			setService(res.data);
@@ -38,11 +38,11 @@ const programmingSupServiceProvider = (props) => {
 
 	
 	return (
-		<programmingSupServiceContext.Provider value={state}>
+		<ProgrammingSupServiceContext.Provider value={state}>
 			{props.children}
-		</programmingSupServiceContext.Provider>
+		</ProgrammingSupServiceContext.Provider>
 	);
 };
 
-export default programmingSupServiceProvider;
+export default ProgrammingSupServiceProvider;
 

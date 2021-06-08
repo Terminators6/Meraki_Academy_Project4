@@ -8,7 +8,6 @@ import { Register } from "./components/auth/signUp";
 import Login from "./components/auth/login/index";
 import favorite from "./components/favorite/favorite";
 
-
 import "./App.css";
 
 const App = () => {
@@ -26,15 +25,6 @@ const App = () => {
       </Switch>
     </div>
   );
-
-
-
-
-
-	
-
-
-
 };
 
 export default App;

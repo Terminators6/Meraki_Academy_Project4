@@ -6,17 +6,21 @@ import App from "./App";
 //providers context
 import LoginProvider, { LoginContext } from "./contexts/login";
 import FavoriteProvider, { FavoriteContext } from "./contexts/favorite";
+import ServiceProvider, { ServiceContext } from "./contexts/ServicePage";
+
 import RegisterProvider from "./contexts/signUp";
 
 ReactDOM.render(
   <Router>
-    <FavoriteProvider>
-      <RegisterProvider>
-        <LoginProvider>
-          <App />
-        </LoginProvider>
-      </RegisterProvider>
-    </FavoriteProvider>
+    <ServiceProvider>
+      <FavoriteProvider>
+        <RegisterProvider>
+          <LoginProvider>
+            <App />
+          </LoginProvider>
+        </RegisterProvider>
+      </FavoriteProvider>
+    </ServiceProvider>
   </Router>,
   document.getElementById("root")
 );

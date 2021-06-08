@@ -1,38 +1,19 @@
+
 import React, { useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import './navigation.css'
 
 
-const Navigation = () => {
-	
-	const history = useHistory();
-
-	const handleClick = () => {
-		history.push('/login');
-		 loginContext.logout();
-	};
-
+export const Navigation = () => {
 	return (
-		<>
-			{localStorage.getItem('token') ? (
-				<>
-					<Link to="/allServices">all_Services</Link>
-					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-					<Link to="/sup/courses">sup_courses</Link>
-					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-					
-				</>
-			) : (
-				<>
-					<Link to="/sup/finance">sup_finance</Link>
-					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-					<Link to="/sup/marketing">sup_marketing</Link>
-					<Link to="/sup/programming">sup_programming</Link>
-					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-					<Link to="/sup/business">sup_business</Link>
-				</>
-			)}
-		</>
-	);
+		<div className="Nav">
+			Navigation component
+			<Link to="/Register"> Register </Link>
+			<Link to="/Login"> Login </Link>
+			<Link to="/Favorite"> Favorite </Link>
+		</div>
+	)
+
 };
 
-export default Navigation;
+

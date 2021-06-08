@@ -13,19 +13,17 @@ import ProfileProvider from "./contexts/profile";
 
 ReactDOM.render(
   <Router>
-
-   <ServiceProvider>
-    <FavoriteProvider>
-      <RegisterProvider>
-        <LoginProvider>
-          <ProfileProvider>
-          <App />
-          </ProfileProvider>
-        </LoginProvider>
-      </RegisterProvider>
-    </FavoriteProvider>
-   </ServiceProvider>
-
+    <ServiceProvider>
+      <FavoriteProvider>
+        <RegisterProvider>
+          <LoginProvider>
+            <ProfileProvider>
+              <App />
+            </ProfileProvider>
+          </LoginProvider>
+        </RegisterProvider>
+      </FavoriteProvider>
+    </ServiceProvider>
   </Router>,
   document.getElementById("root")
 );

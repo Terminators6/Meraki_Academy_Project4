@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, Route, useParams, useHistory } from "react-router-dom";
-
 import axios from "axios";
 import { decode } from "jsonwebtoken";
 import jwt from "jsonwebtoken";
@@ -18,8 +17,9 @@ const ServiceProvider = (props) => {
   const [numberOfVoters, setNumberOfVoters] = useState(0);
   const [image, setImage] = useState("");
   const [token, setToken] = useState(false);
-  const [first, setFirst] = useState(true);
+  const [first, setFirst] = useState("");
   const [commit, setCommit] = useState("");
+  const [reload, setReload] = useState();
 
   const state = {
     token,
@@ -37,6 +37,9 @@ const ServiceProvider = (props) => {
     setCommit,
     commit,
     getToken,
+    setReload,
+    reload,
+    first,
   };
 
   function getToken(token) {
@@ -61,6 +64,7 @@ const ServiceProvider = (props) => {
       setNumberOfVoters(service.data.numberOfVoters);
       setImage(service.data.image);
       setRate(service.data.rating / service.data.numberOfVoters);
+      await setFirst(service.data.comments);
     } catch (error) {}
   }
 

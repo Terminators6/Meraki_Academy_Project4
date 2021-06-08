@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
@@ -60,25 +59,14 @@ const RegisterProvider = (props) => {
                 history.push("/Login");
               }, 2000);
             } else {
-
-                await axios.post('http://localhost:5000/register', newUser)
-                    .then(response => {
-                        if (response.status === 201) {
-                            setMessage('The user has been created successfully ');
-                            setTimeout(function (){
-                                history.push('/Login')
-                            }, 2000);
-                        } else {
-                            setMessage('Error happened while register, please try again')
-                        }
-                    })              
-                }
-        } catch (error) {
-            setMessage('Error 5000 happened while register, please try again');
-            throw error;
-        }
-
-    
+              setMessage("Error happened while register, please try again");
+            }
+          });
+      }
+    } catch (error) {
+      setMessage("Error 5000 happened while register, please try again");
+      throw error;
+    }
   }
 
   return (
@@ -89,4 +77,3 @@ const RegisterProvider = (props) => {
 };
 
 export default RegisterProvider;
-

@@ -3,7 +3,7 @@ const cors = require("cors");
 require("dotenv").config();
 const db = require("./db/db");
 const app = express();
-
+const ser = require("./db/models/supService");
 //routers
 
 const profileRouter = require("./routers/routes/profile");
@@ -30,6 +30,15 @@ app.use(loginRouter);
 app.use(favoriteRouter);
 app.use(serviceRouter);
 app.use(servicesRouter);
+
+app.put("/ratting", (req, res) => {
+  const { id, numberOfVoters, rating } = req.body;
+  ser
+    .findOneAndUpdate({ _id: id }, { numberOfVoters, rating }, { new: true })
+    .then((result) => {
+      console.log(result);
+    });
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

@@ -7,10 +7,10 @@ import jwt from "jsonwebtoken";
 export const Programing = ({ id }) => {
   const serviceContext = useContext(ServiceContext);
   const userId = useParams().userId;
-  console.log("userId", userId);
   serviceContext.getService(userId);
 
-  let NOV;
+  ///////////////////////////////////////////////
+
   async function rateFun(e) {
     serviceContext.add();
     let rating = Number(serviceContext.rating) + Number(e.target.value);
@@ -21,24 +21,25 @@ export const Programing = ({ id }) => {
       rating: rating,
     });
   }
+  ///////////////////////////////////////////////
 
   async function commitFun() {
     let token = localStorage.getItem("token");
     let token1 = jwt.decode(token);
-    console.log(token1.userId);
     await axios.post(`http://localhost:5000/subService/${userId}/comment`, {
       comment: serviceContext.commit,
       commenter: token1.userId,
     });
+    serviceContext.setCommit("");
   }
+  ///////////////////////////////////////////////
 
   function commit(e) {
     serviceContext.setCommit(e.target.value);
   }
-  useEffect(() => {
-    console.log("object");
-  }, [commitFun]);
 
+  ///////////////////////////////////////////////
+  //////////////////////////////////////////////
   return (
     <>
       <div className="Programing">
@@ -58,7 +59,12 @@ export const Programing = ({ id }) => {
         <input type="button" onClick={rateFun} value="1"></input>
         <div>{`${Math.round(serviceContext.rate)}`}/10</div>
         <div>{serviceContext.numberOfVoters}</div>
-        <input placeholder="comment here" onChange={commit}></input>
+        <input
+          type="text"
+          placeholder="comment here"
+          value={serviceContext.commit}
+          onChange={commit}
+        ></input>
         <br></br>
         <button onClick={commitFun}>add Comment</button>
       </div>

@@ -1,15 +1,15 @@
 import React, { useContext, useEffect } from 'react';
-import {allSupServiceContext} from './../../contexts/secondaPage/AllSupService';
+import {AllSupServiceContext} from '../../contexts/secondaPage/AllSupService';
 
-const allSupService = () => {
-	const allSupServiceContext = useContext(allSupServiceContext);
+const AllSupService = () => {
+	const AllSupServiceContext = useContext(AllSupServiceContext);
     
 	
 
 	const handleClick = () => {
-		allSupServiceContext.getAllSupService();
+		AllSupServiceContext.getAllSupService();
 		
-        allSupServiceContext.setShow(!allSupServiceContext.show);
+        AllSupServiceContext.setShow(!AllSupServiceContext.show);
 	};
 
 
@@ -25,4 +25,4 @@ const allSupService = () => {
 	);
 };
 
-export default allSupService;
+export default AllSupService;

@@ -1,15 +1,15 @@
 import React, { useContext, useEffect } from 'react';
-import {programmingSupServiceContext} from './../../contexts/secondaPage/programmingSupService';
+import {ProgrammingSupServiceContext} from '../../contexts/secondaPage/ProgrammingSupService';
 
-const programmingSupService = () => {
-	const programmingSupServiceContext = useContext(programmingSupServiceContext);
+const ProgrammingSupService = () => {
+	const ProgrammingSupServiceContext = useContext(ProgrammingSupServiceContext);
     
 	
 
 	const handleClick = () => {
-		programmingSupServiceContext.getprogrammingSupService();
+		ProgrammingSupServiceContext.getProgrammingSupService();
 		
-        programmingSupServiceContext.setShow(!programmingSupServiceContext.show);
+        ProgrammingSupServiceContext.setShow(!ProgrammingSupServiceContext.show);
 	};
 
 
@@ -19,10 +19,10 @@ const programmingSupService = () => {
 	return (
 		<>
 			<br />
-			<button onClick={handleClick}>Get All programmingSupService</button>
+			<button onClick={handleClick}>Get All ProgrammingSupService</button>
 			
 		</>
 	);
 };
 
-export default programmingSupService;
+export default ProgrammingSupService;

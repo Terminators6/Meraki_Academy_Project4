@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const financeSupServiceContext = React.createContext();
+export const FinanceSupServiceContext = React.createContext();
 
 
 
-const financeSupServiceProvider = (props) => {
+const FinanceSupServiceProvider = (props) => {
 	const [service, setService] = useState('');
 	const [img, setImg] = useState('');
 	const [title, setTitle] = useState('');
@@ -19,7 +19,7 @@ const financeSupServiceProvider = (props) => {
 		setImg,
 		setTitle,
 		setDescription,
-        getfinanceSupService,
+        getFinanceSupService,
        
 		
 	};
@@ -27,7 +27,7 @@ const financeSupServiceProvider = (props) => {
 	
     
 
-	async function getfinanceSupService() {
+	async function getFinanceSupService() {
 		try {
 			const res = await axios.get('http://localhost:5000/sup/finance');
 			setService(res.data);
@@ -38,11 +38,11 @@ const financeSupServiceProvider = (props) => {
 
 	
 	return (
-		<financeSupServiceContext.Provider value={state}>
+		<FinanceSupServiceContext.Provider value={state}>
 			{props.children}
-		</financeSupServiceContext.Provider>
+		</FinanceSupServiceContext.Provider>
 	);
 };
 
-export default financeSupServiceProvider;
+export default FinanceSupServiceProvider;
 

@@ -1,12 +1,12 @@
 
 import React from 'react';
-import allSupService from './components/seconedPage/allSupService';
+import AllSupService from './components/seconedPage/AllSupService';
 import BusinessSupService from './components/seconedPage/BusinessSupService';
-import coursesSupService from './components/seconedPage/coursesSupService';
-import financeSupService from './components/seconedPage/financeSupService';
-import marketingSupService from './components/seconedPage/marketingSupService';
-import programmingSupService from './components/seconedPage/programmingSupService';
-import Navigation from './components/navigation/index';
+import CoursesSupService from './components/seconedPage/CoursesSupService';
+import FinanceSupService from './components/seconedPage/FinanceSupService';
+import MarketingSupService from './components/seconedPage/MarketingSupService';
+import ProgrammingSupService from './components/seconedPage/ProgrammingSupService';
+
 import { Route, Switch } from "react-router-dom";
 import { Navigation } from "./components/navigation/index";
 import { Header } from "./components/header/index";
@@ -27,17 +27,17 @@ const App = () => {
         <Route path="/login" component={Login} />
         <Route path="/favorite" component={favorite} />
           	
-	<Route path="/allServices" component={allSupService} />
+	<Route path="/allServices" component={AllSupService} />
 
 	<Route path="/sup/business" component={BusinessSupService} />
 
-	<Route path="/sup/courses" component={coursesSupService} />
+	<Route path="/sup/courses" component={CoursesSupService} />
 
-	<Route path="/sup/finance" component={financeSupService} />
+	<Route path="/sup/finance" component={FinanceSupService} />
 
-	<Route path="/sup/marketing" component={marketingSupService} />
+	<Route path="/sup/marketing" component={MarketingSupService} />
 
-	<Route path="/sup/programming" component={programmingSupService} />
+	<Route path="/sup/programming" component={ProgrammingSupService} />
         <Header />
         <Main />
         <Footer />

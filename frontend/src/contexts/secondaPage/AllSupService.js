@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const allSupServiceContext = React.createContext();
+export const AllSupServiceContext = React.createContext();
 
 
 
-const allSupServiceProvider = (props) => {
+const AllSupServiceProvider = (props) => {
 	const [service, setService] = useState('');
 	const [img, setImg] = useState('');
 	const [title, setTitle] = useState('');
@@ -37,11 +37,11 @@ const allSupServiceProvider = (props) => {
 	
 
 	return (
-		<allSupServiceContext.Provider value={state}>
+		<AllSupServiceContext.Provider value={state}>
 			{props.children}
-		</allSupServiceContext.Provider>
+		</AllSupServiceContext.Provider>
 	);
 };
 
-export default allSupServiceProvider;
+export default AllSupServiceProvider;
 

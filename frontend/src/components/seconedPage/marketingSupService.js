@@ -1,15 +1,15 @@
 import React, { useContext, useEffect } from 'react';
-import {marketingSupServiceContext} from './../../contexts/secondaPage/marketingSupService';
+import {MarketingSupServiceContext} from '../../contexts/secondaPage/MarketingSupService';
 
-const marketingSupService = () => {
-	const marketingSupServiceContext = useContext(marketingSupServiceContext);
+const MarketingSupService = () => {
+	const MarketingSupServiceContext = useContext(MarketingSupServiceContext);
     
 	
 
 	const handleClick = () => {
-		marketingSupServiceContext.getmarketingSupService();
+		MarketingSupServiceContext.getMarketingSupService();
 		
-        marketingSupServiceContext.setShow(!marketingSupServiceContext.show);
+        MarketingSupServiceContext.setShow(!MarketingSupServiceContext.show);
 	};
 
 
@@ -19,10 +19,10 @@ const marketingSupService = () => {
 	return (
 		<>
 			<br />
-			<button onClick={handleClick}>Get All marketingSupService</button>
+			<button onClick={handleClick}>Get All MarketingSupService</button>
 			
 		</>
 	);
 };
 
-export default marketingSupService;
+export default MarketingSupService;

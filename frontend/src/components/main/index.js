@@ -1,14 +1,19 @@
 import React from "react";
 import "./main.css";
+// import "./../../contexts/main";
+import { useHistory } from "react-router-dom";
 
 export const Main = () => {
+  const history = useHistory();
   const image = [
-    "https://rb.gy/woeg7k",
-    "https://rb.gy/vebaim",
-    "https://rb.gy/jthqo0",
-    "https://rb.gy/cgtybc",
-    "https://rb.gy/vouswy",
-    "https://rb.gy/yec2im",
+
+    { url: "https://rb.gy/woeg7k", path: "/business" },
+    { url: "https://rb.gy/vebaim", path: "/courses" },
+    { url: "https://rb.gy/rrlv5u", path: "/finance" },
+    { url: "https://rb.gy/cgtybc", path: "/marketing" },
+    { url: "https://rb.gy/vouswy", path: "/programming" },
+    { url: "https://rb.gy/yec2im", path: "/allServices" },
+
   ];
 
   const nameImage = [
@@ -20,19 +25,23 @@ export const Main = () => {
     "All services",
   ];
   const newImage = image.map((srcImage, i) => {
-    return <img key={i} src={srcImage} className="sizeImage" />;
+    return <img key={i} src={srcImage.url} className="sizeImage" />;
   });
 
-  const imageAll = newImage.map((image, i) => {
+  const imageAll = newImage.map((imagei, i) => {
     return (
-      <div className="Div" key={i}>
-        {" "}
-        {image}{" "}
-        <div className="overlay">
-          {" "}
-          <div className="text"> {nameImage[i]} </div>{" "}
-        </div>{" "}
-      </div>
+      <button
+        onClick={(e) => {
+          history.push(image[i].path);
+        }}
+      >
+        <div key={i} className="Div">
+          {imagei}
+          <div className="overlay">
+            <div className="text"> {nameImage[i]} </div>
+          </div>
+        </div>
+      </button>
     );
   });
 

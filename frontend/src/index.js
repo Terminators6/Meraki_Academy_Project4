@@ -8,6 +8,10 @@ import LoginProvider, { LoginContext } from "./contexts/login";
 import FavoriteProvider, { FavoriteContext } from "./contexts/favorite";
 import ServiceProvider, { ServiceContext } from "./contexts/ServicePage";
 import RegisterProvider from "./contexts/signUp";
+
+import AllSupServiceProvider from"./contexts/secondaPage/AllSupService"
+  
+
 import ProfileProvider from "./contexts/profile";
 
 ReactDOM.render(
@@ -17,12 +21,15 @@ ReactDOM.render(
         <RegisterProvider>
           <LoginProvider>
             <ProfileProvider>
+            <AllSupServiceProvider>
               <App />
+              </AllSupServiceProvider>
             </ProfileProvider>
           </LoginProvider>
         </RegisterProvider>
       </FavoriteProvider>
     </ServiceProvider>
+
   </Router>,
   document.getElementById("root")
 );

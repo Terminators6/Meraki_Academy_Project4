@@ -5,8 +5,11 @@ import "./navigation.css";
 import { LoginContext } from "./../../contexts/login";
 
 export const Navigation = () => {
+
   const [state, setState] = useState("");
   const loginContext = useContext(LoginContext);
+
+
 
   return (
     <div>

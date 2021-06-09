@@ -17,6 +17,8 @@ const ProfileProvider = (props) => {
         setUser,
         user,
         getUserProfile,
+        updateUserProfile,
+
 
     };
 
@@ -42,6 +44,18 @@ const ProfileProvider = (props) => {
             console.log('....setUser res.data', res.data)
         } catch (error) {
             console.log("error in getProfile frontend", error)
+        }
+    }
+
+    async function updateUserProfile() {
+        console.log("update User Profile.......");
+        try {
+            validationToken();
+            const res = await axios.put(`http://localhost:5000/profile/${userId}`)
+            setUser(res.data);
+            console.log('....Edit User profile res.data', res.data)
+        } catch (error) {
+            console.log("error in editUserProfile frontend", error)
         }
     }
 

@@ -8,7 +8,7 @@ export const Main = () => {
     "https://rb.gy/jthqo0",
     "https://rb.gy/cgtybc",
     "https://rb.gy/vouswy",
-    "https://rb.gy/yec2im"
+    "https://rb.gy/yec2im",
   ];
 
   const nameImage = [
@@ -17,7 +17,7 @@ export const Main = () => {
     "Finance",
     "Courses",
     "Marketing",
-    "All services"
+    "All services",
   ];
   const newImage = image.map((srcImage, i) => {
     return <img key={i} src={srcImage} className="sizeImage" />;

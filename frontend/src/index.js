@@ -7,7 +7,6 @@ import App from "./App";
 import LoginProvider, { LoginContext } from "./contexts/login";
 import FavoriteProvider, { FavoriteContext } from "./contexts/favorite";
 import ServiceProvider, { ServiceContext } from "./contexts/ServicePage";
-
 import RegisterProvider from "./contexts/signUp";
 import ProfileProvider from "./contexts/profile";
 

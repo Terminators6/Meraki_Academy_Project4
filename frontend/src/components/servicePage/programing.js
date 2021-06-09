@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, Route, useParams } from "react-router-dom";
 import { ServiceContext } from "./../../contexts/ServicePage";
 import jwt from "jsonwebtoken";
@@ -7,9 +7,6 @@ import jwt from "jsonwebtoken";
 export const Programing = ({ id }) => {
   const serviceContext = useContext(ServiceContext);
   const userId = useParams().userId;
-  serviceContext.getService(userId);
-
-  ///////////////////////////////////////////////
 
   async function rateFun(e) {
     serviceContext.add();
@@ -21,7 +18,34 @@ export const Programing = ({ id }) => {
       rating: rating,
     });
   }
-  ///////////////////////////////////////////////
+  const [allComments, setAllComments] = useState("");
+  let a;
+  async function getCommints() {
+    try {
+      let token = localStorage.getItem("token");
+      let token1 = jwt.decode(token);
+      const commit = await axios.post("http://localhost:5000/getcomments", {
+        comment: serviceContext.commit,
+        commenter: token1.userId,
+        serviceId: userId,
+      });
+      a = commit.data;
+      let y = console.log("a", a);
+
+      await setAllComments(
+        a.map((ele) => {
+          return (
+            <div>
+              <p>{ele.commenter.image}</p>
+              <p>{ele.commenter.firstName}</p>
+              <p>{ele.comment}</p>
+            </div>
+          );
+        })
+      );
+      console.log("codasdasmmit", commit.data);
+    } catch (error) {}
+  }
 
   async function commitFun() {
     let token = localStorage.getItem("token");
@@ -29,17 +53,20 @@ export const Programing = ({ id }) => {
     await axios.post(`http://localhost:5000/subService/${userId}/comment`, {
       comment: serviceContext.commit,
       commenter: token1.userId,
+      serviceId: userId,
     });
     serviceContext.setCommit("");
   }
-  ///////////////////////////////////////////////
 
   function commit(e) {
     serviceContext.setCommit(e.target.value);
   }
 
-  ///////////////////////////////////////////////
-  //////////////////////////////////////////////
+  useEffect(() => {
+    serviceContext.getService(userId);
+    getCommints();
+  }, []);
+
   return (
     <>
       <div className="Programing">
@@ -60,13 +87,14 @@ export const Programing = ({ id }) => {
         <div>{`${Math.round(serviceContext.rate)}`}/10</div>
         <div>{serviceContext.numberOfVoters}</div>
         <input
-          type="text"
           placeholder="comment here"
           value={serviceContext.commit}
           onChange={commit}
         ></input>
         <br></br>
+        {a}
         <button onClick={commitFun}>add Comment</button>
+        {allComments}
       </div>
     </>
   );

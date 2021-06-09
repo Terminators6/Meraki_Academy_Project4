@@ -14,7 +14,7 @@ const LoginProvider = (props) => {
   const [massage, setMassage] = useState("");
   const [token, setToken] = useState("");
   const [userId, setUserId] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   const state = {
     massage,
@@ -53,7 +53,7 @@ const LoginProvider = (props) => {
   }
 
   function logout() {
-    setLoggedIn(true);
+    setLoggedIn(false);
     localStorage.clear();
   }
   return (

@@ -74,14 +74,13 @@ export const Programing = ({ id }) => {
         <h1>{serviceContext.title}</h1>
         <p>Type:{serviceContext.type}</p>
         <p>{serviceContext.description}</p>
-
         <input type="button" onClick={rateFun} value="5"></input>
         <input type="button" onClick={rateFun} value="4"></input>
         <input type="button" onClick={rateFun} value="3"></input>
         <input type="button" onClick={rateFun} value="2"></input>
         <input type="button" onClick={rateFun} value="1"></input>
         <div>{`${Math.round(serviceContext.rate) / 2}`}/5</div>
-        <div>{serviceContext.numberOfVoters}</div>
+        <div>{` Number of voters : ${serviceContext.numberOfVoters}`}</div>
         <input
           placeholder="comment here"
           value={serviceContext.commit}

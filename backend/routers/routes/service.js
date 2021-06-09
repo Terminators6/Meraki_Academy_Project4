@@ -10,7 +10,7 @@ const {
 
 const serviceRouter = express.Router();
 
-serviceRouter.get("/", getAllservice);
+serviceRouter.get("/allServices", getAllservice);
 serviceRouter.post("/newService", createNewService);
 serviceRouter.put("/business/:id/update", updateAnServiceById);
 serviceRouter.delete("/business/:id/delete", deleteServiceById);

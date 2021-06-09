@@ -1,6 +1,7 @@
 const servicemoudule = require("./../../db/models/supService");
 
 const getAllservice = (req, res) => {
+  console.log("get all services");
   servicemoudule
     .find({})
     .then((result) => {

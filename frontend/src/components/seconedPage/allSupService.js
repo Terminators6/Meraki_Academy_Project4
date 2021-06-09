@@ -2,14 +2,14 @@ import React, { useContext, useEffect } from 'react';
 import {AllSupServiceContext} from '../../contexts/secondaPage/AllSupService';
 
 const AllSupService = () => {
-	const AllSupServiceContext = useContext(AllSupServiceContext);
+	const allSupServiceContext = useContext(AllSupServiceContext);
     
 	
 
 	const handleClick = () => {
-		AllSupServiceContext.getAllSupService();
+		allSupServiceContext.getAllSupService();
 		
-        AllSupServiceContext.setShow(!AllSupServiceContext.show);
+        allSupServiceContext.setShow(!allSupServiceContext.show);
 	};
 
 
@@ -18,9 +18,11 @@ const AllSupService = () => {
 
 	return (
 		<>
+		
 			<br />
+			<h1>allServices</h1>
 			<button onClick={handleClick}>Get All supService</button>
-			
+			{/* <img src="" onclik={} /> */}
 		</>
 	);
 };

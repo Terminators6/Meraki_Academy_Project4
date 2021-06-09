@@ -13,18 +13,19 @@ import { Main } from "./components/main/index";
 import { Register } from "./components/auth/signUp";
 import { Programing } from "./components/servicePage/programing";
 import Login from "./components/auth/login/index";
+
 import favorite from "./components/favorite/favorite";
 
 import { Video } from "./components/video/video";
 
 import { Profile } from "./components/profile/index";
+import { Logout } from "./components/logout";
 
 import "./App.css";
 
 const App = () => {
   return (
     <div className="App">
-      App component
       <Navigation />
       <Switch>
         <Route exact path="/register" component={Register} />
@@ -46,6 +47,11 @@ const App = () => {
 
         <Route path="/profile" component={Profile} />
         <Route path="/programing/:userId" component={Programing} />
+
+
+        <Route path="/logout" component={Logout} />
+=======
+
 
 
         <Header />

@@ -1,24 +1,32 @@
+import React, { useContext, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import "./navigation.css";
 
-import React, { useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import './navigation.css'
-
+import { LoginContext } from "./../../contexts/login";
 
 export const Navigation = () => {
-	return (
-		<div className="Nav">
-			Navigation component
-			<Link to="/Register"> Register </Link>
-			<Link to="/Login"> Login </Link>
-			<Link to="/Favorite"> Favorite </Link>
 
-			<Link to="/AllSupService"> AllSupService </Link>
+  const [state, setState] = useState("");
+  const loginContext = useContext(LoginContext);
 
-			<Link to="/Profile"> Profile </Link>
 
-		</div>
-	)
 
+  return (
+    <div>
+      {localStorage.getItem("token") ? (
+        <div className="Nav">
+          <Link to="/"> Terminators </Link>
+          <Link to="/Favorite"> Favorite </Link>
+          <Link to="/Profile"> Profile </Link>
+          <Link to="/logout"> Loge Out </Link>
+        </div>
+      ) : (
+        <div className="Nav">
+          <Link to="/"> Terminators </Link>
+          <Link to="/Register"> Register </Link>
+          <Link to="/Login"> Login </Link>
+        </div>
+      )}
+    </div>
+  );
 };
-
-

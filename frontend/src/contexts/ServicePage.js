@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, Route, useParams, useHistory } from "react-router-dom";
+
 import axios from "axios";
 import { decode } from "jsonwebtoken";
 import jwt from "jsonwebtoken";
@@ -13,13 +14,13 @@ const ServiceProvider = (props) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [type, setType] = useState("");
+  const [reload, setReload] = useState("");
   const [rating, setRating] = useState(0);
   const [numberOfVoters, setNumberOfVoters] = useState(0);
   const [image, setImage] = useState("");
   const [token, setToken] = useState(false);
   const [first, setFirst] = useState("");
   const [commit, setCommit] = useState("");
-  const [reload, setReload] = useState();
 
   const state = {
     token,
@@ -37,9 +38,8 @@ const ServiceProvider = (props) => {
     setCommit,
     commit,
     getToken,
-    setReload,
-    reload,
     first,
+    reload,
   };
 
   function getToken(token) {
@@ -56,6 +56,7 @@ const ServiceProvider = (props) => {
       const service = await axios.post(
         `http://localhost:5000/programming/${params}`
       );
+      setReload(service.data);
       setName(service.data.name);
       setTitle(service.data.title);
       setDescription(service.data.description);
@@ -64,7 +65,6 @@ const ServiceProvider = (props) => {
       setNumberOfVoters(service.data.numberOfVoters);
       setImage(service.data.image);
       setRate(service.data.rating / service.data.numberOfVoters);
-      await setFirst(service.data.comments);
     } catch (error) {}
   }
 

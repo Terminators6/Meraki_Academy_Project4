@@ -8,7 +8,7 @@ const supService = new mongoose.Schema({
   rating: { type: Number },
   numberOfVoters: { type: Number },
   image: { type: String },
-  comments: { type: mongoose.Schema.Types.ObjectId, ref: "Comment" },
+  comments: { type: Array },
 });
 
 module.exports = mongoose.model("SupService", supService);

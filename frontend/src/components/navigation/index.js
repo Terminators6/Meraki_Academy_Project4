@@ -11,6 +11,7 @@ export const Navigation = () => {
 			<Link to="/Register"> Register </Link>
 			<Link to="/Login"> Login </Link>
 			<Link to="/Favorite"> Favorite </Link>
+			<Link to="/AllSupService"> AllSupService </Link>
 		</div>
 	)
 

@@ -27,17 +27,17 @@ const App = () => {
         <Route path="/login" component={Login} />
         <Route path="/favorite" component={favorite} />
           	
-	<Route path="/allServices" component={AllSupService} />
+	<Route exact path="/AllSupService" component={AllSupService} />
 
-	<Route path="/sup/business" component={BusinessSupService} />
+	<Route path="/business" component={BusinessSupService} />
 
-	<Route path="/sup/courses" component={CoursesSupService} />
+	<Route path="/courses" component={CoursesSupService} />
 
-	<Route path="/sup/finance" component={FinanceSupService} />
+	<Route path="/finance" component={FinanceSupService} />
 
-	<Route path="/sup/marketing" component={MarketingSupService} />
+	<Route path="/marketing" component={MarketingSupService} />
 
-	<Route path="/sup/programming" component={ProgrammingSupService} />
+	<Route path="/programming" component={ProgrammingSupService} />
         <Header />
         <Main />
         <Footer />

@@ -7,13 +7,16 @@ import App from "./App";
 import LoginProvider, { LoginContext } from "./contexts/login";
 import FavoriteProvider, { FavoriteContext } from "./contexts/favorite";
 import RegisterProvider from "./contexts/signUp";
-
+import AllSupServiceProvider from"./contexts/secondaPage/AllSupService"
+  
 ReactDOM.render(
   <Router>
     <FavoriteProvider>
       <RegisterProvider>
         <LoginProvider>
+          <AllSupServiceProvider>
           <App />
+          </AllSupServiceProvider>
         </LoginProvider>
       </RegisterProvider>
     </FavoriteProvider>

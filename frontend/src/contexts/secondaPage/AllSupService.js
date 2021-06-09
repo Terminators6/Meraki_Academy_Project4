@@ -15,6 +15,7 @@ const AllSupServiceProvider = (props) => {
 
 	const state = {
         show,
+		setShow,
 		service,
 		setImg,
 		setTitle,
@@ -29,10 +30,16 @@ const AllSupServiceProvider = (props) => {
 		try {
 			const res = await axios.get('http://localhost:5000/allServices');
 			setService(res.data);
+			console.log(service);
+
+
 		} catch (error) {
 			console.log(error);
+
 		}
 	}
+    
+	
 
 	
 

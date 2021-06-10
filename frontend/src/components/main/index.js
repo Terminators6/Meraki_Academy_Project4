@@ -1,6 +1,6 @@
 import React from "react";
-import './main.css';
 import { useHistory } from "react-router-dom";
+import './main.css';
 
 export const Main = () => {
   const history = useHistory();
@@ -37,11 +37,8 @@ export const Main = () => {
 
   return (
     <>
-      <div className="main">
-        <div></div>
         <div className="allDiv">{imageAll}</div>
         <div></div>
-      </div>
     </>
   );
 };

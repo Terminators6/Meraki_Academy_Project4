@@ -1,5 +1,4 @@
-body {
-}
+
 
 .Register {
   position: absolute;
@@ -27,7 +26,7 @@ input[type="password"] {
   width: 50%;
 }
 
-button {
+.button4 {
   width: 30%;
   background-color: #3c6efd;
   text-align: center;

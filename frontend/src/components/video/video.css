@@ -8,8 +8,8 @@
     position: absolute;
     object-fit: cover;
     left: 0;
-    top: 7.5%;
+    top: 4em;
     width: 100%;
-    height: 500px;
+    height: 570px;
     z-index:-1;
 }

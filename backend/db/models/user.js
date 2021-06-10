@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   image: { type: String },
   role: { type: mongoose.Schema.Types.ObjectId, ref: "Role" },
-  favorite: [{ type: mongoose.Schema.Types.ObjectId, ref: "SupService" }],
+  favorite: { type: Array },
 });
 //hash the password
 userSchema.pre("save", async function () {

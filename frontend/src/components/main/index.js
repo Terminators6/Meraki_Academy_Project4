@@ -1,21 +1,18 @@
 import React from "react";
 import "./main.css";
-// import "./../../contexts/main";
 import { useHistory } from "react-router-dom";
 
 export const Main = () => {
   const history = useHistory();
+
   const image = [
-
     { url: "https://rb.gy/woeg7k", path: "/business" },
-    { url: "https://rb.gy/vebaim", path: "/courses" },
+    { url: "https://rb.gy/vebaim", path: "/programming" },
     { url: "https://rb.gy/rrlv5u", path: "/finance" },
-    { url: "https://rb.gy/cgtybc", path: "/marketing" },
-    { url: "https://rb.gy/vouswy", path: "/programming" },
+    { url: "https://rb.gy/cgtybc", path: "/courses" },
+    { url: "https://rb.gy/vouswy", path: "/marketing" },
     { url: "https://rb.gy/yec2im", path: "/allServices" },
-
   ];
-
   const nameImage = [
     "Business",
     "Programming",

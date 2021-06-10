@@ -7,6 +7,7 @@ import jwt from "jsonwebtoken";
 export const Programing = ({ id }) => {
   const serviceContext = useContext(ServiceContext);
   const userId = useParams().userId;
+  const [stat1, setStat1] = useState(0);
 
   async function rateFun(e) {
     serviceContext.add();
@@ -48,6 +49,7 @@ export const Programing = ({ id }) => {
   }
 
   async function commitFun() {
+    setStat1(stat1 + 1);
     let token = localStorage.getItem("token");
     let token1 = jwt.decode(token);
     await axios.post(`http://localhost:5000/subService/${userId}/comment`, {
@@ -67,9 +69,23 @@ export const Programing = ({ id }) => {
     getCommints();
   }, []);
 
+  useEffect(() => {
+    getCommints();
+  }, [stat1]);
+
+  // async function fav() {
+  //   let token = localStorage.getItem("token");
+  //   let token1 = jwt.decode(token);
+  //   console.log(token1);
+  //   await axios.post(`http://localhost:5000/favorite`, {
+  //     userId: token1.userId, //userId
+  //     serviceId: userId, //serviceid
+  //   });
+  // }
+
   return (
     <>
-      <div className="Programing">
+      <div className="programming">
         <img src={serviceContext.image}></img>
         <h1>{serviceContext.title}</h1>
         <p>Type:{serviceContext.type}</p>
@@ -80,7 +96,7 @@ export const Programing = ({ id }) => {
         <input type="button" onClick={rateFun} value="2"></input>
         <input type="button" onClick={rateFun} value="1"></input>
         <div>{`${Math.round(serviceContext.rate) / 2}`}/5</div>
-        <div>{` Number of voters : ${serviceContext.numberOfVoters}`}</div>
+        Number of voters <div>{serviceContext.numberOfVoters}</div>
         <input
           placeholder="comment here"
           value={serviceContext.commit}
@@ -89,6 +105,7 @@ export const Programing = ({ id }) => {
         <br></br>
         {a}
         <button onClick={commitFun}>add Comment</button>
+        {/* <button onClick={fav}>add favorite</button> */}
         {allComments}
       </div>
     </>

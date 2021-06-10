@@ -2,7 +2,7 @@ const supServiceModel = require("./../../db/models/supService");
 
 const getBusiness = (req, res) => {
   supServiceModel
-    .find({ type: "business" }, "image title rating")
+    .find({ type: "business" })
     .then((result) => {
       res.status(200);
       res.json(result);
@@ -15,7 +15,7 @@ const getBusiness = (req, res) => {
 
 const getProgramming = (req, res) => {
   supServiceModel
-    .find({ type: "programming" }, "image title rating")
+    .find({ type: "programming" })
     .then((result) => {
       res.status(200);
       res.json(result);
@@ -28,7 +28,7 @@ const getProgramming = (req, res) => {
 
 const getFinance = (req, res) => {
   supServiceModel
-    .find({ type: "finance" }, "image title rating")
+    .find({ type: "finance" })
     .then((result) => {
       res.status(200);
       res.json(result);
@@ -41,7 +41,7 @@ const getFinance = (req, res) => {
 
 const getCourses = (req, res) => {
   supServiceModel
-    .find({ type: "courses" }, "image title rating")
+    .find({ type: "courses" })
     .then((result) => {
       res.status(200);
       res.json(result);
@@ -54,7 +54,7 @@ const getCourses = (req, res) => {
 
 const getMarketing = (req, res) => {
   supServiceModel
-    .find({ type: "marketing" }, "image title rating")
+    .find({ type: "marketing" })
     .then((result) => {
       res.status(200);
       res.json(result);

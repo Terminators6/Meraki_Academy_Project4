@@ -72,7 +72,7 @@ export const Profile = () => {
 
 
                 <div className="card">
-                    <img src="https://cutt.ly/qnUMxQg"></img>
+                    <img src="https://cutt.ly/qnUMxQg" className="img1"></img>
                     <div  className="allInformatiom"> 
                     <div className="container">
                         <label className="label2">First Name</label>
@@ -95,7 +95,7 @@ export const Profile = () => {
                         {/* <input type="text" value={profileContext.user.country} readOnly/> */}
                     </div>
                     <div className="container">
-                        <label className="label2">Email :</label>
+                        <label className="label2">Email </label>
                         <label className="label2">{profileContext.user.email}</label>
                         {/* <input type="text" value={profileContext.user.email} readOnly/> */}
                     </div>

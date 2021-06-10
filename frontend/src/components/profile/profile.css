@@ -120,7 +120,7 @@ input[type="password"] {
 
 
 
-img {
+.img1 {
   
   width: 200px;
   height: 200px;
@@ -165,7 +165,7 @@ img {
 }
 
 .styleInput{
-  width: 300px;
+  width: 200px;
   height: 40px;
   margin: 8px;
 }

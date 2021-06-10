@@ -4,6 +4,7 @@ require("dotenv").config();
 const db = require("./db/db");
 const app = express();
 const ser = require("./db/models/supService");
+const User = require("./db/models/user");
 //routers
 
 const profileRouter = require("./routers/routes/profile");
@@ -30,7 +31,7 @@ app.use(loginRouter);
 app.use(favoriteRouter);
 app.use(serviceRouter);
 app.use(servicesRouter);
-
+///////////////////////////////////////////////////////////////////////////////////////
 app.put("/ratting", (req, res) => {
   const { id, numberOfVoters, rating } = req.body;
   ser
@@ -39,6 +40,18 @@ app.put("/ratting", (req, res) => {
       console.log(result);
     });
 });
+
+// app.post("/favorite", async (req, res) => {
+//   const { userId, serviceId } = req.body;
+//   const a = await User.findOne({ _id: userId }, "favorite");
+//   console.log("userId", userId);
+//   console.log("fav", a.favorite);
+//   let c = a.favorite;
+//   console.log("c", c);
+//   let d = c.map(async (ele, i) => {
+
+//   });
+// });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

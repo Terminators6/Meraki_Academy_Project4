@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AllSupService from "./components/seconedPage/allSupService";
 import BusinessSupService from "./components/seconedPage/BusinessSupService";
 import CoursesSupService from "./components/seconedPage/coursesSupService";
@@ -24,6 +24,8 @@ import { Logout } from "./components/logout";
 import "./App.css";
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(true);
+
   return (
     <div className="App">
       <Navigation />
@@ -42,10 +44,8 @@ const App = () => {
         <Route path="/business/:userId" component={Programing} />
         <Route path="/finance/:userId" component={Programing} />
         <Route path="/courses/:userId" component={Programing} />
-
         <Route path="/logout" component={Logout} />
         <Route exact path="/:type" component={BusinessSupService} />
-
         <Header />
         <Main />
         <Footer />

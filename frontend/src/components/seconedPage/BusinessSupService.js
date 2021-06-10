@@ -17,21 +17,24 @@ const BusinessSupService = ({ id }) => {
 
   return (
     <>
-      <div className="allServices">
+      <div className="other">
         {allSupServiceContext.service &&
           allSupServiceContext.service.map((ele) => {
             return (
-              <div>
-                <img
-                  onClick={(e) => {
-                    history.push(`${ele.type}/${ele._id}`);
-                  }}
-                  src={ele.image}
-                ></img>
-                <p>{` Title :     ${ele.title}`}</p>
-                <p>{`Rating:    ${Math.round(
-                  ele.rating / ele.numberOfVoters
-                )}`}</p>
+              <div className="All1">
+                <div className="IMG">
+                  <img
+                    className="All1Image"
+                    onClick={(e) => {
+                      history.push(`${ele.type}/${ele._id}`);
+                    }}
+                    src={ele.image}
+                  ></img>
+                </div>
+                <div className="Des">
+                  <h2 className="color9">{`   ${ele.title}`}</h2>
+                  <h2 id="type">{`Rating:    ${Math.round(ele.rating / ele.numberOfVoters) / 2}`}</h2>
+                </div>
               </div>
             );
           })}

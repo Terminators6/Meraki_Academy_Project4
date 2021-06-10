@@ -1,12 +1,6 @@
 const express = require("express");
 //controllers
-const {
-  getBusiness,
-  getProgramming,
-  getFinance,
-  getCourses,
-  getMarketing,
-} = require("./../controllers/secund");
+const { getBusiness, getProgramming, getFinance, getCourses, getMarketing } = require("./../controllers/secund");
 
 const supRouter = express.Router();
 

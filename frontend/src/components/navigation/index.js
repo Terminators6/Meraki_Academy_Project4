@@ -20,7 +20,7 @@ export const Navigation = () => {
           <Link to="/"> <img  className="NavIm" src="https://rb.gy/xkgfkm" /> </Link>
           <Link to="/Favorite"> Favorite </Link>
           <Link to="/Profile"> Profile </Link>
-          <Link to="/logout"> Loge Out </Link>
+          <Link to="/logout"> Log Out </Link>
         </div>
       ) : (
         <div className="Nav">

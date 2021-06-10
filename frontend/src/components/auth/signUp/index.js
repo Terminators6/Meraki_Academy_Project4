@@ -21,7 +21,7 @@ export const Register = () => {
                 <input type="text" placeholder="Country here" onChange={(e) => registerContext.setCountry(e.target.value)} />
                 <input type="text" placeholder="Email here" onChange={(e) => registerContext.setEmail(e.target.value)} />
                 <input type="password" placeholder="Password here" onChange={(e) => registerContext.setPassword(e.target.value)} />
-                <button>SignUp</button>
+                <button className="button4">SignUp</button>
                 {registerContext.message && <div> {registerContext.message} </div>}
             </form>
         </>

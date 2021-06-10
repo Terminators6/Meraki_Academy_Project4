@@ -1,14 +1,10 @@
-.main {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-}
-
 .allDiv {
   display: grid;
   width: 50%;
   grid-template-columns: auto auto auto;
   grid-gap: 30px;
   margin-bottom: 2em;
+  margin-left: 300px;
   /* justify-items: center; */
   
 }
@@ -20,7 +16,7 @@
 .sizeImage {
   display: block;
   width: 240px;
-  height: 200px;
+  height: 170px;
 }
 
 .overlay {

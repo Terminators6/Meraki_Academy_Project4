@@ -45,7 +45,7 @@ const LoginProvider = (props) => {
       saveToken(res.data);
       setLoggedIn(true);
       setTimeout(function () {
-        history.push("/home");
+        history.push("/");
       }, 2000);
     } catch (error) {
       setMassage(error.response.data);

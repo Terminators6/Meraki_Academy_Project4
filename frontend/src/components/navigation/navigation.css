@@ -1,13 +1,25 @@
 .Nav {
+  margin-bottom: 5px;
+  padding: 5px;
+  display: flex;
+  gap: 16px;
+  background-color: white;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
 
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 5px;
-    display: flex;
-    gap: 16px;
+[data-theme="dark"] {
+  --bg-color: #3f3f3f;
+  --text-color: #fff;
 }
 
 .NavIm {
-    width:70px;
-    height:40px;
+  width: 70px;
+  height: 40px;
 }

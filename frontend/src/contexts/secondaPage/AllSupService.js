@@ -37,18 +37,13 @@ const AllSupServiceProvider = (props) => {
     console.log("typ", typeService);
     try {
       const res = await axios.get(`http://localhost:5000/sup/${typeService}`);
-      console.log("all", res.data);
       setService(res.data);
     } catch (error) {
       console.log(error);
     }
   }
 
-  return (
-    <AllSupServiceContext.Provider value={state}>
-      {props.children}
-    </AllSupServiceContext.Provider>
-  );
+  return <AllSupServiceContext.Provider value={state}>{props.children}</AllSupServiceContext.Provider>;
 };
 
 export default AllSupServiceProvider;

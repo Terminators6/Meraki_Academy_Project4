@@ -13,21 +13,14 @@ export const Main = () => {
     { url: "https://rb.gy/vouswy", path: "/marketing" },
     { url: "https://rb.gy/yec2im", path: "/allServices" },
   ];
-  const nameImage = [
-    "Business",
-    "Programming",
-    "Finance",
-    "Courses",
-    "Marketing",
-    "All services",
-  ];
+  const nameImage = ["Business", "Programming", "Finance", "Courses", "Marketing", "All services"];
   const newImage = image.map((srcImage, i) => {
     return <img key={i} src={srcImage.url} className="sizeImage" />;
   });
 
   const imageAll = newImage.map((imagei, i) => {
     return (
-      <button
+      <div
         onClick={(e) => {
           history.push(image[i].path);
         }}
@@ -38,7 +31,7 @@ export const Main = () => {
             <div className="text"> {nameImage[i]} </div>
           </div>
         </div>
-      </button>
+      </div>
     );
   });
 

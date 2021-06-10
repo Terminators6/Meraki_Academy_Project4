@@ -13,14 +13,7 @@ export const Main = () => {
     { url: "https://rb.gy/vouswy", path: "/marketing" },
     { url: "https://rb.gy/isbbpw", path: "/allServices" },
   ];
-  const nameImage = [
-    "Business",
-    "Programming",
-    "Finance",
-    "Courses",
-    "Marketing",
-    "All services",
-  ];
+  const nameImage = ["Business", "Programming", "Finance", "Courses", "Marketing", "All services"];
   const newImage = image.map((srcImage, i) => {
     return <img key={i} src={srcImage.url} className="sizeImage" />;
   });

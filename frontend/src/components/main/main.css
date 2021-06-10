@@ -10,17 +10,21 @@
   grid-gap: 30px;
   margin-bottom: 2em;
   /* justify-items: center; */
-  
 }
 
-.Div{
+.Div {
   position: relative;
 }
 
 .sizeImage {
   display: block;
   width: 240px;
+
+  
+  cursor: pointer;
+
   height: 200px;
+
 }
 
 .overlay {
@@ -28,20 +32,31 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   width: 240px;
   height: 0;
-  transition: .5s;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .Div:hover .overlay {
   height: 100%;
 }
 
-.text{
+.text {
   color: #ffffff;
   margin-top: 25%;
   text-align: center;
   font-size: 30px;
+
 }
+
+button {
+  width: 0%;
+  height: 0%;
+  background-color: white;
+  border: white;
+}
+=======
+

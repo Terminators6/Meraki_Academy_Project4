@@ -29,9 +29,7 @@ const BusinessSupService = ({ id }) => {
                   src={ele.image}
                 ></img>
                 <p>{` Title :     ${ele.title}`}</p>
-                <p>{`Rating:    ${Math.round(
-                  ele.rating / ele.numberOfVoters
-                )}`}</p>
+                <p>{`Rating:    ${Math.round(ele.rating / ele.numberOfVoters)}`}</p>
               </div>
             );
           })}

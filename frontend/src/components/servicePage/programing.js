@@ -85,7 +85,7 @@ export const Programing = ({ id }) => {
 
   return (
     <>
-      <div className="Programing">
+      <div className="programming">
         <img src={serviceContext.image}></img>
         <h1>{serviceContext.title}</h1>
         <p>Type:{serviceContext.type}</p>

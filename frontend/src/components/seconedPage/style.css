@@ -14,7 +14,7 @@ body {
   align-items: center;
   cursor: pointer;
   height: 395px;
-  box-shadow: 2px 2px 40px black;
+  box-shadow: 2px 2px 20px black;
   border-radius: 10px;
   overflow: hidden;
   margin: 20px;
@@ -24,13 +24,16 @@ body {
   margin-top: 43px;
 }
 
+.IMG {
+  height: 300px;
+}
 .All1:hover {
   transform: translateY(15px);
   transition: all ease 0.7s;
 }
 .All1Image {
   height: 300px;
-  width: 100%;
+  width: 192%;
   object-fit: cover;
 }
 

@@ -17,18 +17,17 @@ const AllSupService = () => {
         allSupServiceContext.service.map((ele) => {
           return (
             <div className="All1">
-              <img
-                className="All1Image"
-                onClick={(e) => {
-                  history.push(`${ele.type}/${ele._id}`);
-                }}
-                src={ele.image}
-              ></img>
-
+              <div className="IMG">
+                <img
+                  className="All1Image"
+                  onClick={(e) => {
+                    history.push(`${ele.type}/${ele._id}`);
+                  }}
+                  src={ele.image}
+                ></img>
+              </div>
               <div className="Des">
-                <h2 className="color9" id="Avatarr">
-                  {ele.title}
-                </h2>
+                <h2 className="color9">{ele.title}</h2>
                 <h2 id="type">{Math.round(ele.rating / ele.numberOfVoters)}</h2>
               </div>
             </div>

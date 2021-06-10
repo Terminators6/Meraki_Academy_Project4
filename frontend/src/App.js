@@ -31,15 +31,21 @@ const App = () => {
         <Route exact path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/favorite" component={favorite} />
-        <Route exact path="/AllSupService" component={AllSupService} />
-        <Route path="/business" component={BusinessSupService} />
-        <Route path="/courses" component={CoursesSupService} />
+        <Route exact path="/allServices" component={AllSupService} />
+        {/* <Route exact path="/business" component={BusinessSupService} /> */}
+        {/* <Route path="/courses" component={CoursesSupService} />
         <Route path="/finance" component={FinanceSupService} />
         <Route path="/marketing" component={MarketingSupService} />
-        <Route path="/programming" component={ProgrammingSupService} />
+        <Route path="/programming" component={ProgrammingSupService} /> */}
         <Route path="/profile" component={Profile} />
-        <Route path="/programing/:userId" component={Programing} />
+        <Route path="/programming/:userId" component={Programing} />
+        <Route path="/business/:userId" component={Programing} />
+        <Route path="/finance/:userId" component={Programing} />
+        <Route path="/courses/:userId" component={Programing} />
+
         <Route path="/logout" component={Logout} />
+        <Route exact path="/:type" component={BusinessSupService} />
+
         <Header />
         <Main />
         <Footer />

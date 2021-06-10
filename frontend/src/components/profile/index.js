@@ -27,64 +27,81 @@ export const Profile = () => {
 
     return (
 
-        <div>
+        <div className="main">
             {!edit ?
+
+
                 <form className="Profile" onSubmit={handelSubmit}>
-                    <div>
-                        <label>First Name</label>
-                        <input type="text" defaultValue={profileContext.firstName} onChange={(e) => profileContext.setFirstName(e.target.value)} />
+                    <div><h1>{profileContext.firstName} {profileContext.lastName} Profile</h1></div>
+                    <hr></hr>
+                    <div className="EditProfile">
+                
+                            <label>First Name</label>
+                            <input type="text" defaultValue={profileContext.firstName} onChange={(e) => profileContext.setFirstName(e.target.value)} />
+                    
+                
+                            <label>Last Name</label>
+                            <input type="text" defaultValue={profileContext.lastName} onChange={(e) => profileContext.setLastName(e.target.value)} />
+                
+                
+                            <label>Age</label>
+                            <input type="Number" defaultValue={profileContext.age} onChange={(e) => profileContext.setAge(e.target.value)} />
+                    
+                
+                            <label>Country</label>
+                            <input type="text" defaultValue={profileContext.country} onChange={(e) => profileContext.setCountry(e.target.value)} />
+                    
+                
+                            <label>Email</label>
+                            <input type="text" defaultValue={profileContext.email} readOnly />
+                    
                     </div>
-                    <div>
-                        <label>Last Name</label>
-                        <input type="text" defaultValue={profileContext.lastName} onChange={(e) => profileContext.setLastName(e.target.value)} />
-                    </div>
-                    <div>
-                        <label>Age</label>
-                        <input type="Number" defaultValue={profileContext.age} onChange={(e) => profileContext.setAge(e.target.value)} />
-                    </div>
-                    <div>
-                        <label>Country</label>
-                        <input type="text" defaultValue={profileContext.country} onChange={(e) => profileContext.setCountry(e.target.value)} />
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input type="text" defaultValue={profileContext.email} readOnly />
-                    </div>
-                    <div><button>Save Changes</button> </div>
+                    <button className="button save">Save</button>
                     {/* {registerContext.message && <div> {registerContext.message} </div>} */}
-                    <div><button onClick={()=>{setEdit(!edit)}}>Cancel</button> </div>
-                    <div><button onClick={()=>{profileContext.deleteUserProfile();history.push('/')}}>Delete Account</button> </div>
+                    <button className="button cancel" onClick={() => { setEdit(!edit) }}>Cancel</button>
+                    <button className="button delete" onClick={() => { profileContext.deleteUserProfile(); history.push('/') }}>Delete</button>
+                    <div></div>
                 </form>
-                
 
 
 
 
-                : 
-                
-                
 
-                <div><div>
-                    <label>First Name</label>
-                    <input type="text" value={profileContext.user.firstName} readOnly />
-                </div>
-                    <div>
+                :
+
+
+
+                <div className="card">
+                    <img src="https://cutt.ly/qnUMxQg"></img>
+                    <div className="container">
+                        <label>First Name</label>
+                        <label > {profileContext.user.firstName} </label>
+                        {/* <input type="text" value={profileContext.user.firstName} readOnly /> */}
+                    </div>
+                    <div className="container">
                         <label>Last Name</label>
-                        <input type="text" value={profileContext.user.lastName} readOnly />
+                        <label>{profileContext.user.lastName}</label>
+                        {/* <input type="text" value={profileContext.user.lastName} readOnly /> */}
                     </div>
-                    <div>
+                    <div className="container">
                         <label>Age</label>
-                        <input type="Number" value={profileContext.user.age} readOnly/>
+                        <label>{profileContext.user.age}</label>
+                        {/* <input type="Number" value={profileContext.user.age} readOnly/> */}
                     </div>
-                    <div>
+                    <div className="container">
                         <label>Country</label>
-                        <input type="text" value={profileContext.user.country} readOnly/>
+                        <label>{profileContext.user.country}</label>
+                        {/* <input type="text" value={profileContext.user.country} readOnly/> */}
                     </div>
-                    <div>
+                    <div className="container">
                         <label>Email</label>
-                        <input type="text" value={profileContext.user.email} readOnly/>
-                        <div><button onClick={()=>{setEdit(!edit)}}>Edit Profile</button> </div>
-                    </div></div>
+                        <label>{profileContext.user.email}</label>
+                        {/* <input type="text" value={profileContext.user.email} readOnly/> */}
+                    </div>
+                    <div className="container">
+                        <button onClick={() => { setEdit(!edit) }}>Edit Profile</button>
+                    </div>
+                </div>
             }
         </div>
     )

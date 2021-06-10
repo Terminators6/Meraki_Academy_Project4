@@ -13,17 +13,20 @@ export const Navigation = () => {
   return (
     <div>
       {localStorage.getItem("token") ? (
-        <div className="Nav">
-          <img className="NavIm" src="https://rb.gy/xkgfkm" />
-          <Link to="/"> Terminators </Link>
+
+        <div className="Nav">  
+          <Link to="/"> <img  className="NavIm" src="https://rb.gy/xkgfkm" /> </Link>
+
           <Link to="/Favorite"> Favorite </Link>
           <Link to="/Profile"> Profile </Link>
           <Link to="/logout"> Loge Out </Link>
         </div>
       ) : (
         <div className="Nav">
-          <img className="NavIm" src="https://rb.gy/xkgfkm" />
-          <Link to="/"> Terminators </Link>
+
+   
+          <Link to="/"> <img  className="NavIm" src="https://rb.gy/xkgfkm" /> </Link>
+
           <Link to="/Register"> Register </Link>
           <Link to="/Login"> Login </Link>
         </div>

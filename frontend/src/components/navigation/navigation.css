@@ -1,22 +1,19 @@
-.Nav {
-  margin-bottom: 5px;
-  padding: 5px;
-  display: flex;
-  gap: 16px;
-  background-color: white;
-  font-family: sans-serif;
-  text-align: center;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-:root {
-  --bg-color: #fff;
-  --text-color: #000;
-}
 
-[data-theme="dark"] {
-  --bg-color: #3f3f3f;
-  --text-color: #fff;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+.Nav {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* margin-left: ; */
+    padding: 5px;
+    display: flex;
+    gap: 30px;
+
 }
 
 .NavIm {

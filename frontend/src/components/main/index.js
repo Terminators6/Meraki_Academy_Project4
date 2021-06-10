@@ -1,5 +1,5 @@
 import React from "react";
-import "./main.css";
+import './main.css';
 import { useHistory } from "react-router-dom";
 
 export const Main = () => {
@@ -11,7 +11,7 @@ export const Main = () => {
     { url: "https://rb.gy/rrlv5u", path: "/finance" },
     { url: "https://rb.gy/cgtybc", path: "/courses" },
     { url: "https://rb.gy/vouswy", path: "/marketing" },
-    { url: "https://rb.gy/yec2im", path: "/allServices" },
+    { url: "https://rb.gy/isbbpw", path: "/allServices" },
   ];
   const nameImage = ["Business", "Programming", "Finance", "Courses", "Marketing", "All services"];
   const newImage = image.map((srcImage, i) => {

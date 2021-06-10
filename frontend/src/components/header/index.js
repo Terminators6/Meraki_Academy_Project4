@@ -7,6 +7,7 @@ import './header.css';
 export const Header = () => {
 	return (
 	<div className="Header">
+		
 		<Video />
 		<p className="sizaText">
 		Hire the best <br/> freelancers for any job,<br/>  online.

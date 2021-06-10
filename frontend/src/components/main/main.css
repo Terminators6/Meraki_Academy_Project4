@@ -20,7 +20,7 @@
 .sizeImage {
   display: block;
   width: 240px;
-  height: 100%;
+  height: 200px;
 }
 
 .overlay {
@@ -44,11 +44,4 @@
   margin-top: 25%;
   text-align: center;
   font-size: 30px;
-}
-
-button{
-  width: 0%;
-  height: 0%;
-  background-color: white;
-  border: white;
 }

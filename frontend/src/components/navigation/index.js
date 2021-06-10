@@ -2,6 +2,11 @@ import React, { useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./navigation.css";
 
+
+
+
+
+
 import { LoginContext } from "./../../contexts/login";
 
 export const Navigation = () => {
@@ -12,6 +17,7 @@ export const Navigation = () => {
     <div>
       {localStorage.getItem("token") ? (
         <div className="Nav">
+          <img  className="NavIm" src="https://rb.gy/xkgfkm" />
           <Link to="/"> Terminators </Link>
           <Link to="/Favorite"> Favorite </Link>
           <Link to="/Profile"> Profile </Link>
@@ -19,6 +25,7 @@ export const Navigation = () => {
         </div>
       ) : (
         <div className="Nav">
+        <img className="NavIm" src="https://rb.gy/xkgfkm" />
           <Link to="/"> Terminators </Link>
           <Link to="/Register"> Register </Link>
           <Link to="/Login"> Login </Link>

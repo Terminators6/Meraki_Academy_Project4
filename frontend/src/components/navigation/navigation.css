@@ -1,8 +1,12 @@
 .Nav {
     margin-top: 5px;
     margin-bottom: 5px;
-    border: solid red 5px;
     padding: 5px;
     display: flex;
     gap: 16px;
+}
+
+.NavIm {
+    width:70px;
+    height:40px;
 }

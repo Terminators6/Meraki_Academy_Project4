@@ -32,28 +32,28 @@ export const Profile = () => {
 
 
                 <form className="Profile" onSubmit={handelSubmit}>
-                    <div><h1>{profileContext.firstName} {profileContext.lastName} Profile</h1></div>
-                    <hr></hr>
+                    <div><h2 className="nameProfile">{profileContext.firstName} {profileContext.lastName} Profile</h2></div>
+                    <div className="hrStyle"></div>
                     <div className="EditProfile">
                 
                             <label className="label1">First Name</label>
-                            <input type="text" defaultValue={profileContext.firstName} onChange={(e) => profileContext.setFirstName(e.target.value)} />
+                            <input type="text" defaultValue={profileContext.firstName} onChange={(e) => profileContext.setFirstName(e.target.value)} className="styleInput"/>
                     
                 
                             <label className="label1">Last Name</label>
-                            <input type="text" defaultValue={profileContext.lastName} onChange={(e) => profileContext.setLastName(e.target.value)} />
+                            <input type="text" defaultValue={profileContext.lastName} onChange={(e) => profileContext.setLastName(e.target.value)} className="styleInput"/>
                 
                 
                             <label className="label1">Age</label>
-                            <input type="Number" defaultValue={profileContext.age} onChange={(e) => profileContext.setAge(e.target.value)} />
+                            <input type="Number" defaultValue={profileContext.age} onChange={(e) => profileContext.setAge(e.target.value)} className="styleInput"/>
                     
                 
                             <label className="label1">Country</label>
-                            <input type="text" defaultValue={profileContext.country} onChange={(e) => profileContext.setCountry(e.target.value)} />
+                            <input type="text" defaultValue={profileContext.country} onChange={(e) => profileContext.setCountry(e.target.value)} className="styleInput"/>
                     
                 
                             <label className="label1">Email</label>
-                            <input type="text" defaultValue={profileContext.email} readOnly />
+                            <input type="text" defaultValue={profileContext.email} readOnly className="styleInput"/>
                     
                     </div>
                     <button className="button1 save">Save</button>

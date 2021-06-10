@@ -11,7 +11,7 @@ const ProfileProvider = (props) => {
     const [user, setUser] = useState({ "Name": "T" });
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [age, setAge] = useState(0);
+    const [age, setAge] = useState('');
     const [country, setCountry] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -24,6 +24,11 @@ const ProfileProvider = (props) => {
         setUser,
         user,
         setFirstName,
+        firstName,
+        lastName,
+        age,
+        country,
+        email,
         setLastName,
         setAge,
         setCountry,
@@ -44,7 +49,7 @@ const ProfileProvider = (props) => {
         //     // throw new Error();
         // }
         // else { 
-            userId = user.userId;
+        userId = user.userId;
         // }
     }
 
@@ -53,7 +58,12 @@ const ProfileProvider = (props) => {
         try {
             validationToken();
             const res = await axios.get(`http://localhost:5000/profile/${userId}`)
-            setUser(res.data);
+            setUser(res.data)
+            setFirstName(res.data.firstName);
+            setLastName(res.data.lastName);
+            setAge(res.data.age);
+            setCountry(res.data.country);
+            setEmail(res.data.email);
             console.log('....setUser res.data', res.data)
         } catch (error) {
             console.log("error in getProfile frontend", error)
@@ -61,16 +71,16 @@ const ProfileProvider = (props) => {
     }
 
     async function updateUserProfile() {
-        const user = { firstName, lastName, age, country, email}
+        const user = { firstName, lastName, age, country, email }
         console.log("update User Profile.......");
         try {
             validationToken();
-            console.log('....Edit User profile res.data',userId )
-            await axios.put(`http://localhost:5000/profile/${userId}`,user)
-            .then( (response) =>{
-                console.log('....Edit User profile res.data',response.data )
-            })
-            
+            console.log('....Edit User profile res.data', userId)
+            await axios.put(`http://localhost:5000/profile/${userId}`, user)
+                .then((response) => {
+                    console.log('....Edit User profile ..', response)
+                })
+
         } catch (error) {
             console.log("error in editUserProfile frontend", error)
         }
@@ -78,14 +88,14 @@ const ProfileProvider = (props) => {
 
     async function deleteUserProfile() {
         console.log("delete User Profile.......");
-        // try {
-        //     validationToken();
-        //     const res = await axios.delete(`http://localhost:5000/profile/${userId}`)
-        //     setUser(res.data);
-        //     console.log('....Delete User profile res.data', res.data)
-        // } catch (error) {
-        //     console.log("error in deleteUserProfile frontend", error)
-        // }
+        try {
+            validationToken();
+            const res = await axios.delete(`http://localhost:5000/profile/${userId}`)
+            setUser(res.data);
+            console.log('....Delete User profile res.data', res.data)
+        } catch (error) {
+            console.log("error in deleteUserProfile frontend", error)
+        }
     }
 
     return (

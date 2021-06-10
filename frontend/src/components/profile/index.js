@@ -95,7 +95,7 @@ export const Profile = () => {
                         {/* <input type="text" value={profileContext.user.country} readOnly/> */}
                     </div>
                     <div className="container">
-                        <label className="label2">Email</label>
+                        <label className="label2">Email :</label>
                         <label className="label2">{profileContext.user.email}</label>
                         {/* <input type="text" value={profileContext.user.email} readOnly/> */}
                     </div>

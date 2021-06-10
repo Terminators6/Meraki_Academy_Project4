@@ -20,11 +20,9 @@
   display: block;
   width: 240px;
 
-  
   cursor: pointer;
 
   height: 200px;
-
 }
 
 .overlay {
@@ -49,7 +47,6 @@
   margin-top: 25%;
   text-align: center;
   font-size: 30px;
-
 }
 
 button {
@@ -58,5 +55,3 @@ button {
   background-color: white;
   border: white;
 }
-=======
-

@@ -1,13 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { FavoriteContext } from "./../../contexts/favorite";
 
 const Favorite = () => {
   const favoriteContext = useContext(FavoriteContext);
 
+  useEffect(() => {
+    favoriteContext.favorite();
+  }, []);
+
   return (
     <div className="favorite">
-      {/* {favoriteContext.favorite()} */}
-      Fav component
+      {favoriteContext.fav &&
+        favoriteContext.fav.map((ele, i) => {
+          return <p>{ele.name}</p>;
+        })}
     </div>
   );
 };

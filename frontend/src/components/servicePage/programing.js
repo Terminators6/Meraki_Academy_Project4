@@ -97,11 +97,7 @@ export const Programing = ({ id }) => {
         <input type="button" onClick={rateFun} value="1"></input>
         <div>{`${Math.round(serviceContext.rate) / 2}`}/5</div>
         Number of voters <div>{serviceContext.numberOfVoters}</div>
-        <input
-          placeholder="comment here"
-          value={serviceContext.commit}
-          onChange={commit}
-        ></input>
+        <input placeholder="comment here" value={serviceContext.commit} onChange={commit}></input>
         <br></br>
         {a}
         <button onClick={commitFun}>add Comment</button>

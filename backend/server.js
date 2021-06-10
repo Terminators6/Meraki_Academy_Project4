@@ -34,24 +34,29 @@ app.use(servicesRouter);
 ///////////////////////////////////////////////////////////////////////////////////////
 app.put("/ratting", (req, res) => {
   const { id, numberOfVoters, rating } = req.body;
-  ser
-    .findOneAndUpdate({ _id: id }, { numberOfVoters, rating }, { new: true })
-    .then((result) => {
-      console.log(result);
-    });
+  ser.findOneAndUpdate({ _id: id }, { numberOfVoters, rating }, { new: true }).then((result) => {
+    console.log(result);
+  });
 });
 
-// app.post("/favorite", async (req, res) => {
-//   const { userId, serviceId } = req.body;
-//   const a = await User.findOne({ _id: userId }, "favorite");
-//   console.log("userId", userId);
-//   console.log("fav", a.favorite);
-//   let c = a.favorite;
-//   console.log("c", c);
-//   let d = c.map(async (ele, i) => {
+app.post("/favorite", async (req, res) => {
+  const { userId, serviceId } = req.body;
+  const a = await User.findOne({ _id: userId }, "favorite");
+  console.log("userId", userId);
+  console.log("fav", a.favorite);
+  const b = a.favorite;
+  let c = b;
+  let q = [];
+  async function name() {
+    o = c.map(async (ele) => {
+      console.log("ele", ele.split()[0]);
+      return q.push(await ser.findOne({ _id: ele.split()[0] }));
+    });
+    console.log(o);
+  }
 
-//   });
-// });
+  name();
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

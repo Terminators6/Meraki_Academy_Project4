@@ -17,14 +17,14 @@ const AllSupService = () => {
         allSupServiceContext.service.map((ele) => {
           return (
             <div className="All1">
-              <div className="AllImage">
-                <img
-                  onClick={(e) => {
-                    history.push(`${ele.type}/${ele._id}`);
-                  }}
-                  src={ele.image}
-                ></img>
-              </div>
+              <img
+                className="All1Image"
+                onClick={(e) => {
+                  history.push(`${ele.type}/${ele._id}`);
+                }}
+                src={ele.image}
+              ></img>
+
               <div className="Des">
                 <h2 className="color9" id="Avatarr">
                   {ele.title}

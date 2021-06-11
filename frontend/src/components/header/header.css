@@ -33,6 +33,10 @@
   cursor: pointer;
 }
 
+.buttonPageOne:hover {
+  transition-duration: 1s;
+}
+
 .buttonPagetWO {
   margin-bottom: 5.5em;
   margin-left: 4.3em;
@@ -46,6 +50,10 @@
   font-size: 20px;
   height: 60px;
   cursor: pointer;
+}
+.buttonPagetWO:hover {
+  background-color: black;
+  transition-duration: 1s;
 }
 
 .videoText {

@@ -63,12 +63,12 @@
 .descriptionP {
   width: 900px;
   text-align: left;
-  margin-left: 3%;
   font-size: 20px;
   margin-left: 16%;
   background-color: rgba(243, 241, 237, 0.9);
   padding: 2em;
   border-radius: 10px;
+  margin-top: 7%;
 }
 
 .buttonP {
@@ -79,4 +79,14 @@
   width: 200px;
   height: 50px;
   font-size: 20px;
+}
+
+.commentProgramming{
+  margin-top: 10%;
+  height: 15px;
+}
+
+.imageProgramming{
+  width: 100px;
+  height: 100px;
 }

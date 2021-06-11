@@ -43,7 +43,7 @@ export const Programing = ({ id }) => {
               </div>
               <div>
               <div className="firstNameCommentP">{ele.commenter.firstName}</div>
-              <p>{ele.comment}</p>
+              <p className="commentDivProgramming">{ele.comment}</p>
               </div>
             </div>
           );

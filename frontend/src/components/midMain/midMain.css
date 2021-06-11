@@ -1,99 +1,106 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.midOne{
+.midOne {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
   margin-bottom: 4em;
 }
 
-.hStyle{
-    text-align: left;
-    margin-top: 6em;
-    margin-bottom: 2em;
-    margin-left: 4.6em;
+.hStyle {
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 4.6em;
 }
 
-.namePhoto{
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 1em;
+.namePhoto {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
-.textPhotoStyle{
-    text-align: left;
-    width: 250px;
+.textPhotoStyle {
+  text-align: left;
+  width: 250px;
 }
 
-.text1{
-    margin-left: 10em;
+.text1 {
+  margin-left: 10em;
 }
 
-.title1{
-    margin-top: 8px;
+.title1 {
+  margin-top: 8px;
 }
 
-.title2{
-    margin-top: 10px;
-    margin-left: -3em;
+.title2 {
+  margin-top: 10px;
+  margin-left: -6em;
 }
 
-.photo1{
-    position: absolute; 
-    margin-left: -7em;
+.photo1 {
+  position: absolute;
+  margin-left: -9.5em;
 }
 
-.photo2{
-    position: absolute; 
-    margin-left: -12em;
+.photo2 {
+  position: absolute;
+  margin-left: -14.5em;
 }
 
-.hStyle1{
-    text-align: left;
-    margin-top: 3em;
-    margin-bottom: 2em;
-    margin-left: 5.6em;
+.hStyle1 {
+  text-align: left;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  margin-left: 5.6em;
 }
 
-.midTwo{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 0px;
-    margin-bottom: 4em;
-  }
-
-.textPhotoStyle1{
-    text-align: left;
-    width: 250px;
-    margin-left: 14em;
+.midTwo {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 0px;
+  margin-bottom: 4em;
 }
 
-.textPhotoStyle2{
-    text-align: left;
-    width: 250px;
-    margin-left: 5em;
+.textPhotoStyle1 {
+  text-align: left;
+  width: 250px;
+  margin-left: 14em;
 }
 
-.title3{
-    margin-top: 8px;
-    margin-left: 0.5em;
+.textPhotoStyle2 {
+  text-align: left;
+  width: 250px;
+  margin-left: 5em;
 }
 
-.title4{
-    margin-top: 10px;
-    margin-left: -8em;
+.title3 {
+  margin-top: 8px;
+  margin-left: -120px;
 }
 
-.photo3{
-    position: absolute; 
-    margin-left: -9em;
+.title4 {
+  margin-top: 10px;
+  margin-left: -12em;
 }
 
-.photo4{
-    position: absolute; 
-    margin-left: -14em;
+.photo3 {
+  position: absolute;
+  margin-left: -12.5em;
+}
+
+.photo4 {
+  position: absolute;
+  margin-left: -17em;
+}
+
+.hrMid {
+  position: relative;
+  margin-left: 200px;
+
+  width: 70%;
 }

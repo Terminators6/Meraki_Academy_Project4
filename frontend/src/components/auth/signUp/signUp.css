@@ -1,5 +1,3 @@
-
-
 .Register {
   position: absolute;
   width: 98%;
@@ -14,6 +12,10 @@
 .All {
   width: 100%;
   height: 100%;
+}
+
+.H3regester {
+  margin-top: 10px;
 }
 
 input[type="text"],

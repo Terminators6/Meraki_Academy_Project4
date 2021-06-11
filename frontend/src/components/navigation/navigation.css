@@ -1,26 +1,29 @@
-
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-.Nav {
-    margin-bottom: 2px;
-    margin-left: 9em;
-    margin-top: 0.7em;
-    display: flex;
-    gap: 30px;
-
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+.Nav {
+  margin-bottom: 2px;
+  margin-left: 9em;
+  padding-top: 10px;
+  display: flex;
+  gap: 30px;
+}
+
+.Navbar {
+  background-color: rgb(243, 241, 237);
+  height: 70px;
+  border: blanchedalmond;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
 .NavIm {
   width: 70px;
   height: 40px;
 }
 
-.styleText{
+.styleText {
   font-size: 20px;
   color: black;
   text-decoration: none;
@@ -28,7 +31,7 @@
   margin-left: 0.4em;
 }
 
-.styleLogOut{
+.styleLogOut {
   margin-left: 35em;
   background-color: #d82171;
   border-color: #d82171;

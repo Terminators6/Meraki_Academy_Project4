@@ -4,8 +4,8 @@
   width: 50%;
   grid-template-columns: auto auto auto;
   grid-gap: 50px;
-  margin-bottom: 2em;
-  margin-left: 320px;
+  margin-bottom: 6em;
+  margin-left: 200px;
   /* justify-items: center; */
 }
 
@@ -15,8 +15,8 @@
 
 .sizeImage {
   display: block;
-  width: 262px;
-  height: 188px;
+  width: 350px;
+  height: 200px;
   cursor: pointer;
 }
 
@@ -27,7 +27,7 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  width: 262px;
+  width: 350px;
   height: 0;
   transition: 0.7s;
   cursor: pointer;

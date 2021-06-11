@@ -4,6 +4,7 @@ import { Link, Route, useParams } from "react-router-dom";
 import { ServiceContext } from "./../../contexts/ServicePage";
 import jwt from "jsonwebtoken";
 import "./programming.css";
+import { Footer } from "./../footer/index";
 
 export const Programing = ({ id }) => {
   const serviceContext = useContext(ServiceContext);
@@ -91,6 +92,7 @@ export const Programing = ({ id }) => {
 
   return (
     <>
+    <div>
       <div className="AllPage">
         <div></div>
         <div className="midPageDiv">
@@ -170,6 +172,10 @@ export const Programing = ({ id }) => {
           {/* <button onClick={fav}>add favorite</button> */}
         </div>
         <div></div>
+      </div>
+      </div>
+      <div className="margineDiv">
+        <Footer />
       </div>
     </>
   );

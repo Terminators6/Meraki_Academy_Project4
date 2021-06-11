@@ -23,9 +23,7 @@ const createNewComment = async (req, res) => {
 const getCommints = async (req, res) => {
   const { comment, commenter, serviceId } = req.body;
 
-  const commints = await Comment.find({ serviceId: serviceId })
-    .populate("commenter", "firstName")
-    .exec();
+  const commints = await Comment.find({ serviceId: serviceId }).populate("commenter", "firstName").exec();
   console.log("commints", commints);
   res.json(commints);
 };

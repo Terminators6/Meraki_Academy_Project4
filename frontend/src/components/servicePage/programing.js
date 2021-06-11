@@ -31,7 +31,7 @@ export const Programing = ({ id }) => {
         serviceId: userId,
       });
       a = commit.data;
-      let y = console.log("a", a);
+      console.log("aaaaaaa", a);
 
       await setAllComments(
         a.map((ele) => {
@@ -44,6 +44,7 @@ export const Programing = ({ id }) => {
           );
         })
       );
+      console.log("allComments", allComments);
       console.log("codasdasmmit", commit.data);
     } catch (error) {}
   }

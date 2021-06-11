@@ -61,13 +61,6 @@
   margin-left: 5.6em;
 }
 
-
-.midTwo{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 0px;
-    margin-bottom: 4em;
-
 .midTwo {
   display: grid;
   grid-template-columns: auto auto;

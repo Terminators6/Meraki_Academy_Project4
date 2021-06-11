@@ -17,6 +17,7 @@
   width: 40%;
   height: 50%;
   border-radius: 25px;
+  background-color: rgba(243, 241, 237,0.95);
 }
 .All {
   width: 100%;
@@ -118,8 +119,11 @@ input[type="password"] {
 }
 
 .img1 {
-  width: 200px;
-  height: 200px;
+
+  border-radius: 50%;
+  margin-top: 5%;
+  width: 170px;
+  height: 170px;
 }
 
 .toast {
@@ -136,6 +140,7 @@ input[type="password"] {
   width: 30%;
   height: 25%;
   border-radius: 5%;
+  background-color: rgba(243, 241, 237,0.75);
 }
 
 .card:hover {

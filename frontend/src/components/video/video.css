@@ -1,15 +1,15 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-.sizeVideo{
-    position: absolute;
-    object-fit: cover;
-    left: 0;
-    top: 4em;
-    width: 100%;
-    height: 570px;
-    z-index:-1;
+.sizeVideo {
+  position: absolute;
+  object-fit: cover;
+  left: 0;
+  top: 4em;
+  width: 100%;
+  height: 750px;
+  z-index: -1;
 }

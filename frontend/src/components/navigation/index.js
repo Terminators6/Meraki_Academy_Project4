@@ -12,15 +12,16 @@ export const Navigation = () => {
 
   return (
     <div>
+
       {localStorage.getItem("token") && loginContext.loggedIn ? (
-        <div className="Nav">
-          <Link to="/">
-            {" "}
-            <img className="NavIm" src="https://rb.gy/xkgfkm" />{" "}
-          </Link>
-          <Link to="/Favorite"> Favorite </Link>
-          <Link to="/Profile"> Profile </Link>
-          <Link to="/logout"> Log Out </Link>
+
+        <div className="Nav">  
+          <Link to="/"> <img  className="NavIm" src="https://rb.gy/xkgfkm" /> </Link>
+
+          <Link to="/Favorite" className="styleText"> Favorite </Link>
+          <Link to="/Profile" className="styleText"> Profile </Link>
+          <Link to="/logout" className="styleText styleLogOut"> Log Out </Link>
+
         </div>
       ) : (
         <div className="Nav">
@@ -29,8 +30,8 @@ export const Navigation = () => {
             <img className="NavIm" src="https://rb.gy/xkgfkm" />{" "}
           </Link>
 
-          <Link to="/Register"> Register </Link>
-          <Link to="/Login"> Login </Link>
+          <Link to="/Register" className="styleText"> Register </Link>
+          <Link to="/Login" className="styleText"> Login </Link>
         </div>
       )}
     </div>

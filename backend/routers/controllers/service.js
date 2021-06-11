@@ -13,16 +13,7 @@ const getAllservice = (req, res) => {
 };
 
 const createNewService = (req, res) => {
-  const {
-    name,
-    title,
-    description,
-    type,
-    rating,
-    numberOfVoters,
-    image,
-    comments,
-  } = req.body;
+  const { name, title, description, type, rating, numberOfVoters, image, comments } = req.body;
 
   const service = new servicemoudule({
     name,

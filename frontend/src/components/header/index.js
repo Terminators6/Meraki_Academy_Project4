@@ -2,6 +2,7 @@ import React from "react";
 import { Video } from "./../video/video";
 import { Footer } from "./../footer/index";
 import { Main } from "./../main/index";
+import { MidMain } from "./../midMain/midMain";
 import { useHistory } from "react-router-dom";
 import "./header.css";
 
@@ -36,6 +37,7 @@ export const Header = () => {
         </button>
       </div>
       <Main />
+      <MidMain />
       <Footer />
     </div>
   );

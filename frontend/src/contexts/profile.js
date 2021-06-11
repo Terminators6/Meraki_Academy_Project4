@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { useHistory } from "react-router-dom";
 import axios from 'axios';
 import jwt from "jsonwebtoken";
 import { LoginContext } from './login';
@@ -16,11 +17,14 @@ const ProfileProvider = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [role, setRole] = useState('60be297bc1ce0378e4564f2a');
+    const [message, setMessage] = useState('...');
+    const history = useHistory()
 
 
     const loginContext = useContext(LoginContext);
 
     const state = {
+        
         setUser,
         user,
         setFirstName,
@@ -29,6 +33,8 @@ const ProfileProvider = (props) => {
         age,
         country,
         email,
+        message,
+        setMessage,
         setLastName,
         setAge,
         setCountry,
@@ -78,11 +84,15 @@ const ProfileProvider = (props) => {
             console.log('....Edit User profile res.data', userId)
             await axios.put(`http://localhost:5000/profile/${userId}`, user)
                 .then((response) => {
+                    setMessage("User Profile Updated Successfully");
+                    // history.push('/Profile');
                     console.log('....Edit User profile ..', response)
                 })
 
         } catch (error) {
-            console.log("error in editUserProfile frontend", error)
+                setMessage("Error happened while update, Please try again");
+                history.push('/Profile');
+                console.log("error in editUserProfile frontend", error)
         }
     }
 
@@ -91,9 +101,16 @@ const ProfileProvider = (props) => {
         try {
             validationToken();
             const res = await axios.delete(`http://localhost:5000/profile/${userId}`)
-            setUser(res.data);
-            console.log('....Delete User profile res.data', res.data)
+            .then((response) => {
+                setUser(res.data);
+                setMessage("User Profile Deleted Successfully");
+                history.push('/Register');
+                console.log('....Delete User profile res.data', res.data)
+
+            })
         } catch (error) {
+            setMessage("Error happened while delete user profile, Please try again");
+                history.push('/Profile');
             console.log("error in deleteUserProfile frontend", error)
         }
     }

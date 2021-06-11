@@ -1,4 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+.reg{
+  margin-top: 10%;
+}
+
+.Profile {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  height: 50%;
+  border-radius: 25px;
+  margin-top: 5%;
+  
+  
+}
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* padding-top: 4%; */
+  padding: 3%;
+  
+}
+.nameProfile{
+  margin-bottom: 5%;
+}
 
 .Register {
   position: absolute;
@@ -8,8 +38,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  margin-top: 5px;
+  padding: 1%;
+  margin-top: 5%;
 }
 .All {
   width: 100%;
@@ -28,14 +58,22 @@ input[type="password"] {
 
 .button4 {
   width: 30%;
-  background-color: #3c6efd;
+  
   text-align: center;
   color: rgb(273, 249, 249);
   cursor: pointer;
   padding: 8px 0px;
   margin: 8px 0;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  margin-bottom: 5%;
+  margin-top: 5%;
   font-size: 19px;
+
+
+  background-color: #d82171;
+  border-color: #d82171;
+  border-width: 2px;
+  color: white;
 }
 
 .toast {

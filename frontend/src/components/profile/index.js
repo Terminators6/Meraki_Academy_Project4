@@ -25,7 +25,7 @@ export const Profile = () => {
             {!edit ? (
                 <form className="Profile" onSubmit={handelSubmit}>
                     <div>
-                        <h2 className="nameProfile">
+                        <h2 className="reg">
                             {profileContext.firstName} {profileContext.lastName} Profile
             </h2>
                     </div>
@@ -38,7 +38,6 @@ export const Profile = () => {
                             onChange={(e) => profileContext.setFirstName(e.target.value)}
                             className="styleInput"
                         />
-
                         <label className="label1">Last Name</label>
                         <input
                             type="text"

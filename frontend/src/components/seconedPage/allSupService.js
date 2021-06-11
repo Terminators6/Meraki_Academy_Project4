@@ -28,7 +28,9 @@ const AllSupService = () => {
               </div>
               <div className="Des">
                 <h2 className="color9">{ele.title}</h2>
-                <h2 id="type">{Math.round(ele.rating / ele.numberOfVoters)}</h2>
+                <h2 className="color9">{`Type : ${ele.type}`}</h2>
+
+                <h2 id="type">{`Rating:   ${Math.round(ele.rating / ele.numberOfVoters)}/5`}</h2>
               </div>
             </div>
           );

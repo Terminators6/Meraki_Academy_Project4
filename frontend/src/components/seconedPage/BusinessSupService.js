@@ -33,7 +33,8 @@ const BusinessSupService = ({ id }) => {
                 </div>
                 <div className="Des">
                   <h2 className="color9">{`   ${ele.title}`}</h2>
-                  <h2 id="type">{`Rating:    ${Math.round(ele.rating / ele.numberOfVoters) / 2}`}</h2>
+                  <h2 className="color9">{`Type : ${ele.type}`}</h2>
+                  <h2 id="type">{`Rating:    ${Math.round(ele.rating / ele.numberOfVoters) / 2}/5`}</h2>
                 </div>
               </div>
             );

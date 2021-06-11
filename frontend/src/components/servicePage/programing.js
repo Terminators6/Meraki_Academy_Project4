@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, Route, useParams } from "react-router-dom";
 import { ServiceContext } from "./../../contexts/ServicePage";
 import jwt from "jsonwebtoken";
+import './programming.css';
 
 export const Programing = ({ id }) => {
   const serviceContext = useContext(ServiceContext);

@@ -2,6 +2,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { ProfileContext } from "./../../contexts/profile";
+import { Footer } from "./../footer/index";
 import "./profile.css";
 
 export const Profile = () => {
@@ -21,6 +22,7 @@ export const Profile = () => {
     };
 
     return (
+        <>
         <div className="main">
             {!edit ? (
                 <form className="Profile" onSubmit={handelSubmit}>
@@ -128,6 +130,8 @@ export const Profile = () => {
                 </div>
             )}
         </div>
+        <Footer />
+        </>
     );
 };
 

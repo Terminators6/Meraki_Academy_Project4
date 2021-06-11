@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.AllPage {
+  display: grid;
+  grid-template-columns: 5% 80% 5%;
+  grid-gap: 50px;
+  margin-top: 2em;
+}
+
+.midPageDiv {
+  display: grid;
+  grid-template-rows: 30% 13% 30%;
+  grid-gap: 50px;
+}
+
+.secondColumn {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-gap: 50px;
+}
+
+.styleTitleP {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.styleTypeP {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.buttonR {
+  background: url("http://imgur.com/I0EwG.png") transparent;
+  height: 48px;
+  width: 45px;
+  border: none;
+  margin-bottom: 2em;
+}
+
+.rating {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.NumberRating {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.imageP {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.descriptionP {
+  width: 900px;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 14%;
+  background-color: rgba(243, 241, 237, 0.9);
+  padding: 2em;
+  border-radius: 10px;
+  margin-top: 7%;
+}
+
+.buttonP {
+  background-color: #d82171;
+  border-color: #d82171;
+  border-width: 2px;
+  color: white;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.commentProgramming{
+  margin-top: 10%;
+  height: 15px;
+}
+
+.imageProgramming{
+  width: 100px;
+  height: 100px;
+}
+
+.divColumnComment{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  background-color: rgba(243, 241, 237, 0.9);
+  margin-top: 2em;
+  border-radius: 10px;
+  width: 800px;
+  margin-left: 17%;
+}
+
+.imageProgrammingTwo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 0.5em;
+}
+
+.firstNameCommentP{
+  margin-left: 0.3em;
+  text-align: left;
+  margin-top: 0.8em;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.commentDivProgramming{
+  margin-left: 0.3em;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+.inputTextareaComment{
+  display: grid;
+  grid-template-columns: 10% 50% 20%;
+  margin-left: 17%;
+  margin-top: 6em;
+}
+
+.textareaComment{
+  padding-top: 2em;
+}
+
+.textareaCommentTwo{
+  padding-top: 2em;
+}
+
+.margineDiv{
+  margin-top: 100%;
+}

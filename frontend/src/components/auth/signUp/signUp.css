@@ -1,4 +1,3 @@
-
 * {
   padding: 0;
   margin: 0;
@@ -12,8 +11,8 @@
 .Profile {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 100%;
-  height: 50%;
+  width: 40%;
+  height: 30%;
   border-radius: 25px;
   margin-top: 5%;
   background-color: rgba(243, 241, 237,0.75);
@@ -24,25 +23,12 @@
   justify-content: space-around;
   align-items: center;
   /* padding-top: 4%; */
-  padding: 3%;
   
 }
 .nameProfile{
   margin-bottom: 5%;
 }
 
-
-.Register {
-  position: absolute;
-  width: 98%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1%;
-  margin-top: 5%;
-}
 .All {
   width: 100%;
   height: 100%;
@@ -89,6 +75,4 @@ input[type="password"] {
   border-radius: 5px;
 }
 
-.Nav {
-  /* border: solid red 5px; */
-}
+

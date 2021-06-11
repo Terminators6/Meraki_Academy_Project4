@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { RegisterContext } from "./../../../contexts/signUp";
+import { Footer } from "./../../footer/index"
 import "./signUp.css";
 
 export const Register = () => {
@@ -29,6 +30,7 @@ export const Register = () => {
                     <div></div>
                 </form>
             </div>
+            <Footer />
         </>
     )
 }

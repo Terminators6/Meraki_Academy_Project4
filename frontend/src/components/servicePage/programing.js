@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, Route, useParams } from "react-router-dom";
 import { ServiceContext } from "./../../contexts/ServicePage";
 import jwt from "jsonwebtoken";
+import "./programming.css";
+import { Footer } from "./../footer/index";
 
 export const Programing = ({ id }) => {
   const serviceContext = useContext(ServiceContext);
@@ -36,10 +38,14 @@ export const Programing = ({ id }) => {
       await setAllComments(
         a.map((ele) => {
           return (
-            <div>
-              <p>{ele.commenter.image}</p>
-              <p>{ele.commenter.firstName}</p>
-              <p>{ele.comment}</p>
+            <div className="divColumnComment">
+              <div>
+              <img src="https://cutt.ly/qnUMxQg" className="imageProgrammingTwo"/>
+              </div>
+              <div>
+              <div className="firstNameCommentP">{ele.commenter.firstName}</div>
+              <p className="commentDivProgramming">{ele.comment}</p>
+              </div>
             </div>
           );
         })
@@ -86,24 +92,90 @@ export const Programing = ({ id }) => {
 
   return (
     <>
-      <div className="programming">
-        <img src={serviceContext.image}></img>
-        <h1>{serviceContext.title}</h1>
-        <p>Type:{serviceContext.type}</p>
-        <p>{serviceContext.description}</p>
-        <input type="button" onClick={rateFun} value="5"></input>
-        <input type="button" onClick={rateFun} value="4"></input>
-        <input type="button" onClick={rateFun} value="3"></input>
-        <input type="button" onClick={rateFun} value="2"></input>
-        <input type="button" onClick={rateFun} value="1"></input>
-        <div>{`${Math.round(serviceContext.rate) / 2}`}/5</div>
-        Number of voters <div>{serviceContext.numberOfVoters}</div>
-        <input placeholder="comment here" value={serviceContext.commit} onChange={commit}></input>
-        <br></br>
-        {a}
-        <button onClick={commitFun}>add Comment</button>
-        {/* <button onClick={fav}>add favorite</button> */}
-        {allComments}
+    <div>
+      <div className="AllPage">
+        <div></div>
+        <div className="midPageDiv">
+          <div className="secondColumn">
+            <div>
+              <p className="styleTitleP">{serviceContext.title}</p>
+              <p className="styleTypeP">Type: {serviceContext.type}</p>
+              <input
+                type="button"
+                className="buttonR"
+                onClick={rateFun}
+                value="5"
+              ></input>
+              <input
+                type="button"
+                className="buttonR"
+                onClick={rateFun}
+                value="4"
+              ></input>
+              <input
+                type="button"
+                className="buttonR"
+                onClick={rateFun}
+                value="3"
+              ></input>
+              <input
+                type="button"
+                className="buttonR"
+                onClick={rateFun}
+                value="2"
+              ></input>
+              <input
+                type="button"
+                className="buttonR"
+                onClick={rateFun}
+                value="1"
+              ></input>
+              <div className="rating">
+                {`${Math.round(serviceContext.rate) / 2}`}/5
+              </div>
+              <div className="NumberRating">
+                {" "}
+                Number of voters: <span>
+                  {serviceContext.numberOfVoters}
+                </span>{" "}
+              </div>
+            </div>
+            <div>
+              <img src={serviceContext.image} className="imageP"></img>
+            </div>
+          </div>
+          <div>
+            <p className="descriptionP">{serviceContext.description}</p>
+          </div>
+          <div className="commentProgramming">
+            <div className="inputTextareaComment">
+            <img src="https://cutt.ly/qnUMxQg" className="imageProgramming"/>
+              <div className="textareaComment">
+              <textarea
+              rows="3"
+              cols="60"
+              placeholder="comment here"
+              value={serviceContext.commit}
+              onChange={commit}
+            ></textarea>
+            {a}
+            <br></br>
+              </div>
+            <div className="textareaCommentTwo">
+            <button className="buttonP" onClick={commitFun}>
+              add Comment
+            </button>
+            </div>
+            </div>
+            {allComments}
+          </div>
+          {/* <button onClick={fav}>add favorite</button> */}
+        </div>
+        <div></div>
+      </div>
+      </div>
+      <div className="margineDiv">
+        <Footer />
       </div>
     </>
   );

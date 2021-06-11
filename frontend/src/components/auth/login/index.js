@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { LoginContext } from "./../../../contexts/login";
+import { Footer } from "./../../footer/index";
 import "./login.css";
 
 const Login = () => {
@@ -39,6 +40,7 @@ const Login = () => {
           </div>
         </form>
       </div>
+      <Footer />
     </>
   );
 };

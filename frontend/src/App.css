@@ -6,10 +6,11 @@
 
 .App {
   /* border: solid green 5px; */
-  padding: 5px;
+  padding: 0;
   text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
 }
 .App-logo {
   height: 40vmin;

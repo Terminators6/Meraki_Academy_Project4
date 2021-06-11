@@ -3,10 +3,10 @@ import './footer.css'
 
 export const Footer = () => {
 	return (
-	<div className="App borderCopyRight">
-		<p className="copyRight">
+	<div className="borderCopyRight">
+		<span className="copyRight">
 			&copy; 2021 Terminators All rights reserved
-		</p>
+		</span>
 		</div>
 	);
 };

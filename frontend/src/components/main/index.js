@@ -1,6 +1,6 @@
 import React from "react";
-import './main.css';
 import { useHistory } from "react-router-dom";
+import './main.css';
 
 export const Main = () => {
   const history = useHistory();
@@ -13,14 +13,7 @@ export const Main = () => {
     { url: "https://rb.gy/vouswy", path: "/marketing" },
     { url: "https://rb.gy/isbbpw", path: "/allServices" },
   ];
-  const nameImage = [
-    "Business",
-    "Programming",
-    "Finance",
-    "Courses",
-    "Marketing",
-    "All services",
-  ];
+  const nameImage = ["Business", "Programming", "Finance", "Courses", "Marketing", "All services"];
   const newImage = image.map((srcImage, i) => {
     return <img key={i} src={srcImage.url} className="sizeImage" />;
   });
@@ -44,11 +37,8 @@ export const Main = () => {
 
   return (
     <>
-      <div className="main">
-        <div></div>
         <div className="allDiv">{imageAll}</div>
         <div></div>
-      </div>
     </>
   );
 };

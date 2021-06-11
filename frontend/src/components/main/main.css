@@ -1,26 +1,23 @@
-.main {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-}
-
 .allDiv {
+  margin-top: 192px;
   display: grid;
   width: 50%;
   grid-template-columns: auto auto auto;
   grid-gap: 30px;
   margin-bottom: 2em;
+  margin-left: 300px;
   /* justify-items: center; */
-  
 }
 
-.Div{
+.Div {
   position: relative;
 }
 
 .sizeImage {
   display: block;
   width: 240px;
-  height: 200px;
+  height: 170px;
+  cursor: pointer;
 }
 
 .overlay {
@@ -28,20 +25,28 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   width: 240px;
   height: 0;
-  transition: .5s;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .Div:hover .overlay {
   height: 100%;
 }
 
-.text{
+.text {
   color: #ffffff;
   margin-top: 25%;
   text-align: center;
   font-size: 30px;
+}
+
+button {
+  width: 0%;
+  height: 0%;
+  background-color: white;
+  border: white;
 }

@@ -89,34 +89,35 @@ export const Profile = () => {
 
                 <div className="card">
 
-                    <div className="toast">{profileContext.message}</div>
-                    <img src="https://cutt.ly/qnUMxQg"></img>
-                    <div className="allInformatiom">
-                        <div className="container">
-                            <label className="label2">First Name</label>
-                            <label className="label2"> {profileContext.firstName} </label>
-                            {/* <input type="text" value={profileContext.user.firstName} readOnly /> */}
-                        </div>
-                        <div className="container">
-                            <label className="label2">Last Name</label>
-                            <label className="label2">{profileContext.lastName}</label>
-                            {/* <input type="text" value={profileContext.user.lastName} readOnly /> */}
-                        </div>
-                        <div className="container">
-                            <label className="label2">Age</label>
-                            <label className="label2">{profileContext.age}</label>
-                            {/* <input type="Number" value={profileContext.user.age} readOnly/> */}
-                        </div>
-                        <div className="container">
-                            <label className="label2">Country</label>
-                            <label className="label2">{profileContext.country}</label>
-                            {/* <input type="text" value={profileContext.user.country} readOnly/> */}
-                        </div>
-                        <div className="container">
-                            <label className="label2">Email :</label>
-                            <label className="label2">{profileContext.email}</label>
-                            {/* <input type="text" value={profileContext.user.email} readOnly/> */}
-                        </div>
+
+                    <img src="https://cutt.ly/qnUMxQg" className="img1"></img>
+                    <div  className="allInformatiom"> 
+                    <div className="container">
+                        <label className="label2">First Name</label>
+                        <label  className="label2"> {profileContext.user.firstName} </label>
+                        {/* <input type="text" value={profileContext.user.firstName} readOnly /> */}
+                    </div>
+                    <div className="container">
+                        <label className="label2">Last Name</label>
+                        <label className="label2">{profileContext.user.lastName}</label>
+                        {/* <input type="text" value={profileContext.user.lastName} readOnly /> */}
+                    </div>
+                    <div className="container">
+                        <label className="label2">Age</label>
+                        <label className="label2">{profileContext.user.age}</label>
+                        {/* <input type="Number" value={profileContext.user.age} readOnly/> */}
+                    </div>
+                    <div className="container">
+                        <label className="label2">Country</label>
+                        <label className="label2">{profileContext.user.country}</label>
+                        {/* <input type="text" value={profileContext.user.country} readOnly/> */}
+                    </div>
+                    <div className="container">
+                        <label className="label2">Email </label>
+                        <label className="label2">{profileContext.user.email}</label>
+                        {/* <input type="text" value={profileContext.user.email} readOnly/> */}
+                    </div>
+
                     </div>
                     <div className="container">
                         <button className="button1" onClick={() => { setEdit(!edit) }}>Edit Profile</button>

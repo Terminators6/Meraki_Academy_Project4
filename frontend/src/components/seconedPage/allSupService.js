@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AllSupServiceContext } from "../../contexts/secondaPage/AllSupService";
 import { useHistory } from "react-router-dom";
+import "./style.css";
 
 const AllSupService = () => {
   const history = useHistory();
@@ -11,25 +12,28 @@ const AllSupService = () => {
   }, []);
 
   return (
-    <>
-      <div className="allServices">
-        {allSupServiceContext.service &&
-          allSupServiceContext.service.map((ele) => {
-            return (
-              <div>
+    <div className="other">
+      {allSupServiceContext.service &&
+        allSupServiceContext.service.map((ele) => {
+          return (
+            <div className="All1">
+              <div className="IMG">
                 <img
+                  className="All1Image"
                   onClick={(e) => {
                     history.push(`${ele.type}/${ele._id}`);
                   }}
                   src={ele.image}
                 ></img>
-                <p>{ele.title}</p>
-                <p>{Math.round(ele.rating / ele.numberOfVoters)}</p>
               </div>
-            );
-          })}
-      </div>
-    </>
+              <div className="Des">
+                <h2 className="color9">{ele.title}</h2>
+                <h2 id="type">{Math.round(ele.rating / ele.numberOfVoters)}</h2>
+              </div>
+            </div>
+          );
+        })}
+    </div>
   );
 };
 

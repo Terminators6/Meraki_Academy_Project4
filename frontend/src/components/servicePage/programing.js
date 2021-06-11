@@ -37,10 +37,14 @@ export const Programing = ({ id }) => {
       await setAllComments(
         a.map((ele) => {
           return (
-            <div>
-              <p>{ele.commenter.image}</p>
-              <p>{ele.commenter.firstName}</p>
+            <div className="divColumnComment">
+              <div>
+              <img src="https://cutt.ly/qnUMxQg" className="imageProgrammingTwo"/>
+              </div>
+              <div>
+              <div className="firstNameCommentP">{ele.commenter.firstName}</div>
               <p>{ele.comment}</p>
+              </div>
             </div>
           );
         })

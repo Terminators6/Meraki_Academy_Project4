@@ -90,3 +90,27 @@
   width: 100px;
   height: 100px;
 }
+
+.divColumnComment{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  background-color: rgba(243, 241, 237, 0.9);
+  margin-top: 2em;
+  border-radius: 10px;
+  width: 800px;
+  margin-left: 17%;
+}
+
+.imageProgrammingTwo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 0.5em;
+}
+
+.firstNameCommentP{
+  text-align: left;
+  margin-top: 0.5em;
+  font-weight: bold;
+  font-size: 20px;
+}

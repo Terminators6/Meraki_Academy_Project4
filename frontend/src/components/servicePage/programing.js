@@ -87,24 +87,40 @@ export const Programing = ({ id }) => {
 
   return (
     <>
-      <div className="programming">
+      <div  className="AllPage">
+        <div></div>
+        <div className="midPageDiv">
+        <div className="secondColumn">
+          <div>
+        <h1 className="styleTitleP">{serviceContext.title}</h1>
+        <p className="styleTypeP">Type: {serviceContext.type}</p>
+        <input type="button" className="buttonR" onClick={rateFun} value="5"></input>
+        <input type="button" className="buttonR" onClick={rateFun} value="4"></input>
+        <input type="button" className="buttonR" onClick={rateFun} value="3"></input>
+        <input type="button" className="buttonR" onClick={rateFun} value="2"></input>
+        <input type="button" className="buttonR" onClick={rateFun} value="1"></input>
+        <div className="rating">{`${Math.round(serviceContext.rate) / 2}`}/5</div>
+        <div className="NumberRating"> Number of voters: <span>{serviceContext.numberOfVoters}</span> </div>
+
+          </div>
+          <div>
         <img src={serviceContext.image}></img>
-        <h1>{serviceContext.title}</h1>
-        <p>Type:{serviceContext.type}</p>
         <p>{serviceContext.description}</p>
-        <input type="button" onClick={rateFun} value="5"></input>
-        <input type="button" onClick={rateFun} value="4"></input>
-        <input type="button" onClick={rateFun} value="3"></input>
-        <input type="button" onClick={rateFun} value="2"></input>
-        <input type="button" onClick={rateFun} value="1"></input>
-        <div>{`${Math.round(serviceContext.rate) / 2}`}/5</div>
-        Number of voters <div>{serviceContext.numberOfVoters}</div>
+
+          </div>
+
+          </div>
+          <div>
+
         <input placeholder="comment here" value={serviceContext.commit} onChange={commit}></input>
-        <br></br>
         {a}
+        <br></br>
         <button onClick={commitFun}>add Comment</button>
-        {/* <button onClick={fav}>add favorite</button> */}
         {allComments}
+          </div>
+        {/* <button onClick={fav}>add favorite</button> */}
+        </div>
+        <div></div>
       </div>
     </>
   );

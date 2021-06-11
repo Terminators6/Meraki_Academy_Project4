@@ -10,6 +10,7 @@ export const Profile = () => {
     const profileContext = useContext(ProfileContext);
     const history = useHistory()
     const [edit, setEdit] = useState(true);
+    const [del, setDel] = useState(false);
 
 
     useEffect(() => {
@@ -23,21 +24,21 @@ export const Profile = () => {
         profileContext.updateUserProfile();
         console.log("....handel edit", edit)
         // history.push('./Profile')
-        setEdit(!edit);
-
+        // setEdit(!edit);
+        
     }
 
     const handelDelete = (e) => {
         e.preventDefault();
         profileContext.deleteUserProfile();
-        history.push('/')
+        console.log("....handel delete................", edit)
+        
 
     }
 
 
 
     return (
-
         <div className="main">
             {!edit ?
 
@@ -71,6 +72,9 @@ export const Profile = () => {
                         <button className="button1 save" >Save</button>
                         {/* {registerContext.message && <div> {registerContext.message} </div>} */}
                         <button className="button1 cancel" onClick={() => { setEdit(!edit) }}>Cancel</button>
+                        
+                        <button className="button1 delete" onClick={() => { profileContext.deleteUserProfile(); history.push('/Register') }}>Delete</button>
+                
                         <div></div>
                     </form>
                 </div>
@@ -117,12 +121,42 @@ export const Profile = () => {
                     <div className="container">
                         <button className="button1" onClick={() => { setEdit(!edit) }}>Edit Profile</button>
                     </div>
-                    <button className="button1 delete" onClick={() => { profileContext.deleteUserProfile(); history.push('/Register') }}>Delete</button>
-                </div>
+                    </div>
             }
         </div>
     )
 }
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -32,22 +32,31 @@ export const MidMain = () => {
           </p>
         </div>
       </div>
+
       <hr className="hrMid" />
-      <h1 className="hStyle1">What's great about it?</h1>
-      <div className="midTwo">
+      <h1 className="hStyle">What's great about it?</h1>
+      <div className="midOne">
         <div>
-          <img src="https://i.ibb.co/mqGFhvM/post4.png" className="photo3" />
-          <h2 className="namePhoto title3">Browse portfolios</h2>
-          <p className="textPhotoStyle1 text1">
+          <img src="https://i.ibb.co/mqGFhvM/post4.png" className="photo1" />
+          <h2 className="namePhoto title1">Find a jobs</h2>
+          <p className="textPhotoStyle text1">
             Find professionals you can trust by browsing their samples of previous work and reading their profile
             reviews.
           </p>
         </div>
         <div>
-          <img src="https://i.ibb.co/yXP0dCC/post5.png" className="photo4" />
-          <h2 className="namePhoto title4">Quality work</h2>
-          <p className="textPhotoStyle2">
+          <img src="https://i.ibb.co/yXP0dCC/post5.png" className="photo2" />
+          <h2 className="namePhoto title2">Browse portfolios</h2>
+          <p className="textPhotoStyle">
             Freelancer.com has by far the largest pool of quality freelancers globally-over 50 million to choose from.
+          </p>
+        </div>
+        <div>
+          <img src="https://i.ibb.co/yXP0dCC/post5.png" className="photo2" />
+          <h2 className="namePhoto title2">Quality work</h2>
+          <p className="textPhotoStyle">
+            Our telented team of recruiters can help you find the best freelancers for the job and our technical
+            co-pilots can even manage the project for you.
           </p>
         </div>
       </div>

@@ -11,7 +11,6 @@ const Login = () => {
     loginContext.Login();
   };
   return (
-
     <>
       <div className="main">
         <form onSubmit={handleSubmit} className="Login">
@@ -37,7 +36,8 @@ const Login = () => {
           <div>
             <button className="button4">login</button>
             {loginContext.massage && <div>{loginContext.massage}</div>}
-          </div></form>
+          </div>
+        </form>
       </div>
     </>
   );

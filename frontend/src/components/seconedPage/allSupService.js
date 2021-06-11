@@ -12,25 +12,27 @@ const AllSupService = () => {
   }, []);
 
   return (
-    <div className="other">
+    <div className="aboutUs11">
       {allSupServiceContext.service &&
         allSupServiceContext.service.map((ele) => {
           return (
-            <div className="All1">
-              <div className="IMG">
-                <img
-                  className="All1Image"
-                  onClick={(e) => {
-                    history.push(`${ele.type}/${ele._id}`);
-                  }}
-                  src={ele.image}
-                ></img>
-              </div>
-              <div className="Des">
-                <h2 className="color9">{ele.title}</h2>
-                <h2 className="color9">{`Type : ${ele.type}`}</h2>
-
-                <h2 id="type">{`Rating:   ${Math.round(ele.rating / ele.numberOfVoters)}/5`}</h2>
+            <div class="row11">
+              <div class="column11">
+                <div class="card11">
+                  <img
+                    onClick={(e) => {
+                      history.push(`${ele.type}/${ele._id}`);
+                    }}
+                    src={ele.image}
+                    alt="Jane"
+                    style={{ height: "60%", width: "100%" }}
+                  ></img>
+                  <div class="container11">
+                    <h2>{ele.title}</h2>
+                    <p className="type11">{`Type : ${ele.type}`}</p>
+                    <p className="type1">{`Rating:   ${Math.round(ele.rating / ele.numberOfVoters)}/5`}</p>
+                  </div>
+                </div>
               </div>
             </div>
           );

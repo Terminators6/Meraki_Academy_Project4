@@ -11,17 +11,26 @@ export const Navigation = () => {
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
 
   return (
-    <div>
-
+    <div className="Navbar">
       {localStorage.getItem("token") && loginContext.loggedIn ? (
+        <div className="Nav">
+          <Link to="/">
+            {" "}
+            <img className="NavIm" src="https://rb.gy/xkgfkm" />{" "}
+          </Link>
 
-        <div className="Nav">  
-          <Link to="/"> <img  className="NavIm" src="https://rb.gy/xkgfkm" /> </Link>
-
-          <Link to="/Favorite" className="styleText"> Favorite </Link>
-          <Link to="/Profile" className="styleText"> Profile </Link>
-          <Link to="/logout" className="styleText styleLogOut"> Log Out </Link>
-
+          <Link to="/Favorite" className="styleText">
+            {" "}
+            Favorite{" "}
+          </Link>
+          <Link to="/Profile" className="styleText">
+            {" "}
+            Profile{" "}
+          </Link>
+          <Link to="/logout" className="styleText styleLogOut">
+            {" "}
+            Log Out{" "}
+          </Link>
         </div>
       ) : (
         <div className="Nav">
@@ -30,8 +39,14 @@ export const Navigation = () => {
             <img className="NavIm" src="https://rb.gy/xkgfkm" />{" "}
           </Link>
 
-          <Link to="/Register" className="styleText"> Register </Link>
-          <Link to="/Login" className="styleText"> Login </Link>
+          <Link to="/Register" className="styleText">
+            {" "}
+            Register{" "}
+          </Link>
+          <Link to="/Login" className="styleText">
+            {" "}
+            Login{" "}
+          </Link>
         </div>
       )}
     </div>

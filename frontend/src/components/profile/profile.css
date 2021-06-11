@@ -1,20 +1,18 @@
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 22px;
 }
-  
 
 .Profile {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 40%;
   height: 50%;
@@ -64,7 +62,7 @@ input[type="password"] {
 } */
 
 .button1 {
-  background-color: #359956;/* Green */
+  background-color: #359956; /* Green */
   width: 100%;
   border: none;
   color: white;
@@ -77,16 +75,16 @@ input[type="password"] {
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.delete{
+.delete {
   background-color: #d80a0a;
   width: 25%;
   margin-bottom: 1.5em;
 }
 
-.cancel{
+.cancel {
   background-color: #0b0c0c;
   width: 25%;
   margin-bottom: 1.5em;
@@ -108,7 +106,7 @@ input[type="password"] {
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38); */
 }
 
-.EditProfile{
+.EditProfile {
   display: grid;
   width: 50%;
   grid-template-columns: auto auto;
@@ -119,14 +117,10 @@ input[type="password"] {
   margin-left: 7.6em;
 }
 
-
-
-img {
-  
+.img1 {
   width: 200px;
   height: 200px;
 }
-
 
 .toast {
   margin-top: 50px;
@@ -136,8 +130,8 @@ img {
   border-radius: 5px;
 }
 
-.card{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 30%;
   height: 25%;
@@ -145,28 +139,28 @@ img {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
   /* padding-top: 20px; */
   padding-bottom: 20%;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   align-items: center;
   padding: 2px 16px;
   margin: 20px;
 }
 
-.allInformatiom{
+.allInformatiom {
   margin-left: 4.5em;
 }
 
-.nameProfile{
+.nameProfile {
   margin-top: 0.5em;
 }
 
-.styleInput{
+.styleInput {
   width: 300px;
   height: 40px;
   margin: 8px;

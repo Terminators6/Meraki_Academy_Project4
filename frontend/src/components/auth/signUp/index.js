@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
-import { RegisterContext } from './../../../contexts/signUp';
-import './signUp.css';
+import React, { useContext } from "react";
+import { RegisterContext } from "./../../../contexts/signUp";
+import "./signUp.css";
 
 export const Register = () => {
+  const registerContext = useContext(RegisterContext);
 
-    const registerContext = useContext(RegisterContext);
+
+
 
     const handelSubmit = (e) => {
         e.preventDefault();

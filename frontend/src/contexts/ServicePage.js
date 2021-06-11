@@ -53,9 +53,7 @@ const ServiceProvider = (props) => {
 
   async function getService(params) {
     try {
-      const service = await axios.post(
-        `http://localhost:5000/programming/${params}`
-      );
+      const service = await axios.post(`http://localhost:5000/programming/${params}`);
       setReload(service.data);
       setName(service.data.name);
       setTitle(service.data.title);
@@ -71,11 +69,7 @@ const ServiceProvider = (props) => {
   async function add() {
     setNumberOfVoters(numberOfVoters + 1);
   }
-  return (
-    <ServiceContext.Provider value={state}>
-      {props.children}
-    </ServiceContext.Provider>
-  );
+  return <ServiceContext.Provider value={state}>{props.children}</ServiceContext.Provider>;
 };
 
 export default ServiceProvider;

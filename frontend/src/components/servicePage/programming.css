@@ -1,53 +1,82 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.AllPage{
+.AllPage {
   display: grid;
   grid-template-columns: 5% 80% 5%;
   grid-gap: 50px;
   margin-top: 2em;
 }
 
-.midPageDiv{
-    display: grid;
-  grid-template-rows: 50% 50%;
+.midPageDiv {
+  display: grid;
+  grid-template-rows: 30% 13% 30%;
   grid-gap: 50px;
 }
 
-.secondColumn{
-    display: grid;
-  grid-template-columns: 30% 70%;
+.secondColumn {
+  display: grid;
+  grid-template-columns: 35% 65%;
   grid-gap: 50px;
 }
 
-.styleTitleP{
-    margin-top: 2em;
-    margin-bottom: 0.5em;
+.styleTitleP {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
-.styleTypeP{
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 1em;
+.styleTypeP {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
 .buttonR {
-    background: url('http://imgur.com/I0EwG.png') transparent;
-    height: 48px;
-    width: 45px;
-    border: none;
-    margin-bottom: 1em;
+  background: url("http://imgur.com/I0EwG.png") transparent;
+  height: 48px;
+  width: 45px;
+  border: none;
+  margin-bottom: 2em;
 }
 
-.rating{
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 1em;
+.rating {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
-/* .NumberRating{
-    font-size: ;
-} */
+.NumberRating {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.imageP {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.descriptionP {
+  width: 900px;
+  text-align: left;
+  margin-left: 3%;
+  font-size: 20px;
+  margin-left: 16%;
+  background-color: rgba(243, 241, 237, 0.9);
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.buttonP {
+  background-color: #d82171;
+  border-color: #d82171;
+  border-width: 2px;
+  color: white;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}

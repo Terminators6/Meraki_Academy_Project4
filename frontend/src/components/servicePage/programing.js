@@ -92,7 +92,7 @@ export const Programing = ({ id }) => {
         <div className="midPageDiv">
         <div className="secondColumn">
           <div>
-        <h1 className="styleTitleP">{serviceContext.title}</h1>
+        <p className="styleTitleP">{serviceContext.title}</p>
         <p className="styleTypeP">Type: {serviceContext.type}</p>
         <input type="button" className="buttonR" onClick={rateFun} value="5"></input>
         <input type="button" className="buttonR" onClick={rateFun} value="4"></input>
@@ -104,18 +104,19 @@ export const Programing = ({ id }) => {
 
           </div>
           <div>
-        <img src={serviceContext.image}></img>
-        <p>{serviceContext.description}</p>
+        <img src={serviceContext.image} className="imageP"></img>
 
           </div>
-
           </div>
           <div>
+        <p className="descriptionP">{serviceContext.description}</p>
+        </div>
+        <div>
 
-        <input placeholder="comment here" value={serviceContext.commit} onChange={commit}></input>
+        <textarea rows="10" cols="60" placeholder="comment here" value={serviceContext.commit} onChange={commit}></textarea>
         {a}
         <br></br>
-        <button onClick={commitFun}>add Comment</button>
+        <button className="buttonP" onClick={commitFun}>add Comment</button>
         {allComments}
           </div>
         {/* <button onClick={fav}>add favorite</button> */}

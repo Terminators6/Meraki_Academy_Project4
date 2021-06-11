@@ -11,26 +11,34 @@ const Login = () => {
     loginContext.Login();
   };
   return (
-    <>
-      <form onSubmit={handleSubmit} className="Login">
-        <input
-          type="text"
-          placeholder="Email Here"
-          onChange={(e) => {
-            loginContext.setEmail(e.target.value);
-          }}
-        />
-        <input
-          type="Password"
-          placeholder="Password Here"
-          onChange={(e) => {
-            loginContext.setPassword(e.target.value);
-          }}
-        />
 
-        <button className="button3">login</button>
-        {loginContext.massage && <div>{loginContext.massage}</div>}
-      </form>
+    <>
+      <div className="main">
+        <form onSubmit={handleSubmit} className="Login">
+          <h3 className="nameProfile"> Login </h3>
+          <div>
+            <input
+              type="text"
+              placeholder="Email Here"
+              onChange={(e) => {
+                loginContext.setEmail(e.target.value);
+              }}
+            />
+          </div>
+          <div>
+            <input
+              type="Password"
+              placeholder="Password Here"
+              onChange={(e) => {
+                loginContext.setPassword(e.target.value);
+              }}
+            />
+          </div>
+          <div>
+            <button className="button4">login</button>
+            {loginContext.massage && <div>{loginContext.massage}</div>}
+          </div></form>
+      </div>
     </>
   );
 };

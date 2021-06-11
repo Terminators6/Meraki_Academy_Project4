@@ -9,9 +9,9 @@ export const Main = () => {
     { url: "https://cutt.ly/VnPtiJ1", path: "/business" },
     { url: "https://cutt.ly/tnPtqUP", path: "/programming" },
     { url: "https://cutt.ly/WnPtGpa", path: "/finance" },
-    { url: "https://rb.gy/cgtybc", path: "/courses" },
+    { url: "https://rb.gy/pnfcrn", path: "/courses" },
     { url: "https://cutt.ly/TnPtKis", path: "/marketing" },
-    { url: "https://rb.gy/isbbpw", path: "/allServices" },
+    { url: "https://cutt.ly/2nPvWQr", path: "/allServices" },
   ];
   const nameImage = ["Business", "Programming", "Finance", "Courses", "Marketing", "All services"];
   const newImage = image.map((srcImage, i) => {

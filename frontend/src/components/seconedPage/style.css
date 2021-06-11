@@ -6,7 +6,7 @@ body {
   display: grid;
   grid-template-columns: 300px 300px 300px;
   justify-content: center;
-  column-gap: 150px;
+  column-gap: 108px;
   row-gap: 50px;
 }
 .All1 {
@@ -16,19 +16,18 @@ body {
   align-items: center;
   cursor: pointer;
   height: 300px;
-  border-radius: 1px;
+  border-radius: 8px;
   overflow: hidden;
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
   text-align: center;
-  border-style: inset;
 
-  border-width: 5px;
+  border-width: 2px;
   border-style: outset;
   margin-top: 43px;
 }
 
 .IMG {
-  height: 300px;
+  height: 199px;
 }
 .All1:hover {
   transform: translateY(15px);
@@ -38,6 +37,12 @@ body {
   height: 210px;
   width: 192%;
   object-fit: cover;
+}
+.color9 {
+  margin-left: 10px;
+}
+.type56 {
+  margin-left: 10px;
 }
 
 .All1Image-img {
@@ -57,6 +62,7 @@ body {
   color: var(--sub-color);
 }
 #type {
-  color: rgba(255, 0, 0, 0.603);
+  color: #d82171;
   margin: 0px;
+  margin-left: 10px;
 }

@@ -11,6 +11,7 @@
   margin-top: 0;
   margin-bottom: 0;
   width: 100%;
+  transition-duration: 0.4s;
 }
 .App-logo {
   height: 40vmin;

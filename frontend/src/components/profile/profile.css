@@ -98,13 +98,13 @@ input[type="password"] {
 }
 
 .hrStyle {
-  width: 300px;
+  /* width: 300px;
   height: 2px;
   margin-left: 7.5em;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
   background-color: #080808;
-  /* box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38); */
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38); */
 }
 
 .EditProfile{
@@ -128,7 +128,8 @@ img {
 
 
 .toast {
-  background: #d1e7dd;
+  margin-top: 50px;
+  background: rgba(256, 256, 256, 0.95);
   color: #2f6571;
   text-align: center;
   border-radius: 5px;

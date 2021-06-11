@@ -146,10 +146,11 @@ export const Programing = ({ id }) => {
             <p className="descriptionP">{serviceContext.description}</p>
           </div>
           <div className="commentProgramming">
+            <div className="inputTextareaComment">
             <img src="https://cutt.ly/qnUMxQg" className="imageProgramming"/>
-            <textarea
-            className="textareaComment"
-              rows="2"
+              <div className="textareaComment">
+              <textarea
+              rows="3"
               cols="60"
               placeholder="comment here"
               value={serviceContext.commit}
@@ -157,9 +158,13 @@ export const Programing = ({ id }) => {
             ></textarea>
             {a}
             <br></br>
+              </div>
+            <div className="textareaCommentTwo">
             <button className="buttonP" onClick={commitFun}>
               add Comment
             </button>
+            </div>
+            </div>
             {allComments}
           </div>
           {/* <button onClick={fav}>add favorite</button> */}

@@ -42,6 +42,7 @@
   margin-left: -6em;
 }
 
+
 .photo1 {
   position: absolute;
   margin-left: -9.5em;
@@ -50,6 +51,7 @@
 .photo2 {
   position: absolute;
   margin-left: -14.5em;
+
 }
 
 .hStyle1 {
@@ -59,11 +61,19 @@
   margin-left: 5.6em;
 }
 
+
+.midTwo{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0px;
+    margin-bottom: 4em;
+
 .midTwo {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 0px;
   margin-bottom: 4em;
+
 }
 
 .textPhotoStyle1 {
@@ -78,15 +88,18 @@
   margin-left: 5em;
 }
 
+
 .title3 {
   margin-top: 8px;
   margin-left: -120px;
+
 }
 
 .title4 {
   margin-top: 10px;
   margin-left: -12em;
 }
+
 
 .photo3 {
   position: absolute;
@@ -104,3 +117,4 @@
 
   width: 70%;
 }
+

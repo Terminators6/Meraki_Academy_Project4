@@ -6,11 +6,11 @@ export const Main = () => {
   const history = useHistory();
 
   const image = [
-    { url: "https://rb.gy/woeg7k", path: "/business" },
-    { url: "https://rb.gy/vebaim", path: "/programming" },
-    { url: "https://rb.gy/rrlv5u", path: "/finance" },
+    { url: "https://cutt.ly/VnPtiJ1", path: "/business" },
+    { url: "https://cutt.ly/tnPtqUP", path: "/programming" },
+    { url: "https://cutt.ly/WnPtGpa", path: "/finance" },
     { url: "https://rb.gy/cgtybc", path: "/courses" },
-    { url: "https://rb.gy/vouswy", path: "/marketing" },
+    { url: "https://cutt.ly/TnPtKis", path: "/marketing" },
     { url: "https://rb.gy/isbbpw", path: "/allServices" },
   ];
   const nameImage = ["Business", "Programming", "Finance", "Courses", "Marketing", "All services"];

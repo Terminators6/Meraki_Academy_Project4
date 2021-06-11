@@ -23,6 +23,7 @@ const LoginProvider = (props) => {
     Login,
     token,
     logout,
+    loggedIn,
   };
   function saveToken(token) {
     const user = jwt.decode(token);
@@ -56,11 +57,7 @@ const LoginProvider = (props) => {
     setLoggedIn(false);
     localStorage.clear();
   }
-  return (
-    <LoginContext.Provider value={state}>
-      {props.children}
-    </LoginContext.Provider>
-  );
+  return <LoginContext.Provider value={state}>{props.children}</LoginContext.Provider>;
 };
 
 export default LoginProvider;

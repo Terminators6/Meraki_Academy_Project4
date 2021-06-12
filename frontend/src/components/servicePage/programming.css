@@ -58,6 +58,8 @@
 .imageP {
   margin-top: 3em;
   margin-bottom: 3em;
+  width:800px;
+  height:300px;
 }
 
 .descriptionP {

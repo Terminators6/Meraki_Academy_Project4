@@ -114,10 +114,10 @@ async function deleteUserProfile() {
         setUser(res.data);
         console.log("....Delete User profile res.data", res.data);
         setTimeout(() => {
-            history.push("/");
-            setMessage("User Profile Deleted Successfully");
             localStorage.clear();
-        }, 2000);
+            setMessage("User Profile Deleted Successfully");
+            history.push("/");
+        }, 500);
     } catch (error) {
         setMessage("Error happened while delete user profile, Please try again");
         console.log("error in deleteUserProfile frontend", error);

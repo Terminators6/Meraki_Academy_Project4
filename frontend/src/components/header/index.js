@@ -16,9 +16,7 @@ export const Header = () => {
           Hire the best <br /> freelancers for any job,
           <br /> online.
         </p>
-        <p className="paragraph">
-          Millions of people use freelancer.com to turn their ideas into reality
-        </p>
+        <p className="paragraph">Millions of people use freelancer.com to turn their ideas into reality</p>
         <button
           className="buttonPageOne"
           onClick={(e) => {
@@ -30,10 +28,10 @@ export const Header = () => {
         <button
           className="buttonPagetWO"
           onClick={(e) => {
-            history.push("./Login");
+            history.push("./footer");
           }}
         >
-          Login
+          Doc
         </button>
       </div>
       <Main />

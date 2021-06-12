@@ -1,7 +1,9 @@
 import React from "react";
 import "./midMain.css";
+import { useHistory } from "react-router-dom";
 
 export const MidMain = () => {
+  const history = useHistory();
   return (
     <div>
       <hr className="hrMid" />
@@ -58,6 +60,41 @@ export const MidMain = () => {
             Our telented team of recruiters can help you find the best freelancers for the job and our technical
             co-pilots can even manage the project for you.
           </p>
+        </div>
+      </div>
+      <div className="AAAA">
+        <div className="container111">
+          <img
+            className="iiimg"
+            src="https://www.f-cdn.com/assets/main/en/assets/home/api-enterprise/api-upsell-v3.jpg"
+            style={{ width: "100%", height: "600px" }}
+          ></img>
+          <div class="centered">Freelancer API.</div>
+          <p className="centered2">50 million professionals </p>
+          <p className="centered4">on demand</p>
+          <p className="centered3">Why hire people when you can simply integrate our talented</p>
+          <p className="centered5"> cloud workforce instead?</p>
+          <button className="centered6">IBM:DOC</button>
+        </div>
+        <div className="container111">
+          <img
+            className="iiimg"
+            src="https://www.f-cdn.com/assets/main/en/assets/home/api-enterprise/enterprise-upsell-v3.jpg"
+            style={{ width: "100%", height: "600px" }}
+          ></img>
+          <div class="centered">Freelancer Enterprise.</div>
+          <p className="centered2">Company budget? Get </p>
+          <p className="centered4">more done for less</p>
+          <p className="centered3">Use our workforce of 50 million to help</p>
+          <p className="centered5"> your business achieve more.</p>
+          <button
+            onClick={() => {
+              history.push("/aboutUs");
+            }}
+            className="centered6"
+          >
+            concat us
+          </button>
         </div>
       </div>
     </div>

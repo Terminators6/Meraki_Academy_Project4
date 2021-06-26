@@ -16,7 +16,6 @@ const getAllUsers = (req, res) => {
 //get use Profile by userId
 const getProfileById = (req, res) => {
   const id = req.params.id;
-
   User.findById(id)
     .then((result) => {
       if (result) {

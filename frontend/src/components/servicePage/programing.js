@@ -4,7 +4,6 @@ import { Link, Route, useParams } from "react-router-dom";
 import { ServiceContext } from "./../../contexts/ServicePage";
 import jwt from "jsonwebtoken";
 import "./programming.css";
-import { Footer } from "./../footer/index";
 
 export const Programing = ({ id }) => {
   const serviceContext = useContext(ServiceContext);
@@ -141,7 +140,7 @@ export const Programing = ({ id }) => {
               </div>
             </div>
             <div>
-              <img src={serviceContext.image} className="imageP"></img>
+              <img src={serviceContext.image} className="imageP" alt=''></img>
             </div>
           </div>
           <div>
@@ -149,7 +148,7 @@ export const Programing = ({ id }) => {
           </div>
           <div className="commentProgramming">
             <div className="inputTextareaComment">
-            <img src="https://cutt.ly/qnUMxQg" className="imageProgramming"/>
+            <img src="https://cutt.ly/qnUMxQg" className="imageProgramming" alt=''/>
               <div className="textareaComment">
               <textarea
               rows="3"
@@ -175,7 +174,6 @@ export const Programing = ({ id }) => {
       </div>
       </div>
       <div className="margineDiv">
-        <Footer />
       </div>
     </>
   );

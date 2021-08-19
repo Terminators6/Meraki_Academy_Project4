@@ -49,14 +49,14 @@ export const MidMain = () => {
         </div>
         <div>
           <img src="https://i.ibb.co/yXP0dCC/post5.png" className="photo2" alt='' />
-          <h2 className="namePhoto title2">Browse portfolios</h2>
+          <h2 className="namePhoto title21">Browse portfolios</h2>
           <p className="textPhotoStyle">
             Freelancer.com has by far the largest pool of quality freelancers globally-over 50 million to choose from.
           </p>
         </div>
         <div>
           <img src="https://i.ibb.co/yXP0dCC/post5.png" className="photo2" alt='' />
-          <h2 className="namePhoto title2">Quality work</h2>
+          <h2 className="namePhoto title22">Quality work</h2>
           <p className="textPhotoStyle">
             Our telented team of recruiters can help you find the best freelancers for the job and our technical
             co-pilots can even manage the project for you.
@@ -68,7 +68,7 @@ export const MidMain = () => {
           <img
             className="iiimg"
             src="https://www.f-cdn.com/assets/main/en/assets/home/api-enterprise/api-upsell-v3.jpg" alt=''
-            style={{ width: "100%", height: "600px" }}
+            style={{ width: "100%", height: "37.5rem" }}
           ></img>
           <div class="centered">Freelancer API.</div>
           <p className="centered2">50 million professionals </p>
@@ -81,7 +81,7 @@ export const MidMain = () => {
           <img
             className="iiimg"
             src="https://www.f-cdn.com/assets/main/en/assets/home/api-enterprise/enterprise-upsell-v3.jpg"
-            style={{ width: "100%", height: "600px" }}
+            style={{ width: "120%", height: "37.5rem" }}
             alt=""
           ></img>
           <div class="centered">Freelancer Enterprise.</div>
@@ -99,7 +99,6 @@ export const MidMain = () => {
           </button>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

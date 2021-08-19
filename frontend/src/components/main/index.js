@@ -10,7 +10,7 @@ export const Main = () => {
     { url: "https://cutt.ly/tnPtqUP", path: "/programming" },
     { url: "https://cutt.ly/WnPtGpa", path: "/finance" },
     { url: "https://rb.gy/pnfcrn", path: "/courses" },
-    { url: "https://cutt.ly/TnPtKis", path: "/marketing" },
+    { url: "http://edonus.com.br/wp-content/uploads/2020/10/Doutores-da-web-a-importa%CC%82ncia-do-marketing-digital-em-um-novo-nego%CC%81cio.png", path: "/marketing" },
     { url: "https://cutt.ly/2nPvWQr", path: "/allServices" },
   ];
   const nameImage = ["Business", "Programming", "Finance", "Courses", "Marketing", "All services"];

@@ -16,15 +16,15 @@ html {
 .column11 {
   float: left;
   width: 100%;
-  margin-bottom: 16px;
-  padding: 0 8px;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
 }
 
 .card11 {
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-  margin: 8px;
-  width: 338px;
-  height: 283px;
+  box-shadow: 0 0.25rem 0.5rem 0 rgb(0 0 0 / 20%);
+  margin: 0.5rem;
+  width: 21.125rem;
+  height: 17.6875rem;
   cursor: pointer;
   background-color: whitesmoke;
 }
@@ -37,38 +37,38 @@ html {
   color: #d82171;
 }
 .about-section {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
   background-color: #474e5d;
   color: white;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .aboutUs11 {
   width: 100%;
   align-content: center;
-  margin-top: 29px;
+  margin-top: 1.8125rem;
   display: grid;
   width: 91%;
   grid-template-columns: auto auto auto;
-  grid-row-gap: 70px;
+  grid-row-gap: 4.375rem;
   margin-bottom: 0em;
-  margin-left: 100px;
+  margin-left: 6.25rem;
   align-content: center;
 }
 .container11 {
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
-  grid-gap: 0px;
-  gap: 13px;
-  padding-top: 0px;
+  padding: 0 1rem;
+  grid-gap: 0;
+  gap: 0.8125rem;
+  padding-top: 0;
   padding-bottom: 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 0px;
-  margin: 0px;
+  padding: 0 0;
+  margin: 0;
   cursor: pointer;
 }
 
@@ -80,7 +80,7 @@ html {
 }
 
 .row11 {
-  height: 250px;
+  height: 15.625rem;
 }
 .title1 {
   color: grey;
@@ -90,19 +90,19 @@ html {
   border: none;
   outline: 0;
   display: inline-block;
-  padding: 8px;
+  padding: 0.5rem;
   color: white;
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 219px;
+  width: 13.6875rem;
 }
 
 .button:hover {
   background-color: #555;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 40.625rem) {
   .column11 {
     width: 100%;
     display: block;

@@ -10,18 +10,24 @@
   /* padding-top: 4%; */
   padding: 3%;
   margin-bottom: 10.1%;
+
 }
 .Login {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 40%;
   height: 50%;
-  border-radius: 25px;
+  border-radius: 1.5625rem;
   margin-top: 5%;
-  background-color: rgba(243, 241, 237,0.75);
+  /* background-color: rgba(243, 241, 237,0.75); */
+
+  background-color: #f8f8f8;
+  /* box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); */
+  border: blanchedalmond;
 }
 .nameProfile{
-  margin-bottom: 5%;
+  margin-bottom: 5%; 
+  padding-top: 2rem;
 }
 
 
@@ -33,9 +39,9 @@
 input[type="text"],
 input[type="number"],
 input[type="password"] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem 0;
+  border: 0.0625rem solid #ccc;
   box-sizing: border-box;
   width: 50%;
 }
@@ -46,16 +52,16 @@ input[type="password"] {
   text-align: center;
   color: rgb(273, 249, 249);
   cursor: pointer;
-  padding: 8px 0px;
-  margin: 8px 0;
+  padding: 0.5rem 0;
+  margin: 1.5rem 0;
   /* border-radius: 5px; */
   margin-bottom: 5%;
   margin-top: 5%;
-  font-size: 19px;
+  font-size: 1.1875rem;
 
 
   background-color: #d82171;
   border-color: #d82171;
-  border-width: 2px;
+  border-width: 0.125rem;
   color: white;
 }

@@ -1,11 +1,11 @@
 .allDiv {
-  margin-top: 192px;
+  margin-top: 12rem;
   display: grid;
   width: 50%;
   grid-template-columns: auto auto auto;
-  grid-gap: 50px;
+  grid-gap: 3.125rem;
   margin-bottom: 6em;
-  margin-left: 200px;
+  margin-left: 12.5rem;
   /* justify-items: center; */
 }
 
@@ -15,8 +15,8 @@
 
 .sizeImage {
   display: block;
-  width: 350px;
-  height: 200px;
+  width: 21.875rem;
+  height: 12.5rem;
   cursor: pointer;
 }
 
@@ -27,7 +27,7 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  width: 350px;
+  width: 21.875rem;
   height: 0;
   transition: 0.7s;
   cursor: pointer;
@@ -41,5 +41,5 @@
   color: #ffffff;
   margin-top: 25%;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.875rem;
 }

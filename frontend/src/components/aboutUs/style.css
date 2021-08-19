@@ -16,22 +16,22 @@ html {
 .column1 {
   float: left;
   width: 25%;
-  margin-bottom: 16px;
-  padding: 0 8px;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
 }
 
 .card1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-  width: 270px;
+  margin: 0.5rem;
+  width: 16.875rem;
 }
 
 .about-section {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
   background-color: #474e5d;
   color: white;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 .aboutUs {
   display: flex;
@@ -42,15 +42,15 @@ html {
 .container1 {
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
-  gap: 19px;
-  padding-top: 20px;
+  padding: 0 1rem;
+  gap: 1.1875rem;
+  padding-top: 1.25rem;
   padding-bottom: 20%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px 16px;
-  margin: 10px;
+  padding: 0.125rem 1rem;
+  margin: 0.625rem;
 }
 
 .container::after,
@@ -61,7 +61,7 @@ html {
 }
 
 .row1 {
-  height: 10px;
+  height: 0.625rem;
 }
 .title {
   color: grey;
@@ -71,19 +71,20 @@ html {
   border: none;
   outline: 0;
   display: inline-block;
-  padding: 8px;
+  padding: 0.5rem;
   color: white;
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 219px;
+  width: 13.6875rem;
+  margin-bottom: 1rem;
 }
 
 .button:hover {
   background-color: #555;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 40.625rem) {
   .column1 {
     width: 100%;
     display: block;

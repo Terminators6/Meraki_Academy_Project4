@@ -7,90 +7,90 @@
 .AllPage {
   display: grid;
   grid-template-columns: 5% 80% 5%;
-  grid-gap: 50px;
+  grid-gap: 3.125rem;
   margin-top: 2em;
 }
 
 .midPageDiv {
   display: grid;
   grid-template-rows: 30% 13% 30%;
-  grid-gap: 50px;
+  grid-gap: 3.125rem;
 }
 
 .secondColumn {
   display: grid;
   grid-template-columns: 35% 65%;
-  grid-gap: 50px;
+  grid-gap: 3.125rem;
 }
 
 .styleTitleP {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
 
 .styleTypeP {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
   margin-bottom: 1em;
 }
 
 .buttonR {
   background: url("http://imgur.com/I0EwG.png") transparent;
-  height: 48px;
-  width: 45px;
+  height: 3rem;
+  width: 2.8125rem;
   border: none;
   margin-bottom: 2em;
 }
 
 .rating {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1em;
 }
 
 .NumberRating {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
 .imageP {
   margin-top: 3em;
   margin-bottom: 3em;
-  width:800px;
-  height:300px;
+  width:50rem;
+  height:18.75rem;
 }
 
 .descriptionP {
-  width: 900px;
+  width: 56.25rem;
   text-align: left;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-left: 14%;
   background-color: rgba(243, 241, 237, 0.9);
   padding: 2em;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   margin-top: 7%;
 }
 
 .buttonP {
   background-color: #d82171;
   border-color: #d82171;
-  border-width: 2px;
+  border-width: 0.125rem;
   color: white;
-  width: 200px;
-  height: 50px;
-  font-size: 20px;
+  width: 12.5rem;
+  height: 3.125rem;
+  font-size: 1.25rem;
 }
 
 .commentProgramming {
   margin-top: 10%;
-  height: 15px;
+  height: 0.9375rem;
 }
 
 .imageProgramming {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
 }
 
 .divColumnComment {
@@ -98,14 +98,14 @@
   grid-template-columns: 10% 90%;
   background-color: rgba(243, 241, 237, 0.9);
   margin-top: 2em;
-  border-radius: 10px;
-  width: 800px;
+  border-radius: 0.625rem;
+  width: 50rem;
   margin-left: 17%;
 }
 
 .imageProgrammingTwo {
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   padding: 0.5em;
 }
@@ -115,7 +115,7 @@
   text-align: left;
   margin-top: 0.8em;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .commentDivProgramming {

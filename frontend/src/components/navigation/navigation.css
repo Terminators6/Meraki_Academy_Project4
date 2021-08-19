@@ -14,9 +14,9 @@
 
 .Navbar {
   background-color: #FFFFFF;
-  height: 70px;
-  border: blanchedalmond;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  border: blanchedalmond;
+  height: 70px;
 }
 .NavIm {
   width: 70px;

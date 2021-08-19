@@ -7,7 +7,7 @@
 .midOne {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+  grid-gap: 0.625rem;
   margin-bottom: 4em;
 }
 
@@ -15,7 +15,7 @@
   text-align: left;
   margin-top: 2em;
   margin-bottom: 2em;
-  margin-left: 4.6em;
+  margin-left: 4.8em;
 }
 .iiimg {
   object-fit: cover;
@@ -25,14 +25,14 @@
   display: flex;
 }
 .namePhoto {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
   margin-bottom: 1em;
 }
 
 .textPhotoStyle {
   text-align: left;
-  width: 300px;
+  width: 18.75rem;
   font-size: large;
 }
 
@@ -41,12 +41,24 @@
 }
 
 .title1 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  margin-left: -4.5rem;
+  color: black;
 }
 
 .title2 {
-  margin-top: 10px;
+  margin-top: 0.625rem;
+  margin-left: -5em;
+}
+
+.title21 {
+  margin-top: 0.625rem;
   margin-left: -6em;
+}
+
+.title22 {
+  margin-top: 0.625rem;
+  margin-left: -8.6em;
 }
 
 .photo1 {
@@ -69,29 +81,29 @@
 .midTwo {
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 0px;
+  grid-gap: 0;
   margin-bottom: 4em;
 }
 
 .textPhotoStyle1 {
   text-align: left;
-  width: 250px;
+  width: 15.625rem;
   margin-left: 14em;
 }
 
 .textPhotoStyle2 {
   text-align: left;
-  width: 250px;
+  width: 15.625rem;
   margin-left: 5em;
 }
 
 .title3 {
-  margin-top: 8px;
-  margin-left: -120px;
+  margin-top: 0.5rem;
+  margin-left: -7.5rem;
 }
 
 .title4 {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   margin-left: -12em;
 }
 
@@ -107,7 +119,7 @@
 
 .hrMid {
   position: relative;
-  margin-left: 200px;
+  margin-left: 12.5rem;
 
   width: 70%;
 }
@@ -125,7 +137,7 @@
   text-align-last: left;
   font-size: xx-large;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 1.4;
 }
 
@@ -136,7 +148,7 @@
   text-align-last: left;
   font-size: xx-large;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.4;
 }
 .centered4 {
@@ -146,7 +158,7 @@
   text-align-last: left;
   font-size: xx-large;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.4;
 }
 .centered3 {
@@ -174,14 +186,14 @@
   background: #f20091;
   border-color: #f20091;
   color: #f7f7f7;
-  width: 100px;
-  font-size: 14px;
+  width: 6.25rem;
+  font-size: 0.875rem;
   line-height: 1.43;
-  border: 1px solid;
+  border: 0.0625rem solid;
   border-radius: 0;
   display: inline-block;
   font-weight: 700;
-  padding: 6px 13px;
+  padding: 0.375rem 0.8125rem;
   cursor: pointer;
   font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: center;

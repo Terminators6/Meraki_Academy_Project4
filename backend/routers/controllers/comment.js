@@ -1,11 +1,7 @@
 const Comment = require("./../../db/models/commentSchema");
 
 const createNewComment = async (req, res) => {
-  console.log("....createNewComment....");
   const { comment, commenter, serviceId } = req.body;
-  console.log("serviceId", serviceId);
-  console.log("commenter", commenter);
-  console.log("comment", comment);
 
   const newComment = new Comment({ comment, commenter, serviceId });
   newComment

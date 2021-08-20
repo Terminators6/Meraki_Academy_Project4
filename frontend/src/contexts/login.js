@@ -44,21 +44,23 @@ const LoginProvider = (props) => {
         password,
       });
 
-      console.log(res);
       setMassage("login Successfully");
+      console.log(res);
       saveToken(res.data);
       setLoggedIn(true);
       setTimeout(function () {
         history.push("/");
-      }, 2000);
+        
+      }, 1000);
     } catch (error) {
       setMassage(error.response.data);
     }
   }
 
   function logout() {
-    setLoggedIn(false);
     localStorage.clear();
+    setMassage('');
+    setLoggedIn(false);
   }
   return <LoginContext.Provider value={state}>{props.children}</LoginContext.Provider>;
 };

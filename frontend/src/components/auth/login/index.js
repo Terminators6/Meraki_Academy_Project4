@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LoginContext } from "./../../../contexts/login";
-import { Footer } from "./../../footer/index";
 import "./login.css";
 import axios from "axios";
 import GoogleLogin from "react-google-login";
@@ -68,12 +67,11 @@ const Login = () => {
             className="pointer marg styleButton1"
           />
           <div>
-            <button className="button4">login</button>
-            {loginContext.massage && <div>{loginContext.massage}</div>}
+            <button className="button4" >login</button>
+            {  loginContext.massage && <div>{loginContext.massage}</div>}
           </div>
         </form>
       </div>
-      <Footer />
     </>
   );
 };

@@ -1,35 +1,35 @@
 .sizaText {
-  font-size: 50px;
+  font-size: 3.125rem;
   color: white;
-  width: 500px;
-  margin-top: 174px;
+  width: 31.25rem;
+  margin-top: 10.875rem;
   text-align: left;
   margin-left: 3em;
   font-weight: bold;
 }
 
 .paragraph {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: white;
-  width: 454px;
+  width: 34.0625rem;
   text-align: left;
-  margin-left: 155px;
+  margin-left: 9.6875rem;
   margin-top: 1em;
   margin-bottom: 2em;
 }
 
 .buttonPageOne {
   margin-bottom: 5.5em;
-  margin-left: 152px;
-  width: 200px;
+  margin-left: 9.5rem;
+  width: 12.5rem;
   padding: 0.5em;
   background-color: #d82171;
   border-color: #d82171;
-  border-width: 3px;
+  border-width: 0.1875rem;
   color: white;
   font-weight: bold;
-  font-size: 20px;
-  height: 60px;
+  font-size: 1.25rem;
+  height: 3.75rem;
   cursor: pointer;
 }
 
@@ -40,15 +40,15 @@
 .buttonPagetWO {
   margin-bottom: 5.5em;
   margin-left: 4.3em;
-  width: 200px;
+  width: 12.5rem;
   padding: 0.5em;
   background-color: rgba(255, 255, 255, 0);
   border-color: white;
-  border-width: 3px;
+  border-width: 0.1875rem;
   color: white;
   font-weight: bold;
-  font-size: 20px;
-  height: 60px;
+  font-size: 1.25rem;
+  height: 3.75rem;
   cursor: pointer;
 }
 .buttonPagetWO:hover {

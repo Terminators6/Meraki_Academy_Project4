@@ -8,15 +8,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 22px;
+  padding-top: 1.375rem;
 }
 
 .Profile {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 40%;
   height: 50%;
-  border-radius: 25px;
+  border-radius: 1.5625rem;
   background-color: rgba(243, 241, 237,0.95);
 }
 .All {
@@ -27,25 +27,25 @@
 input[type="text"],
 input[type="number"],
 input[type="password"] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem 0;
+  border: 0.0625rem solid #ccc;
   box-sizing: border-box;
-  width: 300px;
+  width: 1.875rem;
 }
 
 .label1 {
-  padding: 12px 20px;
-  margin: 15px 15px;
-  width: 150px;
+  padding: 0.75rem 1.25rem;
+  margin: 0.9375rem 0.9375rem;
+  width: 9.375rem;
   text-align: left;
   margin-right: 10%;
   font-weight: bold;
 }
 
 .label2 {
-  margin: 2px;
-  width: 150px;
+  margin: 0.125rem;
+  width: 9.375rem;
   text-align: left;
   margin-right: 2.7em;
   font-weight: bold;
@@ -67,16 +67,16 @@ input[type="password"] {
   width: 100%;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 0.9375rem 2rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 1rem;
+  margin: 0.25rem 0.125rem;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
 }
 
 .delete {
@@ -97,21 +97,21 @@ input[type="password"] {
   margin-bottom: 1.5em;
 }
 
-.hrStyle {
-  /* width: 300px;
+/* .hrStyle {
+  width: 300px;
   height: 2px;
   margin-left: 7.5em;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
   background-color: #080808;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38); */
-}
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38); 
+} */
 
 .EditProfile {
   display: grid;
   width: 50%;
   grid-template-columns: auto auto;
-  grid-gap: 5px;
+  grid-gap: 0.3125rem;
   /* margin-bottom: 2em; */
   justify-content: center;
   justify-items: center;
@@ -122,20 +122,20 @@ input[type="password"] {
 
   border-radius: 50%;
   margin-top: 5%;
-  width: 170px;
-  height: 170px;
+  width: 10.625rem;
+  height: 10.625rem;
 }
 
 .toast {
-  margin-top: 50px;
+  margin-top: 3.125rem;
   background: rgba(256, 256, 256, 0.95);
   color: #2f6571;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 30%;
   height: 25%;
@@ -144,7 +144,7 @@ input[type="password"] {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -153,8 +153,8 @@ input[type="password"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px 16px;
-  margin: 20px;
+  padding: 0.125rem 1rem;
+  margin: 1.25rem;
 }
 
 .allInformatiom {
@@ -166,7 +166,7 @@ input[type="password"] {
 }
 
 .styleInput {
-  width: 300px;
-  height: 40px;
-  margin: 8px;
+  width: 18.75rem;
+  height: 2.5rem;
+  margin: 0.5rem;
 }

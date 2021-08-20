@@ -5,11 +5,11 @@
 }
 
 .copyRight {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .borderCopyRight {
-  margin-top: -4px;
+  margin-top: -0.25rem;
   color: white;
   border-color: #161e2c;
   background-color: #161e2c;

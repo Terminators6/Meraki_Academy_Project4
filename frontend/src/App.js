@@ -4,7 +4,6 @@ import BusinessSupService from "./components/seconedPage/BusinessSupService";
 import { Route, Switch } from "react-router-dom";
 import { Navigation } from "./components/navigation/index";
 import { Header } from "./components/header/index";
-import { Footer } from "./components/footer/index";
 import { Main } from "./components/main/index";
 import { Register } from "./components/auth/signUp";
 import { Programing } from "./components/servicePage/programing";
@@ -35,7 +34,6 @@ const App = () => {
         <Route exact path="/:type" component={BusinessSupService} />
         <Header />
         <Main />
-        <Footer />
       </Switch>
     </div>
   );

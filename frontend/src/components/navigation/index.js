@@ -14,11 +14,10 @@ export const Navigation = () => {
     <div className="Navbar">
       {localStorage.getItem("token") && loginContext.loggedIn ? (
         <div className="Nav">
-          <Link to="/">
+          <Link to="/" className=" logoText">
             {" "}
-            <img className="NavIm" src="https://rb.gy/xkgfkm" />{" "}
+            Freelance
           </Link>
-
           <Link to="/Favorite" className="styleText">
             {" "}
             Favorite{" "}
@@ -34,9 +33,9 @@ export const Navigation = () => {
         </div>
       ) : (
         <div className="Nav">
-          <Link to="/">
+        <Link to="/" className=" logoText">
             {" "}
-            <img className="NavIm" src="https://rb.gy/xkgfkm" />{" "}
+            Freelance
           </Link>
 
           <Link to="/Register" className="styleText">

@@ -31,6 +31,7 @@ const BusinessSupService = ({ id }) => {
                       }}
                       src={ele.image}
                       style={{ height: "60%", width: "100%" }}
+                    alt=''
                     ></img>
                     <div class="container11">
                       <h2>{`${ele.title}`}</h2>

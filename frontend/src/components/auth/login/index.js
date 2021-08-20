@@ -1,15 +1,40 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LoginContext } from "./../../../contexts/login";
 import { Footer } from "./../../footer/index";
 import "./login.css";
+import axios from "axios";
+import GoogleLogin from "react-google-login";
+import { useHistory } from "react-router";
 
 const Login = () => {
+  const history = useHistory();
+
   const loginContext = useContext(LoginContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     loginContext.Login();
+  };
+
+  const loginWithGoogle = async (response) => {
+    async function goo() {
+      const res = await axios.post("http://localhost:5000/login", {
+        email: response.Ts.Et,
+        password: "123",
+      });
+      loginContext.setMassage("login Successfully");
+      loginContext.saveToken(res.data);
+      loginContext.setLoggedIn(true);
+    }
+    goo();
+    //go data base and save the response if the response
+    // exists login directly if not signup this user
+    // in data base and put the role_id is 2 like user
+    console.log(response.Ts.Et);
+    localStorage.setItem("token", response.accessToken);
+    history.push("/");
+    loginContext.setLoggedIn(true);
   };
   return (
     <>
@@ -34,6 +59,14 @@ const Login = () => {
               }}
             />
           </div>
+          <GoogleLogin
+            clientId="701876201185-nj6jqs8eqjrehl98410phe5vu3spjfgb.apps.googleusercontent.com"
+            buttonText="login with google"
+            onSuccess={loginWithGoogle}
+            onFailure={loginWithGoogle}
+            cookiePolicy={"single_host_origin"}
+            className="pointer marg styleButton1"
+          />
           <div>
             <button className="button4">login</button>
             {loginContext.massage && <div>{loginContext.massage}</div>}

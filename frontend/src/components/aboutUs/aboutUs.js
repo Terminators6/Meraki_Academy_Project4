@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 // import { LoginContext } from "./../../../contexts/login";
 import "./style.css";
-const aboutUs = () => {
+const AboutUs = () => {
+  const history = useHistory();
   return (
     <>
       <div class="about-section">
@@ -29,7 +30,14 @@ const aboutUs = () => {
                 <p>i have an ambition to become the best programmer in the world </p>
                 <p>abedalnabi96@gmail.com</p>
                 <p>
-                  <button class="button">Contact</button>
+                  <button
+                    onClick={() => {
+                      history.push("/contact");
+                    }}
+                    class="button"
+                  >
+                    Contact
+                  </button>
                 </p>
               </div>
             </div>
@@ -98,4 +106,4 @@ const aboutUs = () => {
   );
 };
 
-export default aboutUs;
+export default AboutUs;

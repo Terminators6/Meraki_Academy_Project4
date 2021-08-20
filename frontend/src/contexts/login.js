@@ -24,6 +24,9 @@ const LoginProvider = (props) => {
     token,
     logout,
     loggedIn,
+    setLoggedIn,
+    saveToken,
+    setMassage,
   };
   function saveToken(token) {
     const user = jwt.decode(token);

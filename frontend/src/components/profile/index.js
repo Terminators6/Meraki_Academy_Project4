@@ -1,10 +1,8 @@
-
 import React, { useState, useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { ProfileContext } from "./../../contexts/profile";
 import { LoginContext } from "../../contexts/login";
 import "./profile.css";
-
 export const Profile = () => {
     const profileContext = useContext(ProfileContext);
     const loginContext = useContext(LoginContext);
@@ -13,32 +11,24 @@ export const Profile = () => {
     const [delet, setDelet] = useState(false);
     const [nav, setNav] = useState(false);
     const [state, setState] = useState('');
-
     useEffect(() => {
         profileContext.getUserProfile();
         console.log("1....Profile useEffect", profileContext.user);
     }, []);
-
     useEffect(() => {
         profileContext.getUserProfile();
         console.log("2....updateUserProfile useEffect", profileContext.user);
     }, [edit]);
-
-   
-    
-
     const handelSubmit = (e) => {
         e.preventDefault();
         profileContext.updateUserProfile();
         setEdit(true);
         setNav(true);
     };
-
     const confirm = (email) =>{
         profileContext.setPassword(state)
         profileContext.confirmDelet(email);
     }
-
     return (
         <>
             <div> {!delet ? (
@@ -64,7 +54,6 @@ export const Profile = () => {
                                     onChange={(e) => profileContext.setLastName(e.target.value)}
                                     className="styleInput"
                                 />
-
                                 <label className="label1">Age</label>
                                 <input
                                     type="Number"
@@ -72,7 +61,6 @@ export const Profile = () => {
                                     onChange={(e) => profileContext.setAge(e.target.value)}
                                     className="styleInput"
                                 />
-
                                 <label className="label1">Country</label>
                                 <input
                                     type="text"
@@ -80,7 +68,6 @@ export const Profile = () => {
                                     onChange={(e) => profileContext.setCountry(e.target.value)}
                                     className="styleInput"
                                 />
-
                                 <label className="label1">Email</label>
                                 <input type="text" defaultValue={profileContext.email} readOnly className="styleInput" />
                             </div>
@@ -144,7 +131,6 @@ export const Profile = () => {
                         </div>
                     )}
                 </div>
-
             ) : (<div className="main">
                 <h1 className="reg">Delete Confirmation</h1>
                 {/* <h2 className="reg">Are you sure you want to delete this profile</h2> */}
@@ -173,4 +159,3 @@ export const Profile = () => {
         </>
     );
 };
-

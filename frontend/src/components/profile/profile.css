@@ -17,7 +17,7 @@
   width: 40%;
   height: 50%;
   border-radius: 1.5625rem;
-  background-color: rgba(243, 241, 237,0.95);
+  background-color: rgba(243, 241, 237, 0.95);
 }
 .All {
   width: 100%;
@@ -31,6 +31,10 @@ input[type="password"] {
   margin: 0.5rem 0;
   border: 0.0625rem solid #ccc;
   box-sizing: border-box;
+
+
+  /* width: 1.875rem; */
+
 }
 
 .label1 {
@@ -118,7 +122,6 @@ input[type="password"] {
 }
 
 .img1 {
-
   border-radius: 50%;
   margin-top: 5%;
   width: 10.625rem;
@@ -139,7 +142,7 @@ input[type="password"] {
   width: 30%;
   height: 25%;
   border-radius: 5%;
-  background-color: rgba(243, 241, 237,0.75);
+  background-color: rgba(243, 241, 237, 0.75);
 }
 
 .card:hover {

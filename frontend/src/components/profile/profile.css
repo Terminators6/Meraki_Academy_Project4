@@ -31,7 +31,10 @@ input[type="password"] {
   margin: 0.5rem 0;
   border: 0.0625rem solid #ccc;
   box-sizing: border-box;
+
+
   /* width: 1.875rem; */
+
 }
 
 .label1 {

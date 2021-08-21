@@ -37,6 +37,8 @@ const LoginProvider = (props) => {
     }
   }
 
+  
+
   async function Login() {
     try {
       const res = await axios.post("http://localhost:5000/login", {
@@ -45,13 +47,14 @@ const LoginProvider = (props) => {
       });
 
       setMassage("login Successfully");
+      setLoggedIn(true);
+      console.log("from Logincontext  loggedIn is.....",loggedIn);
       console.log(res);
       saveToken(res.data);
-      setLoggedIn(true);
       setTimeout(function () {
         history.push("/");
         
-      }, 1000);
+      }, 500);
     } catch (error) {
       setMassage(error.response.data);
     }

@@ -1,18 +1,29 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./navigation.css";
 
 import { LoginContext } from "./../../contexts/login";
+import { ProfileContext } from "../../contexts/profile";
 
 export const Navigation = () => {
-  const [state, setState] = useState("");
+  const [state, setState] = useState(false);
   const loginContext = useContext(LoginContext);
+  const profileContext = useContext(ProfileContext)
   const [darkMode, setDarkMode] = useState(false);
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
 
+  console.log("loginContext.loggedIn is ....",loginContext.loggedIn);
+  console.log("profileContext.loggedIn is ....",profileContext.loggedIn)
+
+  useEffect(() => {
+    setState(true);
+    // console.log("1....Profile useEffect", profileContext.user);
+}, [loginContext.loggedIn]);
+
   return (
     <div className="Navbar">
-      {localStorage.getItem("token") && loginContext.loggedIn ? (
+      
+      {loginContext.loggedIn ? (
         <div className="Nav">
           <Link to="/" className=" logoText">
             {" "}

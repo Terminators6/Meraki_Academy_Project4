@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 // import { Register } from '../components/auth/signUp';
-
 export const RegisterContext = React.createContext();
-
 const RegisterProvider = (props) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -15,7 +13,6 @@ const RegisterProvider = (props) => {
   const [role, setRole] = useState("60be297bc1ce0378e4564f2a");
   const [message, setMessage] = useState("");
   const history = useHistory();
-
   const state = {
     setFirstName,
     setLastName,
@@ -27,7 +24,6 @@ const RegisterProvider = (props) => {
     addNewUser,
     message,
   };
-
   async function addNewUser() {
     try {
       const newUser = { firstName, lastName, age, country, email, password, role };
@@ -36,11 +32,12 @@ const RegisterProvider = (props) => {
         setMessage("Please fill all the info");
       } else {
         await axios.post("http://localhost:5000/register", newUser).then((response) => {
-          if (response.status == 201) {
+          console.log("................response.status........",response.status)
+          if (response.status === 200) {
             setMessage("The user has been created successfully ");
             setTimeout(function () {
               history.push("/Login");
-            }, 2000);
+            }, 1000);
           } else {
             setMessage("Error happened while register, please try again");
           }
@@ -51,8 +48,6 @@ const RegisterProvider = (props) => {
       throw error;
     }
   }
-
   return <RegisterContext.Provider value={state}>{props.children}</RegisterContext.Provider>;
 };
-
 export default RegisterProvider;

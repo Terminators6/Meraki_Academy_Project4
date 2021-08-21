@@ -19,6 +19,7 @@ const servicesRouter = require("./routers/routes/thirdPage");
 
 //built-in middlewares
 app.use(express.json());
+//
 
 //third-party middleware
 app.use(cors());

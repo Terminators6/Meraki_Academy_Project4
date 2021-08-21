@@ -1,11 +1,9 @@
-
-
 import React, { useState, useContext } from 'react';
 import { useHistory } from "react-router-dom";
+import { LoginContext } from './login';
 import axios from 'axios';
 
 import jwt from "jsonwebtoken";
-import { LoginContext } from "./login";
 
 let userId;
 
@@ -24,10 +22,10 @@ const ProfileProvider = (props) => {
     const [password, setPassword] = useState('');
     const [role, setRole] = useState('60be297bc1ce0378e4564f2a');
     const [message, setMessage] = useState('...');
+    const [loggedIn, setLoggedIn] = useState(true);
 
 
     const loginContext = useContext(LoginContext);
-
 
     const state = {
         setUser,
@@ -38,6 +36,7 @@ const ProfileProvider = (props) => {
         age,
         country,
         email,
+        loggedIn,
         setLastName,
         setAge,
         setCountry,
@@ -47,6 +46,7 @@ const ProfileProvider = (props) => {
         getUserProfile,
         updateUserProfile,
         deleteUserProfile,
+        confirmDelet,
     };
 
 
@@ -54,13 +54,7 @@ const ProfileProvider = (props) => {
 
     function validationToken() {
         const user = jwt.decode(token);
-        // if (!userId) {
-        //     console.log(".........token error !userId ", user)
-        //     // throw new Error();
-        // }
-        // else {
         userId = user.userId;
-        // }
     }
 
     async function getUserProfile() {
@@ -99,33 +93,50 @@ const ProfileProvider = (props) => {
             history.push('/Profile');
             console.log("error in editUserProfile frontend", error)
         }
+    }
 
+    //confirm delete Profile
+    async function confirmDelet(email) {
+        try {
+            const res = await axios.post("http://localhost:5000/login", {
+                email,
+                password,
+            });
+            console.log("......1   confirmDelet.....");
+            deleteUserProfile();
+            // setMessage("Delete Profile Successfully");
+            setTimeout(function () {
+                history.push("/");
+            }, 1000);
+        } catch (error) {
+            setMessage(error.response.data);
+        }
     }
 
 
-async function deleteUserProfile() {
-    await localStorage.clear();
-
-
-    console.log("delete User Profile.......");
-    try {
-        validationToken();
-        const res = await axios.delete(`http://localhost:5000/profile/${userId}`);
-        setUser(res.data);
-        console.log("....Delete User profile res.data", res.data);
-        setTimeout(() => {
+    async function deleteUserProfile() {
+        await localStorage.clear();
+        console.log("delete User Profile.......");
+        try {
+            validationToken();
+            const res = await axios.delete(`http://localhost:5000/profile/${userId}`);
+            setUser(res.data);
+            console.log("....Delete User profile .....2....", res.data);
             localStorage.clear();
+            console.log("setLoggedIn...............",loginContext.loggedIn)
+            loginContext.setLoggedIn(false);
             setMessage("User Profile Deleted Successfully");
-            history.push("/");
-        }, 500);
-    } catch (error) {
-        setMessage("Error happened while delete user profile, Please try again");
-        console.log("error in deleteUserProfile frontend", error);
-
+            setTimeout(() => {
+                history.push("/");
+            }, 1000);
+        } catch (error) {
+            setMessage("Error happened while delete user profile, Please try again");
+            console.log("error in deleteUserProfile frontend", error);
+        }
     }
-}
 
-return <ProfileContext.Provider value={state}>{props.children}</ProfileContext.Provider>;
+
+    return <ProfileContext.Provider value={state}>{props.children}</ProfileContext.Provider>;
 };
 
 export default ProfileProvider;

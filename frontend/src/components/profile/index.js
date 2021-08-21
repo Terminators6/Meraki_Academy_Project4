@@ -7,7 +7,7 @@ import "./profile.css";
 export const Profile = () => {
     const profileContext = useContext(ProfileContext);
     const history = useHistory();
-    const [edit, setEdit] = useState(true);
+    const [edit, setEdit] = useState(false);
 
     useEffect(() => {
         profileContext.getUserProfile();
@@ -28,7 +28,7 @@ export const Profile = () => {
     return (
         <>
             <div className="main">
-                {!edit ? (
+                {edit ? (
                     <form className="Profile" onSubmit={handelSubmit}>
                         <div>
                             <h2 className="reg">My Profile</h2>

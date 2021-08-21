@@ -14,7 +14,6 @@ import { Video } from "./components/video/video";
 import { Profile } from "./components/profile/index";
 import { Logout } from "./components/logout";
 import "./App.css";
-
 const App = () => {
   return (
     <div className="App">
@@ -38,5 +37,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;

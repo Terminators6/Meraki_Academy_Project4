@@ -9,7 +9,6 @@ export const Programing = ({ id }) => {
   const serviceContext = useContext(ServiceContext);
   const userId = useParams().userId;
   const [stat1, setStat1] = useState(0);
-
   async function rateFun(e) {
     serviceContext.add();
     let rating = Number(serviceContext.rating) + Number(e.target.value) * 2;
@@ -32,28 +31,23 @@ export const Programing = ({ id }) => {
         serviceId: userId,
       });
       a = commit.data;
-      console.log("aaaaaaa", a);
-
       await setAllComments(
         a.map((ele) => {
           return (
             <div className="divColumnComment">
               <div>
-              <img src="https://cutt.ly/qnUMxQg" className="imageProgrammingTwo"/>
+                <img src="https://cutt.ly/qnUMxQg" className="imageProgrammingTwo" />
               </div>
               <div>
-              <div className="firstNameCommentP">{ele.commenter.firstName}</div>
-              <p className="commentDivProgramming">{ele.comment}</p>
+                <div className="firstNameCommentP">{ele.commenter.firstName}</div>
+                <p className="commentDivProgramming">{ele.comment}</p>
               </div>
             </div>
           );
         })
       );
-      console.log("allComments", allComments);
-      console.log("codasdasmmit", commit.data);
     } catch (error) {}
   }
-
   async function commitFun() {
     setStat1(stat1 + 1);
     let token = localStorage.getItem("token");
@@ -65,20 +59,16 @@ export const Programing = ({ id }) => {
     });
     serviceContext.setCommit("");
   }
-
   function commit(e) {
     serviceContext.setCommit(e.target.value);
   }
-
   useEffect(() => {
     serviceContext.getService(userId);
     getCommints();
   }, []);
-
   useEffect(() => {
     getCommints();
   }, [stat1]);
-
   // async function fav() {
   //   let token = localStorage.getItem("token");
   //   let token1 = jwt.decode(token);
@@ -88,93 +78,62 @@ export const Programing = ({ id }) => {
   //     serviceId: userId, //serviceid
   //   });
   // }
-
   return (
     <>
-    <div>
-      <div className="AllPage">
-        <div></div>
-        <div className="midPageDiv">
-          <div className="secondColumn">
-            <div>
-              <p className="styleTitleP">{serviceContext.title}</p>
-              <p className="styleTypeP">Type: {serviceContext.type}</p>
-              <input
-                type="button"
-                className="buttonR"
-                onClick={rateFun}
-                value="5"
-              ></input>
-              <input
-                type="button"
-                className="buttonR"
-                onClick={rateFun}
-                value="4"
-              ></input>
-              <input
-                type="button"
-                className="buttonR"
-                onClick={rateFun}
-                value="3"
-              ></input>
-              <input
-                type="button"
-                className="buttonR"
-                onClick={rateFun}
-                value="2"
-              ></input>
-              <input
-                type="button"
-                className="buttonR"
-                onClick={rateFun}
-                value="1"
-              ></input>
-              <div className="rating">
-                {`${Math.round(serviceContext.rate) / 2}`}/5
+      <div>
+        <div className="AllPage">
+          <div></div>
+          <div className="midPageDiv">
+            <div className="secondColumn">
+              <div>
+                <p className="styleTitleP">{serviceContext.title}</p>
+                <p className="styleTypeP">Type: {serviceContext.type}</p>
+                <input type="button" className="buttonR" onClick={rateFun} value="5"></input>
+                <input type="button" className="buttonR" onClick={rateFun} value="4"></input>
+                <input type="button" className="buttonR" onClick={rateFun} value="3"></input>
+                <input type="button" className="buttonR" onClick={rateFun} value="2"></input>
+                <input type="button" className="buttonR" onClick={rateFun} value="1"></input>
+                <div className="rating">{`${Math.round(serviceContext.rate) / 2}`}/5</div>
+                <div className="NumberRating">
+                  {" "}
+                  Number of voters: <span>{serviceContext.numberOfVoters}</span>{" "}
+                </div>
               </div>
-              <div className="NumberRating">
-                {" "}
-                Number of voters: <span>
-                  {serviceContext.numberOfVoters}
-                </span>{" "}
+              <div>
+                <img src={serviceContext.image} className="imageP" alt=""></img>
               </div>
             </div>
             <div>
-              <img src={serviceContext.image} className="imageP" alt=''></img>
+              <p className="descriptionP">{serviceContext.description}</p>
             </div>
-          </div>
-          <div>
-            <p className="descriptionP">{serviceContext.description}</p>
-          </div>
-          <div className="commentProgramming">
-            <div className="inputTextareaComment">
-            <img src="https://cutt.ly/qnUMxQg" className="imageProgramming" alt=''/>
-              <div className="textareaComment">
-              <textarea
-              rows="3"
-              cols="60"
-              placeholder="comment here"
-              value={serviceContext.commit}
-              onChange={commit}
-            ></textarea>
-            {a}
-            <br></br>
+            <div className="commentProgramming">
+              <div className="inputTextareaComment">
+                <img src="https://cutt.ly/qnUMxQg" className="imageProgramming" alt="" />
+                <div className="textareaComment">
+                  <textarea
+                    rows="3"
+                    cols="60"
+                    placeholder="comment here"
+                    value={serviceContext.commit}
+                    onChange={commit}
+                  ></textarea>
+                  {a}
+                  <br></br>
+                </div>
+                <div className="textareaCommentTwo">
+                  <button className="buttonP" onClick={commitFun}>
+                    add Comment
+                  </button>
+                </div>
               </div>
-            <div className="textareaCommentTwo">
-            <button className="buttonP" onClick={commitFun}>
-              add Comment
-            </button>
+              {allComments}
             </div>
-            </div>
-            {allComments}
+            {/* <button onClick={fav}>add favorite</button> */}
           </div>
-          {/* <button onClick={fav}>add favorite</button> */}
+          <div></div>
         </div>
-        <div></div>
       </div>
-      </div>
-      <div className="margineDiv">
-      </div>
+      <div className="margineDiv"></div>
     </>
   );
 };

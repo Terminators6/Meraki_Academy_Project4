@@ -61,10 +61,10 @@ app.post("/favorite", async (req, res) => {
   name();
 });
 
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
-// app.listen(PORT, () => {
-//   console.log(`Server On ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server On ${PORT}`);
+});
 
 module.exports = app;

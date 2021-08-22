@@ -20,6 +20,15 @@
 .iiimg {
   object-fit: cover;
   position: relative;
+  margin-left: 6rem;
+}
+
+.margMidMain{
+  margin-left: 5rem;
+}
+
+.container111{
+  margin-bottom: 7rem;
 }
 .AAA {
   display: flex;

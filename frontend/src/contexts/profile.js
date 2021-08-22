@@ -37,6 +37,8 @@ const ProfileProvider = (props) => {
         country,
         email,
         loggedIn,
+        message,
+        setMessage,
         setLastName,
         setAge,
         setCountry,
@@ -104,12 +106,12 @@ const ProfileProvider = (props) => {
             });
             console.log("......1   confirmDelet.....");
             deleteUserProfile();
-            // setMessage("Delete Profile Successfully");
+            setMessage("Profile deleted Successfully");
             setTimeout(function () {
                 history.push("/");
             }, 1000);
         } catch (error) {
-            setMessage(error.response.data);
+            setMessage("Please Try again");
         }
     }
 

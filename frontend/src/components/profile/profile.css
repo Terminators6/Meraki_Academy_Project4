@@ -8,16 +8,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1.375rem;
+  padding-top: 10rem;
+  
+}
+
+.mainDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .Profile {
-  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.50rem 1.5rem 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 40%;
   height: 50%;
-  border-radius: 1.5625rem;
-  background-color: rgba(243, 241, 237, 0.95);
+  background-color:#FFFFFF;
 }
 .All {
   width: 100%;
@@ -31,10 +38,6 @@ input[type="password"] {
   margin: 0.5rem 0;
   border: 0.0625rem solid #ccc;
   box-sizing: border-box;
-
-
-  /* width: 1.875rem; */
-
 }
 
 .label1 {
@@ -53,20 +56,10 @@ input[type="password"] {
   margin-right: 2.7em;
   font-weight: bold;
 }
-/* button {
-  width: 100%;
-  background-color: #0b0c0c;
-  text-align: center;
-  color: rgb(273, 249, 249);
-  cursor: pointer;
-  padding: 8px 0px;
-  margin: 8px 0;
-  border-radius: 5px;
-  font-size: 19px;
-} */
+
 
 .button1 {
-  background-color: #359956; /* Green */
+  background-color: #d82171; /* Green */
   width: 100%;
   border: none;
   color: white;
@@ -83,39 +76,44 @@ input[type="password"] {
 }
 
 .delete {
-  background-color: #d80a0a;
+  background-color: #d82171;
   width: 25%;
   margin-bottom: 1.5em;
 }
+.delete:hover { 
+  background-color: rgb(206, 46, 46);
+  /* font-weight: 5; */
+  font-size: 1rem;
+
+} 
+
 
 .cancel {
-  background-color: #0b0c0c;
+  background-color: #d82171;
   width: 25%;
   margin-bottom: 1.5em;
 }
+.cancel:hover { 
+  background-color: black;
+  font-size: 1rem;
+} 
 
 .save {
-  background-color: #3b89f0;
+  background-color: #d82171;
   width: 25%;
   margin-bottom: 1.5em;
 }
+.save:hover { 
+  background-color: green;
+  font-size: 1rem;
+} 
 
-/* .hrStyle {
-  width: 300px;
-  height: 2px;
-  margin-left: 7.5em;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
-  background-color: #080808;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 17px 5px rgba(0,0,0,0.38); 
-} */
 
 .EditProfile {
   display: grid;
-  width: 50%;
+  width: 70%;
   grid-template-columns: auto auto;
   grid-gap: 0.3125rem;
-  /* margin-bottom: 2em; */
   justify-content: center;
   justify-items: center;
   margin-left: 7.6em;
@@ -128,13 +126,7 @@ input[type="password"] {
   height: 10.625rem;
 }
 
-.toast {
-  margin-top: 3.125rem;
-  background: rgba(256, 256, 256, 0.95);
-  color: #2f6571;
-  text-align: center;
-  border-radius: 0.3125rem;
-}
+
 
 .card {
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
@@ -148,9 +140,28 @@ input[type="password"] {
 .card:hover {
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
 }
+.cardDelete{
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  width: 30%;
+  height: 25%;
+  background-color: rgba(243, 241, 237, 0.75);
+  margin-top: 18rem;
+  margin-left: 42rem;
+
+
+  transition: all 0.5s ease;
+  background: rgba(243, 241, 237, 0.75);;
+  padding: 5px;
+}
+
+.cardDelete:hover {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  background: #f590bc;
+  padding: 10px;
+}
 
 .container {
-  /* padding-top: 20px; */
   padding-bottom: 20%;
   display: flex;
   justify-content: space-between;
@@ -160,11 +171,22 @@ input[type="password"] {
 }
 
 .allInformatiom {
-  margin-left: 4.5em;
+  margin-left: 6rem;
+}
+
+
+.infoDelete {
+  margin-left: 1rem;
 }
 
 .nameProfile {
   margin-top: 0.5em;
+  font-weight: bolder;
+}
+
+.nameDelete {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .styleInput {

@@ -68,14 +68,14 @@ export const MidMain = () => {
           <img
             className="iiimg"
             src="https://www.f-cdn.com/assets/main/en/assets/home/api-enterprise/api-upsell-v3.jpg" alt=''
-            style={{ width: "100%", height: "37.5rem" }}
+            style={{ width: "120%", height: "37.5rem" }}
           ></img>
-          <div class="centered">Freelancer API.</div>
-          <p className="centered2">50 million professionals </p>
-          <p className="centered4">on demand</p>
-          <p className="centered3">Why hire people when you can simply integrate our talented</p>
-          <p className="centered5"> cloud workforce instead?</p>
-          <button className="centered6">IBM:DOC</button>
+          <div class="centered  margMidMain">Freelancer API.</div>
+          <p className="centered2 margMidMain">50 million professionals </p>
+          <p className="centered4 margMidMain">on demand</p>
+          <p className="centered3 margMidMain">Why hire people when you can simply integrate our talented</p>
+          <p className="centered5 margMidMain"> cloud workforce instead?</p>
+          <button className="centered6 margMidMain">IBM:DOC</button>
         </div>
         <div className="container111">
           <img
@@ -84,16 +84,16 @@ export const MidMain = () => {
             style={{ width: "120%", height: "37.5rem" }}
             alt=""
           ></img>
-          <div class="centered">Freelancer Enterprise.</div>
-          <p className="centered2">Company budget? Get </p>
-          <p className="centered4">more done for less</p>
-          <p className="centered3">Use our workforce of 50 million to help</p>
-          <p className="centered5"> your business achieve more.</p>
+          <div class="centered margMidMain">Freelancer Enterprise.</div>
+          <p className="centered2 margMidMain">Company budget? Get </p>
+          <p className="centered4 margMidMain">more done for less</p>
+          <p className="centered3 margMidMain">Use our workforce of 50 million to help</p>
+          <p className="centered5 margMidMain"> your business achieve more.</p>
           <button
             onClick={() => {
               history.push("/aboutUs");
             }}
-            className="centered6"
+            className="centered6 margMidMain"
           >
             concat us
           </button>

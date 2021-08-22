@@ -31,16 +31,27 @@
   margin-left: 0.4em;
 }
 
+.styleText:hover { 
+  color: #d82171;
+} 
+
+
 .styleLogOut {
   margin-left: 60%;
   
 }
 
+
+
 .logoText{
   font-size: 2rem;
-  color: black;
+  color: #d82171;
   text-decoration: none;
   margin-left: 0.2em;
   font-weight: 900;
   font-style: italic;
 }
+
+.logoText:hover { 
+  color: black;
+} 

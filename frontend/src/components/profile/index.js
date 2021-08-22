@@ -15,17 +15,19 @@ export const Profile = () => {
         profileContext.getUserProfile();
         console.log("1....Profile useEffect", profileContext.user);
     }, []);
+
     useEffect(() => {
         profileContext.getUserProfile();
         console.log("2....updateUserProfile useEffect", profileContext.user);
     }, [edit]);
+
     const handelSubmit = (e) => {
         e.preventDefault();
         profileContext.updateUserProfile();
         setEdit(true);
         setNav(true);
     };
-    const confirm = (email) =>{
+    const confirm = (email) => {
         profileContext.setPassword(state)
         profileContext.confirmDelet(email);
     }
@@ -36,7 +38,7 @@ export const Profile = () => {
                     {!edit ? (
                         <form className="Profile" onSubmit={handelSubmit}>
                             <div>
-                                <h2 className="reg">My Profile</h2>
+                                <h2 className="nameProfile">My Profile</h2>
                             </div>
                             <div className="hrStyle"></div>
                             <div className="EditProfile">
@@ -84,7 +86,6 @@ export const Profile = () => {
                             <button
                                 className="button1 delete"
                                 onClick={() => {
-                                    {/* profileContext.deleteUserProfile(); */ }
                                     setDelet(true);
                                     confirm(profileContext.user.email)
                                 }}
@@ -131,12 +132,12 @@ export const Profile = () => {
                         </div>
                     )}
                 </div>
-            ) : (<div className="main">
-                <h1 className="reg">Delete Confirmation</h1>
+            ) : (<div className="cardDelete">
                 {/* <h2 className="reg">Are you sure you want to delete this profile</h2> */}
-                <div className="Profile">
-                    <div className="container">
-                        <label className="label2">Email </label>
+                <h1 className="nameDelete">Delete Confirmation</h1>
+                <div className="">
+                    <div className="">
+                        {/* <label className="label2">Email </label> */}
                         <label className="label2">{profileContext.user.email}</label>
                     </div>
                     <div>
@@ -150,7 +151,15 @@ export const Profile = () => {
                         />
                     </div>
                     <div>
-                        <button className="button4" onClick={() => {confirm(profileContext.user.email)}}>confirm</button>
+                        <button className="button1 delete" onClick={() => { confirm(profileContext.user.email) }}>confirm</button>
+                        <button
+                            className="button1 cancel"
+                            onClick={() => {
+                                setDelet(false);
+                            }}
+                        >
+                            Cancel
+                        </button>
                         {profileContext.massage && <div>{profileContext.massage}</div>}
                     </div>
                 </div>

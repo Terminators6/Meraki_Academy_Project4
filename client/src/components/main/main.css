@@ -4,22 +4,19 @@
   width: 50%;
   grid-template-columns: auto auto auto;
   grid-gap: 3.125rem;
-  margin-bottom: 6em;
-  margin-left: 12.5rem;
+  margin-bottom: 6rem;
+  margin-left: 20rem;
   /* justify-items: center; */
 }
-
 .Div {
   position: relative;
 }
-
 .sizeImage {
   display: block;
   width: 21.875rem;
   height: 12.5rem;
   cursor: pointer;
 }
-
 .overlay {
   position: absolute;
   bottom: 0;
@@ -32,11 +29,9 @@
   transition: 0.7s;
   cursor: pointer;
 }
-
 .Div:hover .overlay {
   height: 100%;
 }
-
 .text {
   color: #ffffff;
   margin-top: 25%;

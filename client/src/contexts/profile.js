@@ -2,16 +2,11 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { LoginContext } from "./login";
 import axios from "axios";
-
 import jwt from "jsonwebtoken";
-
 let userId;
-
 export const ProfileContext = React.createContext();
-
 const ProfileProvider = (props) => {
   const history = useHistory();
-
   const [user, setUser] = useState({ Name: "T" });
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -22,9 +17,7 @@ const ProfileProvider = (props) => {
   const [role, setRole] = useState("60be297bc1ce0378e4564f2a");
   const [message, setMessage] = useState("...");
   const [loggedIn, setLoggedIn] = useState(true);
-
   const loginContext = useContext(LoginContext);
-
   const state = {
     setUser,
     user,
@@ -35,6 +28,8 @@ const ProfileProvider = (props) => {
     country,
     email,
     loggedIn,
+    message,
+    setMessage,
     setLastName,
     setAge,
     setCountry,
@@ -46,19 +41,16 @@ const ProfileProvider = (props) => {
     deleteUserProfile,
     confirmDelet,
   };
-
   const token = loginContext.token || localStorage.getItem("token");
-
   function validationToken() {
     const user = jwt.decode(token);
     userId = user.userId;
   }
-
   async function getUserProfile() {
     console.log("get User Profile.......");
     try {
       validationToken();
-      const res = await axios.get(`/profile/${userId}`);
+      const res = await axios.get(`http://localhost:5000/profile/${userId}`);
       setUser(res.data);
       setFirstName(res.data.firstName);
       setLastName(res.data.lastName);
@@ -70,14 +62,13 @@ const ProfileProvider = (props) => {
       console.log("error in getProfile frontend", error);
     }
   }
-
   async function updateUserProfile() {
     const user = { firstName, lastName, age, country, email };
     console.log("update User Profile.......");
     try {
       validationToken();
       console.log("....Edit User profile res.data", userId);
-      await axios.put(`/profile/${userId}`, user).then((response) => {
+      await axios.put(`http://localhost:5000/profile/${userId}`, user).then((response) => {
         setMessage("User Profile Updated Successfully");
         history.push("/Profile");
         console.log("....Edit User profile ..", response);
@@ -88,31 +79,29 @@ const ProfileProvider = (props) => {
       console.log("error in editUserProfile frontend", error);
     }
   }
-
   //confirm delete Profile
   async function confirmDelet(email) {
     try {
-      const res = await axios.post("/login", {
+      const res = await axios.post("http://localhost:5000/login", {
         email,
         password,
       });
       console.log("......1   confirmDelet.....");
       deleteUserProfile();
-      // setMessage("Delete Profile Successfully");
+      setMessage("Profile deleted Successfully");
       setTimeout(function () {
         history.push("/");
       }, 1000);
     } catch (error) {
-      setMessage(error.response.data);
+      setMessage("Please Try again");
     }
   }
-
   async function deleteUserProfile() {
     await localStorage.clear();
     console.log("delete User Profile.......");
     try {
       validationToken();
-      const res = await axios.delete(`/profile/${userId}`);
+      const res = await axios.delete(`http://localhost:5000/profile/${userId}`);
       setUser(res.data);
       console.log("....Delete User profile .....2....", res.data);
       localStorage.clear();
@@ -127,8 +116,6 @@ const ProfileProvider = (props) => {
       console.log("error in deleteUserProfile frontend", error);
     }
   }
-
   return <ProfileContext.Provider value={state}>{props.children}</ProfileContext.Provider>;
 };
-
 export default ProfileProvider;

@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 .Nav {
   margin-bottom: 2px;
   margin-left: 9em;
@@ -11,9 +10,8 @@
   display: flex;
   gap: 30px;
 }
-
 .Navbar {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
   border: blanchedalmond;
   height: 70px;
@@ -22,7 +20,6 @@
   width: 70px;
   height: 40px;
 }
-
 .styleText {
   font-size: 20px;
   color: black;
@@ -30,17 +27,20 @@
   padding: 0.6em;
   margin-left: 0.4em;
 }
-
+.styleText:hover {
+  color: #d82171;
+}
 .styleLogOut {
   margin-left: 60%;
-  
 }
-
-.logoText{
+.logoText {
   font-size: 2rem;
-  color: black;
+  color: #d82171;
   text-decoration: none;
   margin-left: 0.2em;
   font-weight: 900;
   font-style: italic;
+}
+.logoText:hover {
+  color: black;
 }

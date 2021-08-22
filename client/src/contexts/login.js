@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-
 import axios from "axios";
 import { decode } from "jsonwebtoken";
 import jwt from "jsonwebtoken";
-
 export const LoginContext = React.createContext();
 
 const LoginProvider = (props) => {
@@ -14,7 +12,7 @@ const LoginProvider = (props) => {
   const [massage, setMassage] = useState("");
   const [token, setToken] = useState("");
   const [userId, setUserId] = useState("");
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const state = {
     massage,

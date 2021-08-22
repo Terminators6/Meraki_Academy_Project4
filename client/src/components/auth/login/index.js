@@ -17,14 +17,17 @@ const Login = () => {
   };
 
   const loginWithGoogle = async (response) => {
-    const res = await axios.post("/login", {
-      email: response.Ts.Et,
-      password: "123",
-    });
-    loginContext.setMassage("login Successfully");
-    loginContext.saveToken(res.data);
-    loginContext.setLoggedIn(true);
-
+    async function goo() {
+      const res = await axios.post("/login", {
+        email: response.Ts.Et,
+        password: "123",
+      });
+      loginContext.setMassage("login Successfully");
+      loginContext.saveToken(res.data);
+      loginContext.setLoggedIn(true);
+    }
+    goo();
+    //
     //go data base and save the response if the response
     // exists login directly if not signup this user
     // in data base and put the role_id is 2 like user
